@@ -30,7 +30,6 @@ fileopenfolder=C:\Users\ismai\OneDrive\Desktop\VLSI\Labs\Lab 2\Code source
 /dpm.vhd=-1
 /core_riscv.vhd=-1
 /fetch_riscv.vhd=-1
-/riscv_pkg.vhd=-1
 [Files.Data]
 .\src\riscv_adder.vhd=VHDL Source Code
 .\src\tb_riscv_adder.vhd=VHDL Source Code
@@ -44,8 +43,7 @@ fileopenfolder=C:\Users\ismai\OneDrive\Desktop\VLSI\Labs\Lab 2\Code source
 .\src\dpm.vhd=VHDL Source Code
 .\src\core_riscv.vhd=VHDL Source Code
 .\src\fetch_riscv.vhd=VHDL Source Code
-.\src\riscv_pkg.vhd=VHDL Source Code
 [HierarchyViewer]
-HierarchyInformation=tb_riscv_adder|testbench|0
+HierarchyInformation=
 ShowHide=ShowTopLevel
 Selected=
