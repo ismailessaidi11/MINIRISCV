@@ -1,0 +1,1 @@
+-w -erf C:/My_Designs/proc/processor/compile/processor.erf -d C:/My_Designs/proc/processor/compile -s C:/My_Designs/proc/library.cfg -j C:/My_Designs/proc/processor/projlib.cfg -work processor -O3 -e 100 -work processor -2002 C:/My_Designs/proc/processor/src/riscv_adder.vhd C:/My_Designs/proc/processor/src/tb_riscv_adder.vhd 

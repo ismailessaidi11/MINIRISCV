@@ -1,0 +1,51 @@
+[Project]
+Current Flow=Generic
+VCS=0
+version=4
+Current Config=compile
+[Configurations]
+compile=processor
+[Library]
+processor=.\processor\processor.lib
+[$LibMap$]
+processor=.
+Active_lib=
+[Settings]
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+REFRESH_FLOW=1
+FLOWTOOLS=NONE
+FAMILY=
+fileopenfolder=C:\Users\ismai\OneDrive\Desktop\VLSI\Labs\Lab 2\Code source
+[Files]
+/riscv_adder.vhd=-1
+/tb_riscv_adder.vhd=-1
+/adder_tb_validated.asdb=-1
+/adder_tb_validated.awc=-1
+/riscv_alu.vhd=-1
+/riscv_core_tb.vhd=-1
+/riscv_pc.vhd=-1
+/riscv_pkg.vhd=-1
+/riscv_rf.vhd=-1
+/dpm.vhd=-1
+/core_riscv.vhd=-1
+/fetch_riscv.vhd=-1
+/riscv_pkg.vhd=-1
+[Files.Data]
+.\src\riscv_adder.vhd=VHDL Source Code
+.\src\tb_riscv_adder.vhd=VHDL Source Code
+.\src\adder_tb_validated.asdb=Accelerated Waveform File
+.\src\adder_tb_validated.awc=Accelerated Waveform Configuration
+.\src\riscv_alu.vhd=VHDL Source Code
+.\src\riscv_core_tb.vhd=VHDL Source Code
+.\src\riscv_pc.vhd=VHDL Source Code
+.\src\riscv_pkg.vhd=VHDL Source Code
+.\src\riscv_rf.vhd=VHDL Source Code
+.\src\dpm.vhd=VHDL Source Code
+.\src\core_riscv.vhd=VHDL Source Code
+.\src\fetch_riscv.vhd=VHDL Source Code
+.\src\riscv_pkg.vhd=VHDL Source Code
+[HierarchyViewer]
+HierarchyInformation=tb_riscv_adder|testbench|0
+ShowHide=ShowTopLevel
+Selected=
