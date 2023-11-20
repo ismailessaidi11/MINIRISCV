@@ -1,0 +1,10 @@
+.\src\riscv_adder.vhd
+.\src\tb_riscv_adder.vhd
+.\src\riscv_alu.vhd
+.\src\riscv_core_tb.vhd
+.\src\riscv_pc.vhd
+.\src\riscv_pkg.vhd
+.\src\riscv_rf.vhd
+.\src\dpm.vhd
+.\src\core_riscv.vhd
+.\src\fetch_riscv.vhd

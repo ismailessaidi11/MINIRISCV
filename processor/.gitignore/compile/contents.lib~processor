@@ -1,0 +1,7 @@
+134
+~E 1 "../src/riscv_adder.vhd" 83 half_adder
+~A 1 "../src/riscv_adder.vhd" 92 beh
+~E 1 "../src/riscv_adder.vhd" 15 riscv_adder
+~A 1 "../src/riscv_adder.vhd" 24 beh
+~E 1 "../src/tb_riscv_adder.vhd" 5 tb_riscv_adder
+~A 1 "../src/tb_riscv_adder.vhd" 8 testbench
