@@ -16,7 +16,7 @@ LANGUAGE=VHDL
 REFRESH_FLOW=1
 FLOWTOOLS=NONE
 FAMILY=
-fileopenfolder=C:\Users\ismai\OneDrive\Desktop\VLSI\Labs\Lab 2\Code source
+fileopenfolder=C:\Users\ismai\OneDrive\Documents\GitHub\MINIRISCV\processor\src
 [Files]
 /riscv_adder.vhd=-1
 /tb_riscv_adder.vhd=-1
@@ -28,8 +28,11 @@ fileopenfolder=C:\Users\ismai\OneDrive\Desktop\VLSI\Labs\Lab 2\Code source
 /riscv_pkg.vhd=-1
 /riscv_rf.vhd=-1
 /dpm.vhd=-1
-/core_riscv.vhd=-1
-/fetch_riscv.vhd=-1
+/core.vhd=-1
+/fetch.vhd=-1
+/write_back.vhd=-1
+/memory_access.vhd=-1
+/execute.vhd=-1
 [Files.Data]
 .\src\riscv_adder.vhd=VHDL Source Code
 .\src\tb_riscv_adder.vhd=VHDL Source Code
@@ -41,8 +44,11 @@ fileopenfolder=C:\Users\ismai\OneDrive\Desktop\VLSI\Labs\Lab 2\Code source
 .\src\riscv_pkg.vhd=VHDL Source Code
 .\src\riscv_rf.vhd=VHDL Source Code
 .\src\dpm.vhd=VHDL Source Code
-.\src\core_riscv.vhd=VHDL Source Code
-.\src\fetch_riscv.vhd=VHDL Source Code
+.\src\core.vhd=VHDL Source Code
+.\src\fetch.vhd=VHDL Source Code
+.\src\write_back.vhd=VHDL Source Code
+.\src\memory_access.vhd=VHDL Source Code
+.\src\execute.vhd=VHDL Source Code
 [HierarchyViewer]
 HierarchyInformation=
 ShowHide=ShowTopLevel

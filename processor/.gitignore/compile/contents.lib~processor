@@ -1,1 +1,5 @@
-0
+12
+~E 1 "../src/memory_access.vhd" 15 memory_access
+~A 1 "../src/memory_access.vhd" 42 beh
+~E 1 "../src/write_back.vhd" 15 write_back
+~A 1 "../src/write_back.vhd" 35 beh

@@ -1,0 +1,3 @@
+.\src\write_back.vhd
+.\src\memory_access.vhd
+.\src\execute.vhd
