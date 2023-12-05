@@ -1,4 +1,2 @@
-"C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/write_back.vhd" VHDL processor 1 0 0 -02
-"C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/memory_access.vhd" VHDL processor 1 0 0 -02
-"C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/execute.vhd" VHDL processor 2 0 0 -02
+"C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/tb_riscv_rf.vhd" VHDL processor 1 0 0 -02
 . . 0 0 0

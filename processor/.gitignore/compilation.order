@@ -1,3 +1,13 @@
+.\src\riscv_adder.vhd
+.\src\riscv_alu.vhd
+.\src\riscv_core_tb.vhd
+.\src\riscv_pc.vhd
+.\src\riscv_pkg.vhd
+.\src\riscv_rf.vhd
+.\src\fetch.vhd
 .\src\write_back.vhd
 .\src\memory_access.vhd
 .\src\execute.vhd
+.\src\decode.vhd
+.\src\tb_riscv_alu.vhd
+.\src\tb_riscv_rf.vhd

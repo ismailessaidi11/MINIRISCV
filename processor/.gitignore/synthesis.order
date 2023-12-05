@@ -11,3 +11,6 @@ i<>.\src\fetch_riscv.vhd
 i<>.\src\write_b_riscv.vhd
 i<>.\src\memory_access_riscv.vhd
 i<>.\src\execute.vhd
+i<>.\src\decode.vhd
+i<>.\src\tb_riscv_alu.vhd
+i<>.\src\tb_riscv_rf.vhd

@@ -28,11 +28,15 @@ fileopenfolder=C:\Users\ismai\OneDrive\Documents\GitHub\MINIRISCV\processor\src
 /riscv_pkg.vhd=-1
 /riscv_rf.vhd=-1
 /dpm.vhd=-1
-/core.vhd=-1
+/riscv_core.vhd=-1
 /fetch.vhd=-1
 /write_back.vhd=-1
 /memory_access.vhd=-1
 /execute.vhd=-1
+/decode.vhd=-1
+/tb_riscv_alu.vhd=-1
+/tb_riscv_rf.vhd=-1
+/tb_riscv_rf.vhd=-1
 [Files.Data]
 .\src\riscv_adder.vhd=VHDL Source Code
 .\src\tb_riscv_adder.vhd=VHDL Source Code
@@ -44,12 +48,18 @@ fileopenfolder=C:\Users\ismai\OneDrive\Documents\GitHub\MINIRISCV\processor\src
 .\src\riscv_pkg.vhd=VHDL Source Code
 .\src\riscv_rf.vhd=VHDL Source Code
 .\src\dpm.vhd=VHDL Source Code
-.\src\core.vhd=VHDL Source Code
+.\src\riscv_core.vhd=VHDL Source Code
 .\src\fetch.vhd=VHDL Source Code
 .\src\write_back.vhd=VHDL Source Code
 .\src\memory_access.vhd=VHDL Source Code
 .\src\execute.vhd=VHDL Source Code
+.\src\decode.vhd=VHDL Source Code
+.\src\tb_riscv_alu.vhd=VHDL Source Code
+.\src\tb_riscv_rf.vhd=VHDL Source Code
+.\src\tb_riscv_rf.vhd=VHDL Source Code
 [HierarchyViewer]
 HierarchyInformation=
 ShowHide=ShowTopLevel
 Selected=
+[ORDER]
+Synchronize=1

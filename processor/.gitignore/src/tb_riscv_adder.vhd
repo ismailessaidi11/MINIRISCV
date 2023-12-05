@@ -76,7 +76,7 @@ begin
   i_sub <= '1';   -- subtraction
   wait for 20 ns;
 
-  -- Add more test cases as needed...
+ 
 
   wait;
 end process;

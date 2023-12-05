@@ -1,261 +1,642 @@
-acom -reorder -O3 -e 100 -work processor -2002  $dsn/src/write_b_riscv.vhd
+acom -O3 -e 100 -work processor -2002  $dsn/src/decode.vhd
 # Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/write_b_riscv.vhd
-# Compile Entity "write_back"
-# Compile Architecture "beh" of Entity "write_back"
-# Incorrect order of units detected.
-# Automatic reorder and incremental recompilation of required units in progress.
-# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/write_b_riscv.vhd
-# Compile Entity "write_back"
-# Error: COMP96_0078: src/write_b_riscv.vhd : (18, 38): Unknown identifier "REG_WIDTH".
-# Error: COMP96_0133: src/write_b_riscv.vhd : (18, 38): Cannot find object declaration.
-# Error: COMP96_0094: src/write_b_riscv.vhd : (18, 38): Locally static expression is required in the range definition.
-# Error: COMP96_0078: src/write_b_riscv.vhd : (21, 40): Unknown identifier "REG_WIDTH".
-# Error: COMP96_0133: src/write_b_riscv.vhd : (21, 40): Cannot find object declaration.
-# Error: COMP96_0094: src/write_b_riscv.vhd : (21, 40): Locally static expression is required in the range definition.
-# Error: COMP96_0329: src/write_b_riscv.vhd : (33, 2): Generate statement must have a label.
-# Error: COMP96_0019: src/write_b_riscv.vhd : (33, 14): Keyword 'generate' expected.
-# Error: COMP96_0019: src/write_b_riscv.vhd : (36, 2): Keyword 'end' expected.
-# Error: COMP96_0016: src/write_b_riscv.vhd : (37, 3): Design unit declaration expected.
-# Error: COMP96_0019: src/write_b_riscv.vhd : (42, 21): Keyword 'of' expected.
-# Error: COMP96_0018: src/write_b_riscv.vhd : (42, 21): Identifier expected.
-# Compile failure 12 Errors 0 Warnings  Analysis time :  0.1 [s]
-acom -reorder -O3 -e 100 -work processor -2002  $dsn/src/write_b_riscv.vhd
+# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/decode.vhd
+# Compile Entity "decode"
+# Compile Architecture "beh" of Entity "decode"
+# Error: COMP96_0547: decode.vhd : (210, 18): Choice in selected assignments and case statements must be locally static. Use -relax to allow nonstatic expressions and discrete ranges.
+# Error: COMP96_0547: decode.vhd : (211, 18): Choice in selected assignments and case statements must be locally static. Use -relax to allow nonstatic expressions and discrete ranges.
+# Compile failure 2 Errors 0 Warnings  Analysis time :  62.0 [ms]
+acom -O3 -e 100 -work processor -2002  $dsn/src/execute.vhd
 # Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/write_b_riscv.vhd
-# Compile Entity "write_back"
-# Compile Architecture "beh" of Entity "write_back"
-# Incorrect order of units detected.
-# Automatic reorder and incremental recompilation of required units in progress.
-# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/write_b_riscv.vhd
-# Compile Entity "write_back"
-# Error: COMP96_0078: src/write_b_riscv.vhd : (18, 38): Unknown identifier "REG_WIDTH".
-# Error: COMP96_0133: src/write_b_riscv.vhd : (18, 38): Cannot find object declaration.
-# Error: COMP96_0094: src/write_b_riscv.vhd : (18, 38): Locally static expression is required in the range definition.
-# Error: COMP96_0078: src/write_b_riscv.vhd : (21, 40): Unknown identifier "REG_WIDTH".
-# Error: COMP96_0133: src/write_b_riscv.vhd : (21, 40): Cannot find object declaration.
-# Error: COMP96_0094: src/write_b_riscv.vhd : (21, 40): Locally static expression is required in the range definition.
-# Error: COMP96_0329: src/write_b_riscv.vhd : (33, 2): Generate statement must have a label.
-# Error: COMP96_0019: src/write_b_riscv.vhd : (33, 14): Keyword 'generate' expected.
-# Error: COMP96_0019: src/write_b_riscv.vhd : (36, 2): Keyword 'end' expected.
-# Error: COMP96_0016: src/write_b_riscv.vhd : (37, 3): Design unit declaration expected.
-# Error: COMP96_0019: src/write_b_riscv.vhd : (42, 21): Keyword 'of' expected.
-# Error: COMP96_0018: src/write_b_riscv.vhd : (42, 21): Identifier expected.
-# Compile failure 12 Errors 0 Warnings  Analysis time :  31.0 [ms]
-acom -reorder -O3 -e 100 -work processor -2002  $dsn/src/write_b_riscv.vhd
+# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/execute.vhd
+# Compile Entity "execute"
+# Error: COMP96_0078: execute.vhd : (37, 37): Unknown identifier "ALUOP_WIDTH".
+# Error: COMP96_0133: execute.vhd : (37, 37): Cannot find object declaration.
+# Error: COMP96_0094: execute.vhd : (37, 37): Locally static expression is required in the range definition.
+# Compile Architecture "beh" of Entity "execute"
+# Error: COMP96_0333: execute.vhd : (89, 2): Formal must be locally static name.
+# Error: COMP96_0569: execute.vhd : (97, 8): Select expression must be of a locally static subtype. Use -relax to allow expressions of a nonstatic subtype.
+# Error: COMP96_0078: execute.vhd : (110, 4): Unknown identifier "i_scr2".
+# Error: COMP96_0133: execute.vhd : (110, 4): Cannot find object declaration.
+# Error: COMP96_0112: execute.vhd : (110, 4): "i_scr2" does not match the formal name.
+# Error: COMP96_0207: execute.vhd : (103, 3): No actual specified for local port "i_src2".
+# Error: COMP96_0077: execute.vhd : (121, 16): Undefined type of expression. Expected type 'STD_LOGIC_VECTOR'.
+# Error: COMP96_0078: execute.vhd : (122, 3): Unknown identifier "o_we".
+# Error: COMP96_0133: execute.vhd : (122, 3): Cannot find object declaration.
+# Error: COMP96_0077: execute.vhd : (130, 16): Undefined type of expression. Expected type 'STD_LOGIC_VECTOR'.
+# Error: COMP96_0078: execute.vhd : (131, 3): Unknown identifier "o_we".
+# Error: COMP96_0133: execute.vhd : (131, 3): Cannot find object declaration.
+# Error: COMP96_0078: execute.vhd : (140, 3): Unknown identifier "o_we".
+# Error: COMP96_0078: execute.vhd : (140, 15): Unknown identifier "i_we".
+# Error: COMP96_0133: execute.vhd : (140, 3): Cannot find object declaration.
+# Compile failure 18 Errors 0 Warnings  Analysis time :  47.0 [ms]
+acom -O3 -e 100 -work processor -2002  $dsn/src/riscv_pkg.vhd
 # Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/write_b_riscv.vhd
-# Compile Entity "write_back"
-# Compile Architecture "beh" of Entity "write_back"
-# Incorrect order of units detected.
-# Automatic reorder and incremental recompilation of required units in progress.
-# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/write_b_riscv.vhd
-# Compile Entity "write_back"
-# Error: COMP96_0078: src/write_b_riscv.vhd : (18, 38): Unknown identifier "REG_WIDTH".
-# Error: COMP96_0133: src/write_b_riscv.vhd : (18, 38): Cannot find object declaration.
-# Error: COMP96_0094: src/write_b_riscv.vhd : (18, 38): Locally static expression is required in the range definition.
-# Error: COMP96_0078: src/write_b_riscv.vhd : (21, 40): Unknown identifier "REG_WIDTH".
-# Error: COMP96_0133: src/write_b_riscv.vhd : (21, 40): Cannot find object declaration.
-# Error: COMP96_0094: src/write_b_riscv.vhd : (21, 40): Locally static expression is required in the range definition.
-# Error: COMP96_0329: src/write_b_riscv.vhd : (33, 2): Generate statement must have a label.
-# Error: COMP96_0019: src/write_b_riscv.vhd : (33, 14): Keyword 'generate' expected.
-# Error: COMP96_0019: src/write_b_riscv.vhd : (36, 2): Keyword 'end' expected.
-# Error: COMP96_0016: src/write_b_riscv.vhd : (37, 3): Design unit declaration expected.
-# Error: COMP96_0019: src/write_b_riscv.vhd : (42, 21): Keyword 'of' expected.
-# Error: COMP96_0018: src/write_b_riscv.vhd : (42, 21): Identifier expected.
-# Compile failure 12 Errors 0 Warnings  Analysis time :  31.0 [ms]
-acom -reorder -O3 -e 100 -work processor -2002  $dsn/src/write_b_riscv.vhd
+# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/riscv_pkg.vhd
+# Compile Package "riscv_pkg"
+# Compile success 0 Errors 0 Warnings  Analysis time :  31.0 [ms]
+acom -O3 -e 100 -work processor -2002  $dsn/src/execute.vhd
 # Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/write_b_riscv.vhd
-# Compile Entity "write_back"
-# Compile Architecture "beh" of Entity "write_back"
-# Error: COMP96_0329: src/write_b_riscv.vhd : (33, 2): Generate statement must have a label.
-# Error: COMP96_0019: src/write_b_riscv.vhd : (33, 14): Keyword 'generate' expected.
-# Error: COMP96_0019: src/write_b_riscv.vhd : (36, 2): Keyword 'end' expected.
-# Error: COMP96_0016: src/write_b_riscv.vhd : (37, 3): Design unit declaration expected.
-# Error: COMP96_0019: src/write_b_riscv.vhd : (42, 21): Keyword 'of' expected.
-# Error: COMP96_0018: src/write_b_riscv.vhd : (42, 21): Identifier expected.
-# Compile failure 6 Errors 0 Warnings  Analysis time :  31.0 [ms]
-acom -O3 -e 100 -work processor -2002  $dsn/src/write_b_riscv.vhd
+# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/execute.vhd
+# Compile Entity "execute"
+# Error: COMP96_0078: execute.vhd : (37, 37): Unknown identifier "ALUOP_WIDTH".
+# Error: COMP96_0133: execute.vhd : (37, 37): Cannot find object declaration.
+# Error: COMP96_0094: execute.vhd : (37, 37): Locally static expression is required in the range definition.
+# Compile Architecture "beh" of Entity "execute"
+# Error: COMP96_0333: execute.vhd : (89, 2): Formal must be locally static name.
+# Error: COMP96_0569: execute.vhd : (97, 8): Select expression must be of a locally static subtype. Use -relax to allow expressions of a nonstatic subtype.
+# Error: COMP96_0078: execute.vhd : (110, 4): Unknown identifier "i_scr2".
+# Error: COMP96_0133: execute.vhd : (110, 4): Cannot find object declaration.
+# Error: COMP96_0112: execute.vhd : (110, 4): "i_scr2" does not match the formal name.
+# Error: COMP96_0207: execute.vhd : (103, 3): No actual specified for local port "i_src2".
+# Error: COMP96_0077: execute.vhd : (121, 16): Undefined type of expression. Expected type 'STD_LOGIC_VECTOR'.
+# Error: COMP96_0078: execute.vhd : (122, 3): Unknown identifier "o_we".
+# Error: COMP96_0133: execute.vhd : (122, 3): Cannot find object declaration.
+# Error: COMP96_0077: execute.vhd : (130, 16): Undefined type of expression. Expected type 'STD_LOGIC_VECTOR'.
+# Error: COMP96_0078: execute.vhd : (131, 3): Unknown identifier "o_we".
+# Error: COMP96_0133: execute.vhd : (131, 3): Cannot find object declaration.
+# Error: COMP96_0078: execute.vhd : (140, 3): Unknown identifier "o_we".
+# Error: COMP96_0078: execute.vhd : (140, 15): Unknown identifier "i_we".
+# Error: COMP96_0133: execute.vhd : (140, 3): Cannot find object declaration.
+# Compile failure 18 Errors 0 Warnings  Analysis time :  15.0 [ms]
+acom -O3 -e 100 -work processor -2002  $dsn/src/execute.vhd
 # Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/write_b_riscv.vhd
-# Compile Entity "write_back"
-# Compile Architecture "beh" of Entity "write_back"
-# Error: COMP96_0329: src/write_b_riscv.vhd : (34, 2): Generate statement must have a label.
-# Error: COMP96_0019: src/write_b_riscv.vhd : (34, 14): Keyword 'generate' expected.
-# Error: COMP96_0019: src/write_b_riscv.vhd : (37, 2): Keyword 'end' expected.
-# Error: COMP96_0016: src/write_b_riscv.vhd : (38, 3): Design unit declaration expected.
-# Error: COMP96_0019: src/write_b_riscv.vhd : (43, 21): Keyword 'of' expected.
-# Error: COMP96_0018: src/write_b_riscv.vhd : (43, 21): Identifier expected.
+# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/execute.vhd
+# Compile Entity "execute"
+# Error: COMP96_0078: execute.vhd : (37, 37): Unknown identifier "ALUOP_WIDTH".
+# Error: COMP96_0133: execute.vhd : (37, 37): Cannot find object declaration.
+# Error: COMP96_0094: execute.vhd : (37, 37): Locally static expression is required in the range definition.
+# Compile Architecture "beh" of Entity "execute"
+# Error: COMP96_0333: execute.vhd : (89, 2): Formal must be locally static name.
+# Error: COMP96_0569: execute.vhd : (97, 8): Select expression must be of a locally static subtype. Use -relax to allow expressions of a nonstatic subtype.
+# Error: COMP96_0078: execute.vhd : (110, 4): Unknown identifier "i_scr2".
+# Error: COMP96_0133: execute.vhd : (110, 4): Cannot find object declaration.
+# Error: COMP96_0112: execute.vhd : (110, 4): "i_scr2" does not match the formal name.
+# Error: COMP96_0207: execute.vhd : (103, 3): No actual specified for local port "i_src2".
+# Error: COMP96_0077: execute.vhd : (121, 16): Undefined type of expression. Expected type 'STD_LOGIC_VECTOR'.
+# Error: COMP96_0078: execute.vhd : (122, 3): Unknown identifier "o_we".
+# Error: COMP96_0133: execute.vhd : (122, 3): Cannot find object declaration.
+# Error: COMP96_0077: execute.vhd : (130, 16): Undefined type of expression. Expected type 'STD_LOGIC_VECTOR'.
+# Error: COMP96_0078: execute.vhd : (131, 3): Unknown identifier "o_we".
+# Error: COMP96_0133: execute.vhd : (131, 3): Cannot find object declaration.
+# Error: COMP96_0078: execute.vhd : (140, 3): Unknown identifier "o_we".
+# Error: COMP96_0078: execute.vhd : (140, 15): Unknown identifier "i_we".
+# Error: COMP96_0133: execute.vhd : (140, 3): Cannot find object declaration.
+# Compile failure 18 Errors 0 Warnings  Analysis time :  31.0 [ms]
+acom -O3 -e 100 -work processor -2002  $dsn/src/execute.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/execute.vhd
+# Compile Entity "execute"
+# Compile Architecture "beh" of Entity "execute"
+# Error: COMP96_0333: execute.vhd : (89, 2): Formal must be locally static name.
+# Error: COMP96_0569: execute.vhd : (97, 8): Select expression must be of a locally static subtype. Use -relax to allow expressions of a nonstatic subtype.
+# Error: COMP96_0078: execute.vhd : (110, 4): Unknown identifier "i_scr2".
+# Error: COMP96_0133: execute.vhd : (110, 4): Cannot find object declaration.
+# Error: COMP96_0112: execute.vhd : (110, 4): "i_scr2" does not match the formal name.
+# Error: COMP96_0207: execute.vhd : (103, 3): No actual specified for local port "i_src2".
 # Compile failure 6 Errors 0 Warnings  Analysis time :  47.0 [ms]
-acom -O3 -e 100 -work processor -2002  $dsn/src/write_b_riscv.vhd
+acom -O3 -e 100 -work processor -2002  $dsn/src/execute.vhd
 # Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/write_b_riscv.vhd
-# Compile Entity "write_back"
-# Compile Architecture "beh" of Entity "write_back"
-# Error: COMP96_0329: src/write_b_riscv.vhd : (34, 2): Generate statement must have a label.
-# Error: COMP96_0019: src/write_b_riscv.vhd : (34, 14): Keyword 'generate' expected.
-# Error: COMP96_0019: src/write_b_riscv.vhd : (37, 2): Keyword 'end' expected.
-# Error: COMP96_0016: src/write_b_riscv.vhd : (38, 3): Design unit declaration expected.
-# Error: COMP96_0019: src/write_b_riscv.vhd : (43, 21): Keyword 'of' expected.
-# Error: COMP96_0018: src/write_b_riscv.vhd : (43, 21): Identifier expected.
-# Compile failure 6 Errors 0 Warnings  Analysis time :  15.0 [ms]
-acom -O3 -e 100 -work processor -2002  $dsn/src/write_b_riscv.vhd
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/write_b_riscv.vhd
-# Compile Entity "write_back"
-# Compile Architecture "beh" of Entity "write_back"
-# Error: COMP96_0329: src/write_b_riscv.vhd : (34, 2): Generate statement must have a label.
-# Error: COMP96_0019: src/write_b_riscv.vhd : (34, 14): Keyword 'generate' expected.
-# Error: COMP96_0019: src/write_b_riscv.vhd : (37, 2): Keyword 'end' expected.
-# Error: COMP96_0016: src/write_b_riscv.vhd : (38, 3): Design unit declaration expected.
-# Error: COMP96_0019: src/write_b_riscv.vhd : (43, 21): Keyword 'of' expected.
-# Error: COMP96_0018: src/write_b_riscv.vhd : (43, 21): Identifier expected.
-# Compile failure 6 Errors 0 Warnings  Analysis time :  15.0 [ms]
-acom -reorder -O3 -e 100 -work processor -2002  $dsn/src/write_b_riscv.vhd
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/write_b_riscv.vhd
-# Compile Entity "write_back"
-# Compile Architecture "beh" of Entity "write_back"
-# Error: COMP96_0329: src/write_b_riscv.vhd : (34, 2): Generate statement must have a label.
-# Error: COMP96_0019: src/write_b_riscv.vhd : (34, 14): Keyword 'generate' expected.
-# Error: COMP96_0019: src/write_b_riscv.vhd : (37, 2): Keyword 'end' expected.
-# Error: COMP96_0016: src/write_b_riscv.vhd : (38, 3): Design unit declaration expected.
-# Error: COMP96_0019: src/write_b_riscv.vhd : (43, 21): Keyword 'of' expected.
-# Error: COMP96_0018: src/write_b_riscv.vhd : (43, 21): Identifier expected.
+# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/execute.vhd
+# Compile Entity "execute"
+# Compile Architecture "beh" of Entity "execute"
+# Error: COMP96_0333: execute.vhd : (89, 2): Formal must be locally static name.
+# Error: COMP96_0569: execute.vhd : (97, 8): Select expression must be of a locally static subtype. Use -relax to allow expressions of a nonstatic subtype.
+# Error: COMP96_0078: execute.vhd : (110, 4): Unknown identifier "i_scr2".
+# Error: COMP96_0133: execute.vhd : (110, 4): Cannot find object declaration.
+# Error: COMP96_0112: execute.vhd : (110, 4): "i_scr2" does not match the formal name.
+# Error: COMP96_0207: execute.vhd : (103, 3): No actual specified for local port "i_src2".
 # Compile failure 6 Errors 0 Warnings  Analysis time :  16.0 [ms]
-acom -O3 -e 100 -work processor -2002  $dsn/src/write_b_riscv.vhd
+acom -O3 -e 100 -work processor -2002  $dsn/src/execute.vhd
 # Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/write_b_riscv.vhd
-# Compile Entity "write_back"
-# Compile Architecture "beh" of Entity "write_back"
-# Error: COMP96_0019: src/write_b_riscv.vhd : (33, 2): Keyword 'end' expected.
-# Error: COMP96_0016: src/write_b_riscv.vhd : (34, 2): Design unit declaration expected.
-# Error: COMP96_0019: src/write_b_riscv.vhd : (43, 21): Keyword 'of' expected.
-# Error: COMP96_0018: src/write_b_riscv.vhd : (43, 21): Identifier expected.
-# Compile failure 4 Errors 0 Warnings  Analysis time :  15.0 [ms]
-acom -O3 -e 100 -work processor -2002  $dsn/src/write_b_riscv.vhd
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/write_b_riscv.vhd
-# Compile Entity "write_back"
-# Compile Architecture "beh" of Entity "write_back"
-# Error: COMP96_0019: src/write_b_riscv.vhd : (28, 2): Keyword 'begin' expected.
-# Error: COMP96_0016: src/write_b_riscv.vhd : (28, 12): Design unit declaration expected.
-# Error: COMP96_0019: src/write_b_riscv.vhd : (41, 21): Keyword 'of' expected.
-# Error: COMP96_0018: src/write_b_riscv.vhd : (41, 21): Identifier expected.
-# Compile failure 4 Errors 0 Warnings  Analysis time :  31.0 [ms]
-acom -O3 -e 100 -work processor -2002  $dsn/src/write_b_riscv.vhd
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/write_b_riscv.vhd
-# Compile Entity "write_back"
-# Compile Architecture "beh" of Entity "write_back"
-# Error: COMP96_0329: src/write_b_riscv.vhd : (32, 2): Generate statement must have a label.
-# Error: COMP96_0019: src/write_b_riscv.vhd : (32, 14): Keyword 'generate' expected.
-# Error: COMP96_0019: src/write_b_riscv.vhd : (35, 2): Keyword 'end' expected.
-# Error: COMP96_0016: src/write_b_riscv.vhd : (36, 3): Design unit declaration expected.
-# Error: COMP96_0019: src/write_b_riscv.vhd : (41, 21): Keyword 'of' expected.
-# Error: COMP96_0018: src/write_b_riscv.vhd : (41, 21): Identifier expected.
-# Compile failure 6 Errors 0 Warnings  Analysis time :  32.0 [ms]
-acom -O3 -e 100 -work processor -2002  $dsn/src/write_b_riscv.vhd
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/write_b_riscv.vhd
-# Compile Entity "write_back"
-# Compile Architecture "beh" of Entity "write_back"
-# Error: COMP96_0329: src/write_b_riscv.vhd : (34, 3): Generate statement must have a label.
-# Error: COMP96_0019: src/write_b_riscv.vhd : (34, 15): Keyword 'generate' expected.
-# Error: COMP96_0019: src/write_b_riscv.vhd : (36, 3): Keyword 'end' expected.
-# Error: COMP96_0016: src/write_b_riscv.vhd : (37, 5): Design unit declaration expected.
-# Error: COMP96_0019: src/write_b_riscv.vhd : (39, 21): Keyword 'of' expected.
-# Error: COMP96_0018: src/write_b_riscv.vhd : (39, 21): Identifier expected.
+# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/execute.vhd
+# Compile Entity "execute"
+# Compile Architecture "beh" of Entity "execute"
+# Error: COMP96_0333: execute.vhd : (89, 2): Formal must be locally static name.
+# Error: COMP96_0569: execute.vhd : (97, 8): Select expression must be of a locally static subtype. Use -relax to allow expressions of a nonstatic subtype.
+# Error: COMP96_0078: execute.vhd : (110, 4): Unknown identifier "i_scr2".
+# Error: COMP96_0133: execute.vhd : (110, 4): Cannot find object declaration.
+# Error: COMP96_0112: execute.vhd : (110, 4): "i_scr2" does not match the formal name.
+# Error: COMP96_0207: execute.vhd : (103, 3): No actual specified for local port "i_src2".
 # Compile failure 6 Errors 0 Warnings  Analysis time :  31.0 [ms]
-acom -O3 -e 100 -work processor -2002  $dsn/src/write_back.vhd $dsn/src/memory_access.vhd
+acom -O3 -e 100 -work processor -2002  $dsn/src/execute.vhd
 # Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/write_back.vhd
-# Compile Entity "write_back"
-# Compile Architecture "beh" of Entity "write_back"
-# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/memory_access.vhd
-# Compile Entity "memory_access"
-# Error: COMP96_0015: src/memory_access.vhd : (32, 3): ';' expected.
-# Error: COMP96_0018: src/memory_access.vhd : (35, 3): Identifier expected.
-# Compile Architecture "beh" of Entity "memory_access"
-# Error: COMP96_0056: src/memory_access.vhd : (40, 1): Cannot find referenced entity declaration "memory_access".
-# Compile failure 3 Errors 0 Warnings  Analysis time :  0.1 [s]
-acom -O3 -e 100 -work processor -2002  $dsn/src/write_back.vhd $dsn/src/memory_access.vhd
+# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/execute.vhd
+# Compile Entity "execute"
+# Compile Architecture "beh" of Entity "execute"
+# Error: COMP96_0078: execute.vhd : (89, 38): Unknown identifier "XLEN".
+# Error: COMP96_0569: execute.vhd : (97, 8): Select expression must be of a locally static subtype. Use -relax to allow expressions of a nonstatic subtype.
+# Error: COMP96_0078: execute.vhd : (110, 4): Unknown identifier "i_scr2".
+# Error: COMP96_0133: execute.vhd : (110, 4): Cannot find object declaration.
+# Error: COMP96_0112: execute.vhd : (110, 4): "i_scr2" does not match the formal name.
+# Error: COMP96_0207: execute.vhd : (103, 3): No actual specified for local port "i_src2".
+# Compile failure 6 Errors 0 Warnings  Analysis time :  32.0 [ms]
+acom -O3 -e 100 -work processor -2002  $dsn/src/riscv_alu.vhd
 # Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/write_back.vhd
-# Compile Entity "write_back"
-# Compile Architecture "beh" of Entity "write_back"
-# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/memory_access.vhd
-# Compile Entity "memory_access"
-# Error: COMP96_0018: src/memory_access.vhd : (35, 3): Identifier expected.
-# Compile Architecture "beh" of Entity "memory_access"
-# Error: COMP96_0056: src/memory_access.vhd : (40, 1): Cannot find referenced entity declaration "memory_access".
-# Compile failure 2 Errors 0 Warnings  Analysis time :  47.0 [ms]
-acom -O3 -e 100 -work processor -2002  $dsn/src/write_back.vhd $dsn/src/memory_access.vhd
+# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/riscv_alu.vhd
+# Compile Entity "riscv_alu"
+# Compile Architecture "beh" of Entity "riscv_alu"
+# A feature of VHDL 2008 has been detected. Use the -2008 argument of the vcom command.
+# Error: COMP96_0025: riscv_alu.vhd : (40, 22): Identifier or string literal expected.
+# Error: COMP96_0019: riscv_alu.vhd : (46, 9): Keyword 'end' expected.
+# Error: COMP96_0016: riscv_alu.vhd : (47, 11): Design unit declaration expected.
+# Error: COMP96_0019: riscv_alu.vhd : (86, 21): Keyword 'of' expected.
+# Error: COMP96_0018: riscv_alu.vhd : (86, 21): Identifier expected.
+# Compile failure 5 Errors 0 Warnings  Analysis time :  94.0 [ms]
+acom -O3 -e 100 -work processor -2002  $dsn/src/decode.vhd
 # Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/write_back.vhd
-# Compile Entity "write_back"
-# Compile Architecture "beh" of Entity "write_back"
-# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/memory_access.vhd
-# Compile Entity "memory_access"
-# Compile Architecture "beh" of Entity "memory_access"
-# Warning: ELAB1_0026: src/memory_access.vhd : (71, 0): There is no default binding for component "dpm". (No entity named "dpm" was found).
-# Error: COMP96_0078: src/memory_access.vhd : (73, 3): Unknown identifier "i_a_clk".
-# Error: COMP96_0367: src/memory_access.vhd : (83, 16): Improper array length (5). Expected length is 6.
-# Compile failure 2 Errors 1 Warnings  Analysis time :  47.0 [ms]
-acom -O3 -e 100 -work processor -2002  $dsn/src/write_back.vhd $dsn/src/memory_access.vhd
+# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/decode.vhd
+# Compile Entity "decode"
+# Compile Architecture "beh" of Entity "decode"
+# Error: COMP96_0547: decode.vhd : (206, 18): Choice in selected assignments and case statements must be locally static. Use -relax to allow nonstatic expressions and discrete ranges.
+# Error: COMP96_0547: decode.vhd : (207, 18): Choice in selected assignments and case statements must be locally static. Use -relax to allow nonstatic expressions and discrete ranges.
+# Compile failure 2 Errors 0 Warnings  Analysis time :  15.0 [ms]
+acom -O3 -e 100 -work processor -2002  $dsn/src/decode.vhd
 # Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/write_back.vhd
-# Compile Entity "write_back"
-# Compile Architecture "beh" of Entity "write_back"
-# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/memory_access.vhd
-# Compile Entity "memory_access"
-# Compile Architecture "beh" of Entity "memory_access"
-# Error: COMP96_0367: src/memory_access.vhd : (58, 16): Improper array length (5). Expected length is 6.
-# Compile failure 1 Errors 0 Warnings  Analysis time :  78.0 [ms]
-acom -O3 -e 100 -work processor -2002  $dsn/src/write_back.vhd $dsn/src/memory_access.vhd
+# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/decode.vhd
+# Compile Entity "decode"
+# Compile Architecture "beh" of Entity "decode"
+# Error: COMP96_0547: decode.vhd : (206, 18): Choice in selected assignments and case statements must be locally static. Use -relax to allow nonstatic expressions and discrete ranges.
+# Error: COMP96_0547: decode.vhd : (207, 18): Choice in selected assignments and case statements must be locally static. Use -relax to allow nonstatic expressions and discrete ranges.
+# Compile failure 2 Errors 0 Warnings  Analysis time :  31.0 [ms]
+acom -O3 -e 100 -work processor -2002  $dsn/src/decode.vhd
 # Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/write_back.vhd
-# Compile Entity "write_back"
-# Compile Architecture "beh" of Entity "write_back"
-# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/memory_access.vhd
-# Compile Entity "memory_access"
-# Compile Architecture "beh" of Entity "memory_access"
-# Compile success 0 Errors 0 Warnings  Analysis time :  94.0 [ms]
-acom -O3 -e 100 -work processor -2002  $dsn/src/write_back.vhd $dsn/src/memory_access.vhd
+# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/decode.vhd
+# Error: COMP96_0016: decode.vhd : (15, 2): Design unit declaration expected.
+# Error: COMP96_0016: decode.vhd : (15, 3): Design unit declaration expected.
+# Compile Entity "decode"
+# Error: COMP96_0078: decode.vhd : (21, 18): Unknown identifier "std_logic_vector".
+# Error: COMP96_0078: decode.vhd : (21, 35): Unknown identifier "XLEN".
+# Error: COMP96_0064: decode.vhd : (21, 18): Unknown type.
+# Error: COMP96_0078: decode.vhd : (22, 21): Unknown identifier "std_logic_vector".
+# Error: COMP96_0078: decode.vhd : (22, 38): Unknown identifier "XLEN".
+# Error: COMP96_0064: decode.vhd : (22, 21): Unknown type.
+# Error: COMP96_0078: decode.vhd : (23, 21): Unknown identifier "std_logic_vector".
+# Error: COMP96_0078: decode.vhd : (23, 38): Unknown identifier "REG_WIDTH".
+# Error: COMP96_0064: decode.vhd : (23, 21): Unknown type.
+# Error: COMP96_0078: decode.vhd : (24, 17): Unknown identifier "std_logic".
+# Error: COMP96_0064: decode.vhd : (24, 17): Unknown type.
+# Error: COMP96_0078: decode.vhd : (25, 16): Unknown identifier "std_logic".
+# Error: COMP96_0064: decode.vhd : (25, 16): Unknown type.
+# Error: COMP96_0078: decode.vhd : (26, 17): Unknown identifier "std_logic".
+# Error: COMP96_0064: decode.vhd : (26, 17): Unknown type.
+# Error: COMP96_0078: decode.vhd : (27, 16): Unknown identifier "std_logic_vector".
+# Error: COMP96_0078: decode.vhd : (27, 33): Unknown identifier "XLEN".
+# Error: COMP96_0064: decode.vhd : (27, 16): Unknown type.
+# Error: COMP96_0078: decode.vhd : (28, 18): Unknown identifier "std_logic".
+# Error: COMP96_0064: decode.vhd : (28, 18): Unknown type.
+# Error: COMP96_0078: decode.vhd : (29, 18): Unknown identifier "std_logic".
+# Error: COMP96_0064: decode.vhd : (29, 18): Unknown type.
+# Error: COMP96_0078: decode.vhd : (30, 18): Unknown identifier "std_logic".
+# Error: COMP96_0064: decode.vhd : (30, 18): Unknown type.
+# Error: COMP96_0078: decode.vhd : (34, 22): Unknown identifier "std_logic_vector".
+# Error: COMP96_0078: decode.vhd : (34, 39): Unknown identifier "XLEN".
+# Error: COMP96_0064: decode.vhd : (34, 22): Unknown type.
+# Error: COMP96_0078: decode.vhd : (35, 22): Unknown identifier "std_logic_vector".
+# Error: COMP96_0078: decode.vhd : (35, 39): Unknown identifier "XLEN".
+# Error: COMP96_0064: decode.vhd : (35, 22): Unknown type.
+# Error: COMP96_0078: decode.vhd : (36, 19): Unknown identifier "std_logic".
+# Error: COMP96_0064: decode.vhd : (36, 19): Unknown type.
+# Error: COMP96_0078: decode.vhd : (37, 18): Unknown identifier "std_logic".
+# Error: COMP96_0064: decode.vhd : (37, 18): Unknown type.
+# Error: COMP96_0078: decode.vhd : (38, 17): Unknown identifier "std_logic".
+# Error: COMP96_0064: decode.vhd : (38, 17): Unknown type.
+# Error: COMP96_0078: decode.vhd : (39, 16): Unknown identifier "std_logic".
+# Error: COMP96_0064: decode.vhd : (39, 16): Unknown type.
+# Error: COMP96_0078: decode.vhd : (40, 16): Unknown identifier "std_logic".
+# Error: COMP96_0064: decode.vhd : (40, 16): Unknown type.
+# Error: COMP96_0078: decode.vhd : (41, 17): Unknown identifier "std_logic_vector".
+# Error: COMP96_0078: decode.vhd : (41, 34): Unknown identifier "XLEN".
+# Error: COMP96_0064: decode.vhd : (41, 17): Unknown type.
+# Error: COMP96_0078: decode.vhd : (42, 20): Unknown identifier "std_logic".
+# Error: COMP96_0064: decode.vhd : (42, 20): Unknown type.
+# Error: COMP96_0078: decode.vhd : (43, 21): Unknown identifier "std_logic_vector".
+# Error: COMP96_0078: decode.vhd : (43, 38): Unknown identifier "REG_WIDTH".
+# Error: COMP96_0064: decode.vhd : (43, 21): Unknown type.
+# Error: COMP96_0078: decode.vhd : (44, 16): Unknown identifier "std_logic_vector".
+# Error: COMP96_0078: decode.vhd : (44, 33): Unknown identifier "XLEN".
+# Error: COMP96_0064: decode.vhd : (44, 16): Unknown type.
+# Error: COMP96_0078: decode.vhd : (46, 18): Unknown identifier "std_logic".
+# Error: COMP96_0064: decode.vhd : (46, 18): Unknown type.
+# Error: COMP96_0078: decode.vhd : (47, 18): Unknown identifier "std_logic".
+# Error: COMP96_0064: decode.vhd : (47, 18): Unknown type.
+# Error: COMP96_0078: decode.vhd : (48, 18): Unknown identifier "std_logic_vector".
+# Error: COMP96_0064: decode.vhd : (48, 18): Unknown type.
+# Error: COMP96_0078: decode.vhd : (49, 19): Unknown identifier "std_logic_vector".
+# Error: COMP96_0078: decode.vhd : (49, 36): Unknown identifier "ALUOP_WIDTH".
+# Error: COMP96_0064: decode.vhd : (49, 19): Unknown type.
+# Compile Architecture "beh" of Entity "decode"
+# Error: COMP96_0547: decode.vhd : (206, 18): Choice in selected assignments and case statements must be locally static. Use -relax to allow nonstatic expressions and discrete ranges.
+# Error: COMP96_0547: decode.vhd : (207, 18): Choice in selected assignments and case statements must be locally static. Use -relax to allow nonstatic expressions and discrete ranges.
+# Compile failure 64 Errors 0 Warnings  Analysis time :  78.0 [ms]
+acom -O3 -e 100 -work processor -2002  $dsn/src/decode.vhd
 # Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/write_back.vhd
-# Compile Entity "write_back"
-# Compile Architecture "beh" of Entity "write_back"
-# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/memory_access.vhd
-# Compile Entity "memory_access"
-# Compile Architecture "beh" of Entity "memory_access"
+# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/decode.vhd
+# Error: COMP96_0016: decode.vhd : (15, 2): Design unit declaration expected.
+# Error: COMP96_0016: decode.vhd : (15, 3): Design unit declaration expected.
+# Compile Entity "decode"
+# Error: COMP96_0078: decode.vhd : (21, 18): Unknown identifier "std_logic_vector".
+# Error: COMP96_0078: decode.vhd : (21, 35): Unknown identifier "XLEN".
+# Error: COMP96_0064: decode.vhd : (21, 18): Unknown type.
+# Error: COMP96_0078: decode.vhd : (22, 21): Unknown identifier "std_logic_vector".
+# Error: COMP96_0078: decode.vhd : (22, 38): Unknown identifier "XLEN".
+# Error: COMP96_0064: decode.vhd : (22, 21): Unknown type.
+# Error: COMP96_0078: decode.vhd : (23, 21): Unknown identifier "std_logic_vector".
+# Error: COMP96_0078: decode.vhd : (23, 38): Unknown identifier "REG_WIDTH".
+# Error: COMP96_0064: decode.vhd : (23, 21): Unknown type.
+# Error: COMP96_0078: decode.vhd : (24, 17): Unknown identifier "std_logic".
+# Error: COMP96_0064: decode.vhd : (24, 17): Unknown type.
+# Error: COMP96_0078: decode.vhd : (25, 16): Unknown identifier "std_logic".
+# Error: COMP96_0064: decode.vhd : (25, 16): Unknown type.
+# Error: COMP96_0078: decode.vhd : (26, 17): Unknown identifier "std_logic".
+# Error: COMP96_0064: decode.vhd : (26, 17): Unknown type.
+# Error: COMP96_0078: decode.vhd : (27, 16): Unknown identifier "std_logic_vector".
+# Error: COMP96_0078: decode.vhd : (27, 33): Unknown identifier "XLEN".
+# Error: COMP96_0064: decode.vhd : (27, 16): Unknown type.
+# Error: COMP96_0078: decode.vhd : (28, 18): Unknown identifier "std_logic".
+# Error: COMP96_0064: decode.vhd : (28, 18): Unknown type.
+# Error: COMP96_0078: decode.vhd : (29, 18): Unknown identifier "std_logic".
+# Error: COMP96_0064: decode.vhd : (29, 18): Unknown type.
+# Error: COMP96_0078: decode.vhd : (30, 18): Unknown identifier "std_logic".
+# Error: COMP96_0064: decode.vhd : (30, 18): Unknown type.
+# Error: COMP96_0078: decode.vhd : (34, 22): Unknown identifier "std_logic_vector".
+# Error: COMP96_0078: decode.vhd : (34, 39): Unknown identifier "XLEN".
+# Error: COMP96_0064: decode.vhd : (34, 22): Unknown type.
+# Error: COMP96_0078: decode.vhd : (35, 22): Unknown identifier "std_logic_vector".
+# Error: COMP96_0078: decode.vhd : (35, 39): Unknown identifier "XLEN".
+# Error: COMP96_0064: decode.vhd : (35, 22): Unknown type.
+# Error: COMP96_0078: decode.vhd : (36, 19): Unknown identifier "std_logic".
+# Error: COMP96_0064: decode.vhd : (36, 19): Unknown type.
+# Error: COMP96_0078: decode.vhd : (37, 18): Unknown identifier "std_logic".
+# Error: COMP96_0064: decode.vhd : (37, 18): Unknown type.
+# Error: COMP96_0078: decode.vhd : (38, 17): Unknown identifier "std_logic".
+# Error: COMP96_0064: decode.vhd : (38, 17): Unknown type.
+# Error: COMP96_0078: decode.vhd : (39, 16): Unknown identifier "std_logic".
+# Error: COMP96_0064: decode.vhd : (39, 16): Unknown type.
+# Error: COMP96_0078: decode.vhd : (40, 16): Unknown identifier "std_logic".
+# Error: COMP96_0064: decode.vhd : (40, 16): Unknown type.
+# Error: COMP96_0078: decode.vhd : (41, 17): Unknown identifier "std_logic_vector".
+# Error: COMP96_0078: decode.vhd : (41, 34): Unknown identifier "XLEN".
+# Error: COMP96_0064: decode.vhd : (41, 17): Unknown type.
+# Error: COMP96_0078: decode.vhd : (42, 20): Unknown identifier "std_logic".
+# Error: COMP96_0064: decode.vhd : (42, 20): Unknown type.
+# Error: COMP96_0078: decode.vhd : (43, 21): Unknown identifier "std_logic_vector".
+# Error: COMP96_0078: decode.vhd : (43, 38): Unknown identifier "REG_WIDTH".
+# Error: COMP96_0064: decode.vhd : (43, 21): Unknown type.
+# Error: COMP96_0078: decode.vhd : (44, 16): Unknown identifier "std_logic_vector".
+# Error: COMP96_0078: decode.vhd : (44, 33): Unknown identifier "XLEN".
+# Error: COMP96_0064: decode.vhd : (44, 16): Unknown type.
+# Error: COMP96_0078: decode.vhd : (46, 18): Unknown identifier "std_logic".
+# Error: COMP96_0064: decode.vhd : (46, 18): Unknown type.
+# Error: COMP96_0078: decode.vhd : (47, 18): Unknown identifier "std_logic".
+# Error: COMP96_0064: decode.vhd : (47, 18): Unknown type.
+# Error: COMP96_0078: decode.vhd : (48, 18): Unknown identifier "std_logic_vector".
+# Error: COMP96_0064: decode.vhd : (48, 18): Unknown type.
+# Error: COMP96_0078: decode.vhd : (49, 19): Unknown identifier "std_logic_vector".
+# Error: COMP96_0078: decode.vhd : (49, 36): Unknown identifier "ALUOP_WIDTH".
+# Error: COMP96_0064: decode.vhd : (49, 19): Unknown type.
+# Compile Architecture "beh" of Entity "decode"
+# Error: COMP96_0547: decode.vhd : (206, 18): Choice in selected assignments and case statements must be locally static. Use -relax to allow nonstatic expressions and discrete ranges.
+# Error: COMP96_0547: decode.vhd : (207, 18): Choice in selected assignments and case statements must be locally static. Use -relax to allow nonstatic expressions and discrete ranges.
+# Compile failure 64 Errors 0 Warnings  Analysis time :  63.0 [ms]
+acom -O3 -e 100 -work processor -2002  $dsn/src/decode.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/decode.vhd
+# Error: COMP96_0016: decode.vhd : (15, 1): Design unit declaration expected.
+# Error: COMP96_0016: decode.vhd : (15, 2): Design unit declaration expected.
+# Compile Entity "decode"
+# Error: COMP96_0078: decode.vhd : (21, 18): Unknown identifier "std_logic_vector".
+# Error: COMP96_0078: decode.vhd : (21, 35): Unknown identifier "XLEN".
+# Error: COMP96_0064: decode.vhd : (21, 18): Unknown type.
+# Error: COMP96_0078: decode.vhd : (22, 21): Unknown identifier "std_logic_vector".
+# Error: COMP96_0078: decode.vhd : (22, 38): Unknown identifier "XLEN".
+# Error: COMP96_0064: decode.vhd : (22, 21): Unknown type.
+# Error: COMP96_0078: decode.vhd : (23, 21): Unknown identifier "std_logic_vector".
+# Error: COMP96_0078: decode.vhd : (23, 38): Unknown identifier "REG_WIDTH".
+# Error: COMP96_0064: decode.vhd : (23, 21): Unknown type.
+# Error: COMP96_0078: decode.vhd : (24, 17): Unknown identifier "std_logic".
+# Error: COMP96_0064: decode.vhd : (24, 17): Unknown type.
+# Error: COMP96_0078: decode.vhd : (25, 16): Unknown identifier "std_logic".
+# Error: COMP96_0064: decode.vhd : (25, 16): Unknown type.
+# Error: COMP96_0078: decode.vhd : (26, 17): Unknown identifier "std_logic".
+# Error: COMP96_0064: decode.vhd : (26, 17): Unknown type.
+# Error: COMP96_0078: decode.vhd : (27, 16): Unknown identifier "std_logic_vector".
+# Error: COMP96_0078: decode.vhd : (27, 33): Unknown identifier "XLEN".
+# Error: COMP96_0064: decode.vhd : (27, 16): Unknown type.
+# Error: COMP96_0078: decode.vhd : (28, 18): Unknown identifier "std_logic".
+# Error: COMP96_0064: decode.vhd : (28, 18): Unknown type.
+# Error: COMP96_0078: decode.vhd : (29, 18): Unknown identifier "std_logic".
+# Error: COMP96_0064: decode.vhd : (29, 18): Unknown type.
+# Error: COMP96_0078: decode.vhd : (30, 18): Unknown identifier "std_logic".
+# Error: COMP96_0064: decode.vhd : (30, 18): Unknown type.
+# Error: COMP96_0078: decode.vhd : (34, 22): Unknown identifier "std_logic_vector".
+# Error: COMP96_0078: decode.vhd : (34, 39): Unknown identifier "XLEN".
+# Error: COMP96_0064: decode.vhd : (34, 22): Unknown type.
+# Error: COMP96_0078: decode.vhd : (35, 22): Unknown identifier "std_logic_vector".
+# Error: COMP96_0078: decode.vhd : (35, 39): Unknown identifier "XLEN".
+# Error: COMP96_0064: decode.vhd : (35, 22): Unknown type.
+# Error: COMP96_0078: decode.vhd : (36, 19): Unknown identifier "std_logic".
+# Error: COMP96_0064: decode.vhd : (36, 19): Unknown type.
+# Error: COMP96_0078: decode.vhd : (37, 18): Unknown identifier "std_logic".
+# Error: COMP96_0064: decode.vhd : (37, 18): Unknown type.
+# Error: COMP96_0078: decode.vhd : (38, 17): Unknown identifier "std_logic".
+# Error: COMP96_0064: decode.vhd : (38, 17): Unknown type.
+# Error: COMP96_0078: decode.vhd : (39, 16): Unknown identifier "std_logic".
+# Error: COMP96_0064: decode.vhd : (39, 16): Unknown type.
+# Error: COMP96_0078: decode.vhd : (40, 16): Unknown identifier "std_logic".
+# Error: COMP96_0064: decode.vhd : (40, 16): Unknown type.
+# Error: COMP96_0078: decode.vhd : (41, 17): Unknown identifier "std_logic_vector".
+# Error: COMP96_0078: decode.vhd : (41, 34): Unknown identifier "XLEN".
+# Error: COMP96_0064: decode.vhd : (41, 17): Unknown type.
+# Error: COMP96_0078: decode.vhd : (42, 20): Unknown identifier "std_logic".
+# Error: COMP96_0064: decode.vhd : (42, 20): Unknown type.
+# Error: COMP96_0078: decode.vhd : (43, 21): Unknown identifier "std_logic_vector".
+# Error: COMP96_0078: decode.vhd : (43, 38): Unknown identifier "REG_WIDTH".
+# Error: COMP96_0064: decode.vhd : (43, 21): Unknown type.
+# Error: COMP96_0078: decode.vhd : (44, 16): Unknown identifier "std_logic_vector".
+# Error: COMP96_0078: decode.vhd : (44, 33): Unknown identifier "XLEN".
+# Error: COMP96_0064: decode.vhd : (44, 16): Unknown type.
+# Error: COMP96_0078: decode.vhd : (46, 18): Unknown identifier "std_logic".
+# Error: COMP96_0064: decode.vhd : (46, 18): Unknown type.
+# Error: COMP96_0078: decode.vhd : (47, 18): Unknown identifier "std_logic".
+# Error: COMP96_0064: decode.vhd : (47, 18): Unknown type.
+# Error: COMP96_0078: decode.vhd : (48, 18): Unknown identifier "std_logic_vector".
+# Error: COMP96_0064: decode.vhd : (48, 18): Unknown type.
+# Error: COMP96_0078: decode.vhd : (49, 19): Unknown identifier "std_logic_vector".
+# Error: COMP96_0078: decode.vhd : (49, 36): Unknown identifier "ALUOP_WIDTH".
+# Error: COMP96_0064: decode.vhd : (49, 19): Unknown type.
+# Compile Architecture "beh" of Entity "decode"
+# Error: COMP96_0547: decode.vhd : (206, 18): Choice in selected assignments and case statements must be locally static. Use -relax to allow nonstatic expressions and discrete ranges.
+# Error: COMP96_0547: decode.vhd : (207, 18): Choice in selected assignments and case statements must be locally static. Use -relax to allow nonstatic expressions and discrete ranges.
+# Compile failure 64 Errors 0 Warnings  Analysis time :  79.0 [ms]
+-relax
+# Error: invalid command name -relax
+acom -O3 -e 100 -work processor -2002  $dsn/src/decode.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/decode.vhd
+# Compile Entity "decode"
+# Compile Architecture "beh" of Entity "decode"
+# Error: COMP96_0547: decode.vhd : (206, 18): Choice in selected assignments and case statements must be locally static. Use -relax to allow nonstatic expressions and discrete ranges.
+# Error: COMP96_0547: decode.vhd : (207, 18): Choice in selected assignments and case statements must be locally static. Use -relax to allow nonstatic expressions and discrete ranges.
+# Compile failure 2 Errors 0 Warnings  Analysis time :  16.0 [ms]
+acom -O3 -e 100 -work processor -2002  $dsn/src/decode.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/decode.vhd
+# Compile Entity "decode"
+# Compile Architecture "beh" of Entity "decode"
+# Error: COMP96_0329: decode.vhd : (205, 2): Generate statement must have a label.
+# Error: COMP96_0019: decode.vhd : (205, 44): Keyword 'generate' expected.
+# Error: COMP96_0019: decode.vhd : (207, 2): Keyword 'end' expected.
+# Error: COMP96_0016: decode.vhd : (207, 8): Design unit declaration expected.
+# Error: COMP96_0019: decode.vhd : (303, 21): Keyword 'of' expected.
+# Error: COMP96_0018: decode.vhd : (303, 21): Identifier expected.
+# Compile failure 6 Errors 0 Warnings  Analysis time :  47.0 [ms]
+acom -O3 -e 100 -work processor -2002  $dsn/src/decode.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/decode.vhd
+# Compile Entity "decode"
+# Compile Architecture "beh" of Entity "decode"
+# Error: COMP96_0329: decode.vhd : (205, 2): Generate statement must have a label.
+# Error: COMP96_0019: decode.vhd : (205, 44): Keyword 'generate' expected.
+# Error: COMP96_0019: decode.vhd : (207, 2): Keyword 'end' expected.
+# Error: COMP96_0016: decode.vhd : (207, 8): Design unit declaration expected.
+# Error: COMP96_0019: decode.vhd : (303, 21): Keyword 'of' expected.
+# Error: COMP96_0018: decode.vhd : (303, 21): Identifier expected.
+# Compile failure 6 Errors 0 Warnings  Analysis time :  31.0 [ms]
+acom -O3 -e 100 -work processor -2002  $dsn/src/decode.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/decode.vhd
+# Compile Entity "decode"
+# Compile Architecture "beh" of Entity "decode"
+# Error: COMP96_0019: decode.vhd : (206, 2): Keyword 'begin' expected.
+# Error: COMP96_0019: decode.vhd : (208, 2): Keyword 'end' expected.
+# Error: COMP96_0016: decode.vhd : (208, 8): Design unit declaration expected.
+# Error: COMP96_0019: decode.vhd : (305, 21): Keyword 'of' expected.
+# Error: COMP96_0018: decode.vhd : (305, 21): Identifier expected.
+# Compile failure 5 Errors 0 Warnings  Analysis time :  47.0 [ms]
+acom -O3 -e 100 -work processor -2002  $dsn/src/decode.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/decode.vhd
+# Compile Entity "decode"
+# Compile Architecture "beh" of Entity "decode"
+# A feature of VHDL 2008 has been detected. Use the -2008 argument of the vcom command.
+# Error: COMP96_0019: decode.vhd : (213, 3): Keyword 'end' expected.
+# Error: COMP96_0019: decode.vhd : (240, 7): Keyword 'process' expected.
+# Error: COMP96_0015: decode.vhd : (241, 6): ';' expected.
+# Error: COMP96_0016: decode.vhd : (241, 13): Design unit declaration expected.
+# Error: COMP96_0019: decode.vhd : (306, 21): Keyword 'of' expected.
+# Error: COMP96_0018: decode.vhd : (306, 21): Identifier expected.
+# Compile failure 6 Errors 0 Warnings  Analysis time :  47.0 [ms]
+acom -O3 -e 100 -work processor -2002  $dsn/src/decode.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/decode.vhd
+# Compile Entity "decode"
+# Compile Architecture "beh" of Entity "decode"
+# A feature of VHDL 2008 has been detected. Use the -2008 argument of the vcom command.
+# Error: COMP96_0019: decode.vhd : (212, 4): Keyword 'end' expected.
+# Error: COMP96_0019: decode.vhd : (239, 7): Keyword 'process' expected.
+# Error: COMP96_0015: decode.vhd : (240, 6): ';' expected.
+# Error: COMP96_0016: decode.vhd : (240, 13): Design unit declaration expected.
+# Error: COMP96_0019: decode.vhd : (305, 21): Keyword 'of' expected.
+# Error: COMP96_0018: decode.vhd : (305, 21): Identifier expected.
+# Compile failure 6 Errors 0 Warnings  Analysis time :  63.0 [ms]
+acom -O3 -e 100 -work processor -2002  $dsn/src/decode.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/decode.vhd
+# Compile Entity "decode"
+# Compile Architecture "beh" of Entity "decode"
+# A feature of VHDL 2008 has been detected. Use the -2008 argument of the vcom command.
+# Error: COMP96_0019: decode.vhd : (212, 4): Keyword 'end' expected.
+# Error: COMP96_0019: decode.vhd : (239, 7): Keyword 'process' expected.
+# Error: COMP96_0015: decode.vhd : (240, 6): ';' expected.
+# Error: COMP96_0016: decode.vhd : (240, 13): Design unit declaration expected.
+# Error: COMP96_0019: decode.vhd : (305, 21): Keyword 'of' expected.
+# Error: COMP96_0018: decode.vhd : (305, 21): Identifier expected.
+# Compile failure 6 Errors 0 Warnings  Analysis time :  31.0 [ms]
+acom -O3 -e 100 -work processor -2002  $dsn/src/decode.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/decode.vhd
+# Compile Entity "decode"
+# Compile Architecture "beh" of Entity "decode"
+# Error: COMP96_0019: decode.vhd : (212, 4): Keyword 'end' expected.
+# Error: COMP96_0015: decode.vhd : (242, 7): ';' expected.
+# Error: COMP96_0016: decode.vhd : (242, 9): Design unit declaration expected.
+# Error: COMP96_0019: decode.vhd : (308, 21): Keyword 'of' expected.
+# Error: COMP96_0018: decode.vhd : (308, 21): Identifier expected.
+# Compile failure 5 Errors 0 Warnings  Analysis time :  47.0 [ms]
+acom -O3 -e 100 -work processor -2002  $dsn/src/tb_riscv_rf.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/tb_riscv_rf.vhd
+# Compile Entity "tb_riscv_rf"
+# Compile Architecture "testbench" of Entity "tb_riscv_rf"
+# Error: COMP96_0034: tb_riscv_rf.vhd : (42, 3): Expression or keyword expected.
+# Error: COMP96_0015: tb_riscv_rf.vhd : (63, 3): ';' expected.
+# Error: COMP96_0015: tb_riscv_rf.vhd : (70, 3): ';' expected.
+# Error: COMP96_0015: tb_riscv_rf.vhd : (77, 3): ';' expected.
+# Error: COMP96_0015: tb_riscv_rf.vhd : (84, 3): ';' expected.
+# Error: COMP96_0015: tb_riscv_rf.vhd : (92, 3): ';' expected.
+# Error: COMP96_0015: tb_riscv_rf.vhd : (104, 7): ';' expected.
+# Error: COMP96_0016: tb_riscv_rf.vhd : (104, 14): Design unit declaration expected.
+# Error: COMP96_0019: tb_riscv_rf.vhd : (106, 27): Keyword 'of' expected.
+# Error: COMP96_0018: tb_riscv_rf.vhd : (106, 27): Identifier expected.
+# Compile failure 10 Errors 0 Warnings  Analysis time :  94.0 [ms]
+acom -O3 -e 100 -work processor -2002  $dsn/src/riscv_rf.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/riscv_rf.vhd
+# Compile Entity "riscv_rf"
+# Compile Architecture "beh" of Entity "riscv_rf"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]
+acom -O3 -e 100 -work processor -2002  $dsn/src/tb_riscv_rf.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/tb_riscv_rf.vhd
+# Compile Entity "tb_riscv_rf"
+# Compile Architecture "testbench" of Entity "tb_riscv_rf"
+# Error: COMP96_0034: tb_riscv_rf.vhd : (42, 3): Expression or keyword expected.
+# Error: COMP96_0015: tb_riscv_rf.vhd : (63, 3): ';' expected.
+# Error: COMP96_0015: tb_riscv_rf.vhd : (70, 3): ';' expected.
+# Error: COMP96_0015: tb_riscv_rf.vhd : (77, 3): ';' expected.
+# Error: COMP96_0015: tb_riscv_rf.vhd : (84, 3): ';' expected.
+# Error: COMP96_0015: tb_riscv_rf.vhd : (92, 3): ';' expected.
+# Error: COMP96_0015: tb_riscv_rf.vhd : (104, 7): ';' expected.
+# Error: COMP96_0016: tb_riscv_rf.vhd : (104, 14): Design unit declaration expected.
+# Error: COMP96_0019: tb_riscv_rf.vhd : (106, 27): Keyword 'of' expected.
+# Error: COMP96_0018: tb_riscv_rf.vhd : (106, 27): Identifier expected.
+# Compile failure 10 Errors 0 Warnings  Analysis time :  32.0 [ms]
+acom -O3 -e 100 -work processor -2002  $dsn/src/fetch.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/fetch.vhd
+# Compile Entity "fetch"
+# Error: COMP96_0019: fetch.vhd : (28, 3): Keyword 'end' expected.
+# Error: COMP96_0111: fetch.vhd : (28, 3): Labels do not match.
+# Error: COMP96_0015: fetch.vhd : (28, 16): ';' expected.
+# Error: COMP96_0016: fetch.vhd : (28, 18): Design unit declaration expected.
+# Compile Entity "fetch"
+# Error: COMP96_0019: fetch.vhd : (30, 17): Keyword 'is' expected.
+# Error: COMP96_0019: fetch.vhd : (30, 17): Keyword 'end' expected.
+# Compile Architecture "beh" of Entity "fetch"
+# Error: COMP96_0056: fetch.vhd : (32, 1): Cannot find referenced entity declaration "fetch".
+# Compile failure 7 Errors 0 Warnings  Analysis time :  94.0 [ms]
+acom -O3 -e 100 -work processor -2002  $dsn/src/fetch.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/fetch.vhd
+# Compile Entity "fetch"
+# Compile Architecture "beh" of Entity "fetch"
+# Warning: ELAB1_0026: fetch.vhd : (49, 0): There is no default binding for component "riscv_pc". (No entity named "riscv_pc" was found).
+# Error: COMP96_0333: fetch.vhd : (55, 4): Formal must be locally static name.
+# Error: COMP96_0078: fetch.vhd : (66, 19): Unknown identifier "NOP".
+# Error: COMP96_0133: fetch.vhd : (66, 19): Cannot find object declaration.
+# Error: COMP96_0077: fetch.vhd : (66, 19): Undefined type of expression. Expected type 'STD_LOGIC_VECTOR'.
+# Compile failure 4 Errors 1 Warnings  Analysis time :  31.0 [ms]
+acom -O3 -e 100 -work processor -2002  $dsn/src/riscv_pc.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/riscv_pc.vhd
+# Compile Entity "riscv_pc"
+# Compile Architecture "beh" of Entity "riscv_pc"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]
+acom -O3 -e 100 -work processor -2002  $dsn/src/fetch.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/fetch.vhd
+# Compile Entity "fetch"
+# Compile Architecture "beh" of Entity "fetch"
+# Error: COMP96_0333: fetch.vhd : (55, 4): Formal must be locally static name.
+# Error: COMP96_0078: fetch.vhd : (66, 19): Unknown identifier "NOP".
+# Error: COMP96_0133: fetch.vhd : (66, 19): Cannot find object declaration.
+# Error: COMP96_0077: fetch.vhd : (66, 19): Undefined type of expression. Expected type 'STD_LOGIC_VECTOR'.
+# Compile failure 4 Errors 0 Warnings  Analysis time :  15.0 [ms]
+acom -O3 -e 100 -work processor -2002  $dsn/src/fetch.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/fetch.vhd
+# Compile Entity "fetch"
+# Compile Architecture "beh" of Entity "fetch"
+# Error: COMP96_0078: fetch.vhd : (66, 19): Unknown identifier "NOP".
+# Error: COMP96_0133: fetch.vhd : (66, 19): Cannot find object declaration.
+# Error: COMP96_0077: fetch.vhd : (66, 19): Undefined type of expression. Expected type 'STD_LOGIC_VECTOR'.
+# Compile failure 3 Errors 0 Warnings  Analysis time :  31.0 [ms]
+acom -O3 -e 100 -work processor -2002  $dsn/src/riscv_pkg.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/riscv_pkg.vhd
+# Compile Package "riscv_pkg"
+# Compile success 0 Errors 0 Warnings  Analysis time :  15.0 [ms]
+acom -O3 -e 100 -work processor -2002  $dsn/src/fetch.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/fetch.vhd
+# Compile Entity "fetch"
+# Compile Architecture "beh" of Entity "fetch"
+# Error: COMP96_0078: fetch.vhd : (66, 19): Unknown identifier "NOP".
+# Error: COMP96_0133: fetch.vhd : (66, 19): Cannot find object declaration.
+# Error: COMP96_0077: fetch.vhd : (66, 19): Undefined type of expression. Expected type 'STD_LOGIC_VECTOR'.
+# Compile failure 3 Errors 0 Warnings  Analysis time :  15.0 [ms]
+acom -O3 -e 100 -work processor -2002  $dsn/src/fetch.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/fetch.vhd
+# Compile Entity "fetch"
+# Compile Architecture "beh" of Entity "fetch"
 # Compile success 0 Errors 0 Warnings  Analysis time :  63.0 [ms]
-acom -O3 -e 100 -work processor -2002  $dsn/src/write_back.vhd $dsn/src/memory_access.vhd
+acom -O3 -e 100 -work processor -2002  $dsn/src/execute.vhd
 # Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/write_back.vhd
-# Compile Entity "write_back"
-# Compile Architecture "beh" of Entity "write_back"
-# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/memory_access.vhd
-# Compile Entity "memory_access"
-# Compile Architecture "beh" of Entity "memory_access"
-# Compile success 0 Errors 0 Warnings  Analysis time :  47.0 [ms]
-acom -O3 -e 100 -work processor -2002  $dsn/src/write_back.vhd $dsn/src/memory_access.vhd
+# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/execute.vhd
+# Compile Entity "execute"
+# Compile Architecture "beh" of Entity "execute"
+# Error: COMP96_0078: execute.vhd : (89, 38): Unknown identifier "XLEN".
+# Error: COMP96_0569: execute.vhd : (97, 8): Select expression must be of a locally static subtype. Use -relax to allow expressions of a nonstatic subtype.
+# Error: COMP96_0078: execute.vhd : (110, 4): Unknown identifier "i_scr2".
+# Error: COMP96_0133: execute.vhd : (110, 4): Cannot find object declaration.
+# Error: COMP96_0112: execute.vhd : (110, 4): "i_scr2" does not match the formal name.
+# Error: COMP96_0207: execute.vhd : (103, 3): No actual specified for local port "i_src2".
+# Compile failure 6 Errors 0 Warnings  Analysis time :  32.0 [ms]
+acom -O3 -e 100 -work processor -2002  $dsn/src/execute.vhd
 # Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/write_back.vhd
-# Compile Entity "write_back"
-# Compile Architecture "beh" of Entity "write_back"
-# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/memory_access.vhd
-# Compile Entity "memory_access"
-# Compile Architecture "beh" of Entity "memory_access"
-# Compile success 0 Errors 0 Warnings  Analysis time :  78.0 [ms]
-acom -O3 -e 100 -work processor -2002  $dsn/src/write_back.vhd $dsn/src/memory_access.vhd
+# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/execute.vhd
+# Compile Entity "execute"
+# Compile Architecture "beh" of Entity "execute"
+# Error: COMP96_0569: execute.vhd : (98, 8): Select expression must be of a locally static subtype. Use -relax to allow expressions of a nonstatic subtype.
+# Error: COMP96_0078: execute.vhd : (111, 4): Unknown identifier "i_scr2".
+# Error: COMP96_0133: execute.vhd : (111, 4): Cannot find object declaration.
+# Error: COMP96_0112: execute.vhd : (111, 4): "i_scr2" does not match the formal name.
+# Error: COMP96_0207: execute.vhd : (104, 3): No actual specified for local port "i_src2".
+# Compile failure 5 Errors 0 Warnings  Analysis time :  32.0 [ms]
+acom -O3 -e 100 -work processor -2002  $dsn/src/tb_riscv_rf.vhd
 # Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/write_back.vhd
-# Compile Entity "write_back"
-# Compile Architecture "beh" of Entity "write_back"
-# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/memory_access.vhd
-# Compile Entity "memory_access"
-# Compile Architecture "beh" of Entity "memory_access"
-# Compile success 0 Errors 0 Warnings  Analysis time :  47.0 [ms]
-acom -O3 -e 100 -work processor -2002  $dsn/src/write_
+# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/tb_riscv_rf.vhd
+# Compile Entity "tb_riscv_rf"
+# Compile Architecture "testbench" of Entity "tb_riscv_rf"
+# Error: COMP96_0034: tb_riscv_rf.vhd : (42, 3): Expression or keyword expected.
+# Error: COMP96_0015: tb_riscv_rf.vhd : (63, 3): ';' expected.
+# Error: COMP96_0015: tb_riscv_rf.vhd : (70, 3): ';' expected.
+# Error: COMP96_0015: tb_riscv_rf.vhd : (77, 3): ';' expected.
+# Error: COMP96_0015: tb_riscv_rf.vhd : (84, 3): ';' expected.
+# Error: COMP96_0015: tb_riscv_rf.vhd : (92, 3): ';' expected.
+# Error: COMP96_0015: tb_riscv_rf.vhd : (104, 7): ';' expected.
+# Error: COMP96_0016: tb_riscv_rf.vhd : (104, 14): Design unit declaration expected.
+# Error: COMP96_0019: tb_riscv_rf.vhd : (106, 27): Keyword 'of' expected.
+# Error: COMP96_0018: tb_riscv_rf.vhd : (106, 27): Identifier expected.
+# Compile failure 10 Errors 0 Warnings  Analysis time :  32.0 [ms]
+acom -O3 -e 100 -work processor -2002  $dsn/src/tb_riscv_rf.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/tb_riscv_rf.vhd
+# Compile Entity "tb_riscv_rf"
+# Compile Architecture "testbench" of Entity "tb_riscv_rf"
+# Error: COMP96_0015: tb_riscv_rf.vhd : (60, 3): ';' expected.
+# Error: COMP96_0015: tb_riscv_rf.vhd : (67, 3): ';' expected.
+# Error: COMP96_0015: tb_riscv_rf.vhd : (74, 3): ';' expected.
+# Error: COMP96_0015: tb_riscv_rf.vhd : (81, 3): ';' expected.
+# Error: COMP96_0015: tb_riscv_rf.vhd : (89, 3): ';' expected.
+# Error: COMP96_0015: tb_riscv_rf.vhd : (101, 7): ';' expected.
+# Error: COMP96_0016: tb_riscv_rf.vhd : (101, 14): Design unit declaration expected.
+# Error: COMP96_0019: tb_riscv_rf.vhd : (103, 27): Keyword 'of' expected.
+# Error: COMP96_0018: tb_riscv_rf.vhd : (103, 27): Identifier expected.
+# Compile failure 9 Errors 0 Warnings  Analysis time :  46.0 [ms]
+acom -O3 -e 100 -work processor -2002  $dsn/src/tb_riscv_rf.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/tb_riscv_rf.vhd
+# Compile Entity "tb_riscv_rf"
+# Compile Architecture "testbench" of Entity "tb_riscv_rf"
+# Error: COMP96_0015: tb_riscv_rf.vhd : (60, 3): ';' expected.
+# Error: COMP96_0015: tb_riscv_rf.vhd : (101, 7): ';' expected.
+# Error: COMP96_0016: tb_riscv_rf.vhd : (101, 14): Design unit declaration expected.
+# Error: COMP96_0019: tb_riscv_rf.vhd : (103, 27): Keyword 'of' expected.
+# Error: COMP96_0018: tb_riscv_rf.vhd : (103, 27): Identifier expected.
+# Compile failure 5 Errors 0 Warnings  Analysis time :  47.0 [ms]
+acom -O3 -e 100 -work processor -2002  $dsn/src/tb_riscv_rf.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/
