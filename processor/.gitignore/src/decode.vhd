@@ -201,43 +201,61 @@ architecture beh of decode is
 	'1' 		when "0000011",	 -- LW
 	'0' 		when others;
 		 																								
-	--alu_op 
-	process(opcode_and_funct3, opcode)
-	begin
-		if opcode = "0110111"  then
-		  alu_op <= ALUOP_ADD; -- LUI
-		elsif opcode = "1101111" then
-		  alu_op <= ALUOP_ADD; -- JAL
-		else
-			with opcode_and_funct3 select alu_op <=
-			--ALUOP_ADD 	when "0110111"&funct3 , -- LUI
-			--ALUOP_ADD 	when "1101111"&funct3, -- JAL
-			ALUOP_ADD 	when "1100111000", 	-- JALR
-			ALUOP_ADD 	when "1100011000",	-- BEQ
-			ALUOP_ADD 	when "0000011010", 	-- LW
-			ALUOP_ADD	when "0100011010", 	-- SW
-			ALUOP_ADD 	when "0010011000",	-- ADDI
-			ALUOP_ADD 	when "0110011000",	-- ADD 	SUB	
-			
-			ALUOP_SLT 	when "0010011010",	-- SLTI
-			ALUOP_SLT	when "0010011011",	-- SLTIU 
-			ALUOP_SLT 	when "0110011010",	-- SLT 
-			ALUOP_SLT 	when "0110011011",	-- SLTU 
-			
-			ALUOP_SL  	when "0010011001",	-- SLLI 	
-			ALUOP_SL  	when "0110011001",	-- SLL 
-			ALUOP_SR 	when "0010011101",	-- SRLI  SRAI	 
-			ALUOP_SR 	when "0110011101",	-- SRL  SRA
-			
-			ALUOP_XOR 	when "0010011100",	-- XORI  
-			ALUOP_XOR 	when "0110011100",	-- XOR
-			ALUOP_OR  	when "0010011110",	-- ORI 
-			ALUOP_OR 	when "0110011110",	-- OR  
-			ALUOP_AND	when "0010011111",	-- ANDI
-			ALUOP_AND 	when "0110011111",	-- AND
-			ALUOP_OTHER  when others;	
-		end if;
-	end process;
+	-- alu_op 
+process (opcode_and_funct3, opcode)
+begin
+  if opcode = "0110111"  then
+    alu_op <= ALUOP_ADD; -- LUI
+  elsif opcode = "1101111" then
+    alu_op <= ALUOP_ADD; -- JAL
+  else
+    case opcode_and_funct3 is
+      when "1100111000" =>
+        alu_op <= ALUOP_ADD; -- JALR
+      when "1100011000" =>
+        alu_op <= ALUOP_ADD; -- BEQ
+      when "0000011010" =>
+        alu_op <= ALUOP_ADD; -- LW
+      when "0100011010" =>
+        alu_op <= ALUOP_ADD; -- SW
+      when "0010011000" =>
+        alu_op <= ALUOP_ADD; -- ADDI
+      when "0110011000" =>
+        alu_op <= ALUOP_ADD; -- ADD, SUB
+      when "0010011010" =>
+        alu_op <= ALUOP_SLT; -- SLTI
+      when "0010011011" =>
+        alu_op <= ALUOP_SLT; -- SLTIU
+      when "0110011010" =>
+        alu_op <= ALUOP_SLT; -- SLT
+      when "0110011011" =>
+        alu_op <= ALUOP_SLT; -- SLTU
+      when "0010011001" =>
+        alu_op <= ALUOP_SL; -- SLLI
+      when "0110011001" =>
+        alu_op <= ALUOP_SL; -- SLL
+      when "0010011101" =>
+        alu_op <= ALUOP_SR; -- SRLI, SRAI
+      when "0110011101" =>
+        alu_op <= ALUOP_SR; -- SRL, SRA
+      when "0010011100" =>
+        alu_op <= ALUOP_XOR; -- XORI
+      when "0110011100" =>
+        alu_op <= ALUOP_XOR; -- XOR
+      when "0010011110" =>
+        alu_op <= ALUOP_OR; -- ORI
+      when "0110011110" =>
+        alu_op <= ALUOP_OR; -- OR
+      when "0010011111" =>
+        alu_op <= ALUOP_AND; -- ANDI
+      when "0110011111" =>
+        alu_op <= ALUOP_AND; -- AND
+      when others =>
+        alu_op <= ALUOP_OTHER;
+    end case;
+  end if;
+end process;
+
 	
 	rf: component riscv_rf																								 
 		port map(

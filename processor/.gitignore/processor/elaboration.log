@@ -1,4 +1,4 @@
-Active-HDL 13.0.376.8320 2023-11-20 15:01:56
+Active-HDL 13.0.376.8320 2023-12-05 23:17:42
 
 Elaboration top modules:
 Architecture                  testbench(tb_riscv_adder)
@@ -28,3 +28,9 @@ ieee                          | Standard IEEE packages library
 processor                     | None
 std                           | Standard VHDL library
 ---------------------------------------------------------------------------------------------------
+
+
+Simulation Options: asim -O5 +access +r +m+tb_riscv_adder tb_riscv_adder testbench
+
+
+The performance of simulation is reduced. Version Student Edition

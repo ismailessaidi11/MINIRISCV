@@ -51,6 +51,7 @@ signal imem_addr_div4 : std_logic_vector(15 downto 0);
 signal dmem_addr_div4 : std_logic_vector(15 downto 0);
 
 constant PERIOD   : time := 100 ns;
+constant TWO	: std_logic_vector(1 downto 0) := "10";
 
 begin
 
@@ -80,8 +81,12 @@ MEM0 : entity work.dpm
 );
 
 
-imem_addr_div4 <= imem_addr srl 2;     --the memory is only word adressable and not byte so divide the instruction adress by 4
-dmem_addr_div4 <= dmem_addr srl 2;     
+--imem_addr_div4 <= imem_addr srl 2;     --the memory is only word adressable and not byte so divide the instruction adress by 4
+--dmem_addr_div4 <= dmem_addr srl 2;  
+
+imem_addr_div4 <= std_logic_vector(unsigned(imem_addr) srl 2);
+dmem_addr_div4 <= std_logic_vector(unsigned(dmem_addr) srl 2);
+
 
 DUT : entity work.riscv_core 
 port map(

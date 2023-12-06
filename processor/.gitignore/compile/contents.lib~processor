@@ -1,6 +1,9 @@
-51
+90
 ~E 1 "../src/decode.vhd" 16 decode
+~A 1 "../src/decode.vhd" 55 beh
+~E 1 "../src/dpm.vhd" 21 dpm
 ~E 1 "../src/execute.vhd" 16 execute
+~A 1 "../src/execute.vhd" 51 beh
 ~E 1 "../src/fetch.vhd" 16 fetch
 ~A 1 "../src/fetch.vhd" 33 beh
 ~E 1 "../src/riscv_adder.vhd" 87 half_adder
@@ -10,11 +13,18 @@
 ~E 1 "../src/riscv_adder.vhd" 15 riscv_adder
 ~A 1 "../src/riscv_adder.vhd" 43 beh
 ~E 1 "../src/riscv_alu.vhd" 18 riscv_alu
+~A 1 "../src/riscv_alu.vhd" 29 beh
 ~E 1 "../src/riscv_core_tb.vhd" 32 riscv_core_tb
 ~E 1 "../src/riscv_pc.vhd" 18 riscv_pc
 ~A 1 "../src/riscv_pc.vhd" 29 beh
 ~E 1 "../src/riscv_rf.vhd" 18 riscv_rf
 ~A 1 "../src/riscv_rf.vhd" 31 beh
+~E 1 "../src/tb_riscv_adder.vhd" 5 tb_riscv_adder
+~A 1 "../src/tb_riscv_adder.vhd" 8 testbench
+~E 1 "../src/tb_riscv_alu.vhd" 6 tb_riscv_alu
+~A 1 "../src/tb_riscv_alu.vhd" 9 testbench
+~E 1 "../src/tb_riscv_pc.vhd" 6 tb_riscv_pc
+~A 1 "../src/tb_riscv_pc.vhd" 9 testbench
 ~E 1 "../src/tb_riscv_rf.vhd" 5 tb_riscv_rf
 ~A 1 "../src/tb_riscv_rf.vhd" 8 testbench
 ~E 1 "../src/write_back.vhd" 15 write_back

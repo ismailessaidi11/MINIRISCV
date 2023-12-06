@@ -13,7 +13,7 @@ architecture testbench of tb_riscv_rf is
   signal i_data_w  : std_logic_vector(31 downto 0);
   signal i_addr_w  : std_logic_vector(4 downto 0);
   signal i_we	   : std_logic;
-  signal rstn      : std_logic:= '0';
+  signal rstn      : std_logic:= '1';
   signal clk       : std_logic:= '0';
 
   -- Output signals
@@ -27,7 +27,7 @@ begin
   -- Clock generation process
   clk_process: process
   begin
-    while now < 500 ns loop
+    while now < 100 ns loop
       clk <= '0';
       wait for clock_period / 2;
       clk <= '1';
@@ -51,26 +51,35 @@ begin
 	
 	-- Test stimulus generation process
 stimulus_process: process
-begin         
-  -- Test Case 1: write 0x00000001 in register zero and read the value in register "ra"
+begin  
+	
+	--rstn <= '0';
+   -- wait for 20 ns;	
+	
+   -- rstn <= '1';
+	
+  -- Test Case 1: write 0x00000001 in register zero and NOOOOOOOOOOOOOOOOOO read the value in register "ra"
   i_we<='1';
-  i_addr_w <= "00000";
+  i_addr_w <= "00001";
   i_data_w <= "00000000000000000000000000000001";
-  i_addr_ra <= "00000";								   -- ra_data =  0x00000001
+  i_addr_ra <= "00001";								   -- ra_data =  0x00000001
+  i_addr_rb <= "00010"; 
   wait for 20 ns;
 
   -- Test Case 2: check that "we" works properly
   i_we<='0';
-  i_addr_w <= "00000";
+  i_addr_w <= "00001";
   i_data_w <= "00000000000000000000000000000000";	-- we expect output to be still 0x1 and not 0x0
-  i_addr_ra <= "00000";								-- ra_data =  0x00000001
+  i_addr_ra <= "00001";								-- ra_data =  0x00000001
+  i_addr_rb <= "00010"; 
   wait for 20 ns;
 
   -- Test Case 3: write 0x00000008 the address 0x02 
   i_we<='1';
   i_addr_w <= "00010";
   i_data_w <= "00000000000000000000000000001000";
-  i_addr_ra <= "00000";								 -- ra_data =  0x00000001
+  i_addr_ra <= "00001";								 -- ra_data =  0x00000001 
+  i_addr_rb <= "00010";								 -- rb_data =  0x00000008
   wait for 20 ns;
 
   -- Test Case 4: write 0x00000004 the address 0x04	and read address 0x02
@@ -78,7 +87,7 @@ begin
   i_addr_w <= "00100";
   i_data_w <= "00000000000000000000000000000100";
   i_addr_ra <= "00010";								 -- ra_data = 0x00000008
-  i_addr_rb <= "00000"	;							 -- rb_data = 0x00000001
+  i_addr_rb <= "00001"	;							 -- rb_data = 0x00000001
   wait for 20 ns;
 
    -- Test Case 5: read data of address 0x02

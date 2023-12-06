@@ -1,642 +1,1201 @@
-acom -O3 -e 100 -work processor -2002  $dsn/src/decode.vhd
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+acom -O3 -e 100 -work processor -2002  $dsn/src/tb_riscv_alu.vhd
 # Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/decode.vhd
-# Compile Entity "decode"
-# Compile Architecture "beh" of Entity "decode"
-# Error: COMP96_0547: decode.vhd : (210, 18): Choice in selected assignments and case statements must be locally static. Use -relax to allow nonstatic expressions and discrete ranges.
-# Error: COMP96_0547: decode.vhd : (211, 18): Choice in selected assignments and case statements must be locally static. Use -relax to allow nonstatic expressions and discrete ranges.
-# Compile failure 2 Errors 0 Warnings  Analysis time :  62.0 [ms]
-acom -O3 -e 100 -work processor -2002  $dsn/src/execute.vhd
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/execute.vhd
-# Compile Entity "execute"
-# Error: COMP96_0078: execute.vhd : (37, 37): Unknown identifier "ALUOP_WIDTH".
-# Error: COMP96_0133: execute.vhd : (37, 37): Cannot find object declaration.
-# Error: COMP96_0094: execute.vhd : (37, 37): Locally static expression is required in the range definition.
-# Compile Architecture "beh" of Entity "execute"
-# Error: COMP96_0333: execute.vhd : (89, 2): Formal must be locally static name.
-# Error: COMP96_0569: execute.vhd : (97, 8): Select expression must be of a locally static subtype. Use -relax to allow expressions of a nonstatic subtype.
-# Error: COMP96_0078: execute.vhd : (110, 4): Unknown identifier "i_scr2".
-# Error: COMP96_0133: execute.vhd : (110, 4): Cannot find object declaration.
-# Error: COMP96_0112: execute.vhd : (110, 4): "i_scr2" does not match the formal name.
-# Error: COMP96_0207: execute.vhd : (103, 3): No actual specified for local port "i_src2".
-# Error: COMP96_0077: execute.vhd : (121, 16): Undefined type of expression. Expected type 'STD_LOGIC_VECTOR'.
-# Error: COMP96_0078: execute.vhd : (122, 3): Unknown identifier "o_we".
-# Error: COMP96_0133: execute.vhd : (122, 3): Cannot find object declaration.
-# Error: COMP96_0077: execute.vhd : (130, 16): Undefined type of expression. Expected type 'STD_LOGIC_VECTOR'.
-# Error: COMP96_0078: execute.vhd : (131, 3): Unknown identifier "o_we".
-# Error: COMP96_0133: execute.vhd : (131, 3): Cannot find object declaration.
-# Error: COMP96_0078: execute.vhd : (140, 3): Unknown identifier "o_we".
-# Error: COMP96_0078: execute.vhd : (140, 15): Unknown identifier "i_we".
-# Error: COMP96_0133: execute.vhd : (140, 3): Cannot find object declaration.
-# Compile failure 18 Errors 0 Warnings  Analysis time :  47.0 [ms]
-acom -O3 -e 100 -work processor -2002  $dsn/src/riscv_pkg.vhd
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/riscv_pkg.vhd
-# Compile Package "riscv_pkg"
-# Compile success 0 Errors 0 Warnings  Analysis time :  31.0 [ms]
-acom -O3 -e 100 -work processor -2002  $dsn/src/execute.vhd
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/execute.vhd
-# Compile Entity "execute"
-# Error: COMP96_0078: execute.vhd : (37, 37): Unknown identifier "ALUOP_WIDTH".
-# Error: COMP96_0133: execute.vhd : (37, 37): Cannot find object declaration.
-# Error: COMP96_0094: execute.vhd : (37, 37): Locally static expression is required in the range definition.
-# Compile Architecture "beh" of Entity "execute"
-# Error: COMP96_0333: execute.vhd : (89, 2): Formal must be locally static name.
-# Error: COMP96_0569: execute.vhd : (97, 8): Select expression must be of a locally static subtype. Use -relax to allow expressions of a nonstatic subtype.
-# Error: COMP96_0078: execute.vhd : (110, 4): Unknown identifier "i_scr2".
-# Error: COMP96_0133: execute.vhd : (110, 4): Cannot find object declaration.
-# Error: COMP96_0112: execute.vhd : (110, 4): "i_scr2" does not match the formal name.
-# Error: COMP96_0207: execute.vhd : (103, 3): No actual specified for local port "i_src2".
-# Error: COMP96_0077: execute.vhd : (121, 16): Undefined type of expression. Expected type 'STD_LOGIC_VECTOR'.
-# Error: COMP96_0078: execute.vhd : (122, 3): Unknown identifier "o_we".
-# Error: COMP96_0133: execute.vhd : (122, 3): Cannot find object declaration.
-# Error: COMP96_0077: execute.vhd : (130, 16): Undefined type of expression. Expected type 'STD_LOGIC_VECTOR'.
-# Error: COMP96_0078: execute.vhd : (131, 3): Unknown identifier "o_we".
-# Error: COMP96_0133: execute.vhd : (131, 3): Cannot find object declaration.
-# Error: COMP96_0078: execute.vhd : (140, 3): Unknown identifier "o_we".
-# Error: COMP96_0078: execute.vhd : (140, 15): Unknown identifier "i_we".
-# Error: COMP96_0133: execute.vhd : (140, 3): Cannot find object declaration.
-# Compile failure 18 Errors 0 Warnings  Analysis time :  15.0 [ms]
-acom -O3 -e 100 -work processor -2002  $dsn/src/execute.vhd
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/execute.vhd
-# Compile Entity "execute"
-# Error: COMP96_0078: execute.vhd : (37, 37): Unknown identifier "ALUOP_WIDTH".
-# Error: COMP96_0133: execute.vhd : (37, 37): Cannot find object declaration.
-# Error: COMP96_0094: execute.vhd : (37, 37): Locally static expression is required in the range definition.
-# Compile Architecture "beh" of Entity "execute"
-# Error: COMP96_0333: execute.vhd : (89, 2): Formal must be locally static name.
-# Error: COMP96_0569: execute.vhd : (97, 8): Select expression must be of a locally static subtype. Use -relax to allow expressions of a nonstatic subtype.
-# Error: COMP96_0078: execute.vhd : (110, 4): Unknown identifier "i_scr2".
-# Error: COMP96_0133: execute.vhd : (110, 4): Cannot find object declaration.
-# Error: COMP96_0112: execute.vhd : (110, 4): "i_scr2" does not match the formal name.
-# Error: COMP96_0207: execute.vhd : (103, 3): No actual specified for local port "i_src2".
-# Error: COMP96_0077: execute.vhd : (121, 16): Undefined type of expression. Expected type 'STD_LOGIC_VECTOR'.
-# Error: COMP96_0078: execute.vhd : (122, 3): Unknown identifier "o_we".
-# Error: COMP96_0133: execute.vhd : (122, 3): Cannot find object declaration.
-# Error: COMP96_0077: execute.vhd : (130, 16): Undefined type of expression. Expected type 'STD_LOGIC_VECTOR'.
-# Error: COMP96_0078: execute.vhd : (131, 3): Unknown identifier "o_we".
-# Error: COMP96_0133: execute.vhd : (131, 3): Cannot find object declaration.
-# Error: COMP96_0078: execute.vhd : (140, 3): Unknown identifier "o_we".
-# Error: COMP96_0078: execute.vhd : (140, 15): Unknown identifier "i_we".
-# Error: COMP96_0133: execute.vhd : (140, 3): Cannot find object declaration.
-# Compile failure 18 Errors 0 Warnings  Analysis time :  31.0 [ms]
-acom -O3 -e 100 -work processor -2002  $dsn/src/execute.vhd
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/execute.vhd
-# Compile Entity "execute"
-# Compile Architecture "beh" of Entity "execute"
-# Error: COMP96_0333: execute.vhd : (89, 2): Formal must be locally static name.
-# Error: COMP96_0569: execute.vhd : (97, 8): Select expression must be of a locally static subtype. Use -relax to allow expressions of a nonstatic subtype.
-# Error: COMP96_0078: execute.vhd : (110, 4): Unknown identifier "i_scr2".
-# Error: COMP96_0133: execute.vhd : (110, 4): Cannot find object declaration.
-# Error: COMP96_0112: execute.vhd : (110, 4): "i_scr2" does not match the formal name.
-# Error: COMP96_0207: execute.vhd : (103, 3): No actual specified for local port "i_src2".
-# Compile failure 6 Errors 0 Warnings  Analysis time :  47.0 [ms]
-acom -O3 -e 100 -work processor -2002  $dsn/src/execute.vhd
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/execute.vhd
-# Compile Entity "execute"
-# Compile Architecture "beh" of Entity "execute"
-# Error: COMP96_0333: execute.vhd : (89, 2): Formal must be locally static name.
-# Error: COMP96_0569: execute.vhd : (97, 8): Select expression must be of a locally static subtype. Use -relax to allow expressions of a nonstatic subtype.
-# Error: COMP96_0078: execute.vhd : (110, 4): Unknown identifier "i_scr2".
-# Error: COMP96_0133: execute.vhd : (110, 4): Cannot find object declaration.
-# Error: COMP96_0112: execute.vhd : (110, 4): "i_scr2" does not match the formal name.
-# Error: COMP96_0207: execute.vhd : (103, 3): No actual specified for local port "i_src2".
-# Compile failure 6 Errors 0 Warnings  Analysis time :  16.0 [ms]
-acom -O3 -e 100 -work processor -2002  $dsn/src/execute.vhd
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/execute.vhd
-# Compile Entity "execute"
-# Compile Architecture "beh" of Entity "execute"
-# Error: COMP96_0333: execute.vhd : (89, 2): Formal must be locally static name.
-# Error: COMP96_0569: execute.vhd : (97, 8): Select expression must be of a locally static subtype. Use -relax to allow expressions of a nonstatic subtype.
-# Error: COMP96_0078: execute.vhd : (110, 4): Unknown identifier "i_scr2".
-# Error: COMP96_0133: execute.vhd : (110, 4): Cannot find object declaration.
-# Error: COMP96_0112: execute.vhd : (110, 4): "i_scr2" does not match the formal name.
-# Error: COMP96_0207: execute.vhd : (103, 3): No actual specified for local port "i_src2".
-# Compile failure 6 Errors 0 Warnings  Analysis time :  31.0 [ms]
-acom -O3 -e 100 -work processor -2002  $dsn/src/execute.vhd
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/execute.vhd
-# Compile Entity "execute"
-# Compile Architecture "beh" of Entity "execute"
-# Error: COMP96_0078: execute.vhd : (89, 38): Unknown identifier "XLEN".
-# Error: COMP96_0569: execute.vhd : (97, 8): Select expression must be of a locally static subtype. Use -relax to allow expressions of a nonstatic subtype.
-# Error: COMP96_0078: execute.vhd : (110, 4): Unknown identifier "i_scr2".
-# Error: COMP96_0133: execute.vhd : (110, 4): Cannot find object declaration.
-# Error: COMP96_0112: execute.vhd : (110, 4): "i_scr2" does not match the formal name.
-# Error: COMP96_0207: execute.vhd : (103, 3): No actual specified for local port "i_src2".
-# Compile failure 6 Errors 0 Warnings  Analysis time :  32.0 [ms]
-acom -O3 -e 100 -work processor -2002  $dsn/src/riscv_alu.vhd
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/riscv_alu.vhd
-# Compile Entity "riscv_alu"
-# Compile Architecture "beh" of Entity "riscv_alu"
-# A feature of VHDL 2008 has been detected. Use the -2008 argument of the vcom command.
-# Error: COMP96_0025: riscv_alu.vhd : (40, 22): Identifier or string literal expected.
-# Error: COMP96_0019: riscv_alu.vhd : (46, 9): Keyword 'end' expected.
-# Error: COMP96_0016: riscv_alu.vhd : (47, 11): Design unit declaration expected.
-# Error: COMP96_0019: riscv_alu.vhd : (86, 21): Keyword 'of' expected.
-# Error: COMP96_0018: riscv_alu.vhd : (86, 21): Identifier expected.
-# Compile failure 5 Errors 0 Warnings  Analysis time :  94.0 [ms]
-acom -O3 -e 100 -work processor -2002  $dsn/src/decode.vhd
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/decode.vhd
-# Compile Entity "decode"
-# Compile Architecture "beh" of Entity "decode"
-# Error: COMP96_0547: decode.vhd : (206, 18): Choice in selected assignments and case statements must be locally static. Use -relax to allow nonstatic expressions and discrete ranges.
-# Error: COMP96_0547: decode.vhd : (207, 18): Choice in selected assignments and case statements must be locally static. Use -relax to allow nonstatic expressions and discrete ranges.
-# Compile failure 2 Errors 0 Warnings  Analysis time :  15.0 [ms]
-acom -O3 -e 100 -work processor -2002  $dsn/src/decode.vhd
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/decode.vhd
-# Compile Entity "decode"
-# Compile Architecture "beh" of Entity "decode"
-# Error: COMP96_0547: decode.vhd : (206, 18): Choice in selected assignments and case statements must be locally static. Use -relax to allow nonstatic expressions and discrete ranges.
-# Error: COMP96_0547: decode.vhd : (207, 18): Choice in selected assignments and case statements must be locally static. Use -relax to allow nonstatic expressions and discrete ranges.
-# Compile failure 2 Errors 0 Warnings  Analysis time :  31.0 [ms]
-acom -O3 -e 100 -work processor -2002  $dsn/src/decode.vhd
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/decode.vhd
-# Error: COMP96_0016: decode.vhd : (15, 2): Design unit declaration expected.
-# Error: COMP96_0016: decode.vhd : (15, 3): Design unit declaration expected.
-# Compile Entity "decode"
-# Error: COMP96_0078: decode.vhd : (21, 18): Unknown identifier "std_logic_vector".
-# Error: COMP96_0078: decode.vhd : (21, 35): Unknown identifier "XLEN".
-# Error: COMP96_0064: decode.vhd : (21, 18): Unknown type.
-# Error: COMP96_0078: decode.vhd : (22, 21): Unknown identifier "std_logic_vector".
-# Error: COMP96_0078: decode.vhd : (22, 38): Unknown identifier "XLEN".
-# Error: COMP96_0064: decode.vhd : (22, 21): Unknown type.
-# Error: COMP96_0078: decode.vhd : (23, 21): Unknown identifier "std_logic_vector".
-# Error: COMP96_0078: decode.vhd : (23, 38): Unknown identifier "REG_WIDTH".
-# Error: COMP96_0064: decode.vhd : (23, 21): Unknown type.
-# Error: COMP96_0078: decode.vhd : (24, 17): Unknown identifier "std_logic".
-# Error: COMP96_0064: decode.vhd : (24, 17): Unknown type.
-# Error: COMP96_0078: decode.vhd : (25, 16): Unknown identifier "std_logic".
-# Error: COMP96_0064: decode.vhd : (25, 16): Unknown type.
-# Error: COMP96_0078: decode.vhd : (26, 17): Unknown identifier "std_logic".
-# Error: COMP96_0064: decode.vhd : (26, 17): Unknown type.
-# Error: COMP96_0078: decode.vhd : (27, 16): Unknown identifier "std_logic_vector".
-# Error: COMP96_0078: decode.vhd : (27, 33): Unknown identifier "XLEN".
-# Error: COMP96_0064: decode.vhd : (27, 16): Unknown type.
-# Error: COMP96_0078: decode.vhd : (28, 18): Unknown identifier "std_logic".
-# Error: COMP96_0064: decode.vhd : (28, 18): Unknown type.
-# Error: COMP96_0078: decode.vhd : (29, 18): Unknown identifier "std_logic".
-# Error: COMP96_0064: decode.vhd : (29, 18): Unknown type.
-# Error: COMP96_0078: decode.vhd : (30, 18): Unknown identifier "std_logic".
-# Error: COMP96_0064: decode.vhd : (30, 18): Unknown type.
-# Error: COMP96_0078: decode.vhd : (34, 22): Unknown identifier "std_logic_vector".
-# Error: COMP96_0078: decode.vhd : (34, 39): Unknown identifier "XLEN".
-# Error: COMP96_0064: decode.vhd : (34, 22): Unknown type.
-# Error: COMP96_0078: decode.vhd : (35, 22): Unknown identifier "std_logic_vector".
-# Error: COMP96_0078: decode.vhd : (35, 39): Unknown identifier "XLEN".
-# Error: COMP96_0064: decode.vhd : (35, 22): Unknown type.
-# Error: COMP96_0078: decode.vhd : (36, 19): Unknown identifier "std_logic".
-# Error: COMP96_0064: decode.vhd : (36, 19): Unknown type.
-# Error: COMP96_0078: decode.vhd : (37, 18): Unknown identifier "std_logic".
-# Error: COMP96_0064: decode.vhd : (37, 18): Unknown type.
-# Error: COMP96_0078: decode.vhd : (38, 17): Unknown identifier "std_logic".
-# Error: COMP96_0064: decode.vhd : (38, 17): Unknown type.
-# Error: COMP96_0078: decode.vhd : (39, 16): Unknown identifier "std_logic".
-# Error: COMP96_0064: decode.vhd : (39, 16): Unknown type.
-# Error: COMP96_0078: decode.vhd : (40, 16): Unknown identifier "std_logic".
-# Error: COMP96_0064: decode.vhd : (40, 16): Unknown type.
-# Error: COMP96_0078: decode.vhd : (41, 17): Unknown identifier "std_logic_vector".
-# Error: COMP96_0078: decode.vhd : (41, 34): Unknown identifier "XLEN".
-# Error: COMP96_0064: decode.vhd : (41, 17): Unknown type.
-# Error: COMP96_0078: decode.vhd : (42, 20): Unknown identifier "std_logic".
-# Error: COMP96_0064: decode.vhd : (42, 20): Unknown type.
-# Error: COMP96_0078: decode.vhd : (43, 21): Unknown identifier "std_logic_vector".
-# Error: COMP96_0078: decode.vhd : (43, 38): Unknown identifier "REG_WIDTH".
-# Error: COMP96_0064: decode.vhd : (43, 21): Unknown type.
-# Error: COMP96_0078: decode.vhd : (44, 16): Unknown identifier "std_logic_vector".
-# Error: COMP96_0078: decode.vhd : (44, 33): Unknown identifier "XLEN".
-# Error: COMP96_0064: decode.vhd : (44, 16): Unknown type.
-# Error: COMP96_0078: decode.vhd : (46, 18): Unknown identifier "std_logic".
-# Error: COMP96_0064: decode.vhd : (46, 18): Unknown type.
-# Error: COMP96_0078: decode.vhd : (47, 18): Unknown identifier "std_logic".
-# Error: COMP96_0064: decode.vhd : (47, 18): Unknown type.
-# Error: COMP96_0078: decode.vhd : (48, 18): Unknown identifier "std_logic_vector".
-# Error: COMP96_0064: decode.vhd : (48, 18): Unknown type.
-# Error: COMP96_0078: decode.vhd : (49, 19): Unknown identifier "std_logic_vector".
-# Error: COMP96_0078: decode.vhd : (49, 36): Unknown identifier "ALUOP_WIDTH".
-# Error: COMP96_0064: decode.vhd : (49, 19): Unknown type.
-# Compile Architecture "beh" of Entity "decode"
-# Error: COMP96_0547: decode.vhd : (206, 18): Choice in selected assignments and case statements must be locally static. Use -relax to allow nonstatic expressions and discrete ranges.
-# Error: COMP96_0547: decode.vhd : (207, 18): Choice in selected assignments and case statements must be locally static. Use -relax to allow nonstatic expressions and discrete ranges.
-# Compile failure 64 Errors 0 Warnings  Analysis time :  78.0 [ms]
-acom -O3 -e 100 -work processor -2002  $dsn/src/decode.vhd
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/decode.vhd
-# Error: COMP96_0016: decode.vhd : (15, 2): Design unit declaration expected.
-# Error: COMP96_0016: decode.vhd : (15, 3): Design unit declaration expected.
-# Compile Entity "decode"
-# Error: COMP96_0078: decode.vhd : (21, 18): Unknown identifier "std_logic_vector".
-# Error: COMP96_0078: decode.vhd : (21, 35): Unknown identifier "XLEN".
-# Error: COMP96_0064: decode.vhd : (21, 18): Unknown type.
-# Error: COMP96_0078: decode.vhd : (22, 21): Unknown identifier "std_logic_vector".
-# Error: COMP96_0078: decode.vhd : (22, 38): Unknown identifier "XLEN".
-# Error: COMP96_0064: decode.vhd : (22, 21): Unknown type.
-# Error: COMP96_0078: decode.vhd : (23, 21): Unknown identifier "std_logic_vector".
-# Error: COMP96_0078: decode.vhd : (23, 38): Unknown identifier "REG_WIDTH".
-# Error: COMP96_0064: decode.vhd : (23, 21): Unknown type.
-# Error: COMP96_0078: decode.vhd : (24, 17): Unknown identifier "std_logic".
-# Error: COMP96_0064: decode.vhd : (24, 17): Unknown type.
-# Error: COMP96_0078: decode.vhd : (25, 16): Unknown identifier "std_logic".
-# Error: COMP96_0064: decode.vhd : (25, 16): Unknown type.
-# Error: COMP96_0078: decode.vhd : (26, 17): Unknown identifier "std_logic".
-# Error: COMP96_0064: decode.vhd : (26, 17): Unknown type.
-# Error: COMP96_0078: decode.vhd : (27, 16): Unknown identifier "std_logic_vector".
-# Error: COMP96_0078: decode.vhd : (27, 33): Unknown identifier "XLEN".
-# Error: COMP96_0064: decode.vhd : (27, 16): Unknown type.
-# Error: COMP96_0078: decode.vhd : (28, 18): Unknown identifier "std_logic".
-# Error: COMP96_0064: decode.vhd : (28, 18): Unknown type.
-# Error: COMP96_0078: decode.vhd : (29, 18): Unknown identifier "std_logic".
-# Error: COMP96_0064: decode.vhd : (29, 18): Unknown type.
-# Error: COMP96_0078: decode.vhd : (30, 18): Unknown identifier "std_logic".
-# Error: COMP96_0064: decode.vhd : (30, 18): Unknown type.
-# Error: COMP96_0078: decode.vhd : (34, 22): Unknown identifier "std_logic_vector".
-# Error: COMP96_0078: decode.vhd : (34, 39): Unknown identifier "XLEN".
-# Error: COMP96_0064: decode.vhd : (34, 22): Unknown type.
-# Error: COMP96_0078: decode.vhd : (35, 22): Unknown identifier "std_logic_vector".
-# Error: COMP96_0078: decode.vhd : (35, 39): Unknown identifier "XLEN".
-# Error: COMP96_0064: decode.vhd : (35, 22): Unknown type.
-# Error: COMP96_0078: decode.vhd : (36, 19): Unknown identifier "std_logic".
-# Error: COMP96_0064: decode.vhd : (36, 19): Unknown type.
-# Error: COMP96_0078: decode.vhd : (37, 18): Unknown identifier "std_logic".
-# Error: COMP96_0064: decode.vhd : (37, 18): Unknown type.
-# Error: COMP96_0078: decode.vhd : (38, 17): Unknown identifier "std_logic".
-# Error: COMP96_0064: decode.vhd : (38, 17): Unknown type.
-# Error: COMP96_0078: decode.vhd : (39, 16): Unknown identifier "std_logic".
-# Error: COMP96_0064: decode.vhd : (39, 16): Unknown type.
-# Error: COMP96_0078: decode.vhd : (40, 16): Unknown identifier "std_logic".
-# Error: COMP96_0064: decode.vhd : (40, 16): Unknown type.
-# Error: COMP96_0078: decode.vhd : (41, 17): Unknown identifier "std_logic_vector".
-# Error: COMP96_0078: decode.vhd : (41, 34): Unknown identifier "XLEN".
-# Error: COMP96_0064: decode.vhd : (41, 17): Unknown type.
-# Error: COMP96_0078: decode.vhd : (42, 20): Unknown identifier "std_logic".
-# Error: COMP96_0064: decode.vhd : (42, 20): Unknown type.
-# Error: COMP96_0078: decode.vhd : (43, 21): Unknown identifier "std_logic_vector".
-# Error: COMP96_0078: decode.vhd : (43, 38): Unknown identifier "REG_WIDTH".
-# Error: COMP96_0064: decode.vhd : (43, 21): Unknown type.
-# Error: COMP96_0078: decode.vhd : (44, 16): Unknown identifier "std_logic_vector".
-# Error: COMP96_0078: decode.vhd : (44, 33): Unknown identifier "XLEN".
-# Error: COMP96_0064: decode.vhd : (44, 16): Unknown type.
-# Error: COMP96_0078: decode.vhd : (46, 18): Unknown identifier "std_logic".
-# Error: COMP96_0064: decode.vhd : (46, 18): Unknown type.
-# Error: COMP96_0078: decode.vhd : (47, 18): Unknown identifier "std_logic".
-# Error: COMP96_0064: decode.vhd : (47, 18): Unknown type.
-# Error: COMP96_0078: decode.vhd : (48, 18): Unknown identifier "std_logic_vector".
-# Error: COMP96_0064: decode.vhd : (48, 18): Unknown type.
-# Error: COMP96_0078: decode.vhd : (49, 19): Unknown identifier "std_logic_vector".
-# Error: COMP96_0078: decode.vhd : (49, 36): Unknown identifier "ALUOP_WIDTH".
-# Error: COMP96_0064: decode.vhd : (49, 19): Unknown type.
-# Compile Architecture "beh" of Entity "decode"
-# Error: COMP96_0547: decode.vhd : (206, 18): Choice in selected assignments and case statements must be locally static. Use -relax to allow nonstatic expressions and discrete ranges.
-# Error: COMP96_0547: decode.vhd : (207, 18): Choice in selected assignments and case statements must be locally static. Use -relax to allow nonstatic expressions and discrete ranges.
-# Compile failure 64 Errors 0 Warnings  Analysis time :  63.0 [ms]
-acom -O3 -e 100 -work processor -2002  $dsn/src/decode.vhd
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/decode.vhd
-# Error: COMP96_0016: decode.vhd : (15, 1): Design unit declaration expected.
-# Error: COMP96_0016: decode.vhd : (15, 2): Design unit declaration expected.
-# Compile Entity "decode"
-# Error: COMP96_0078: decode.vhd : (21, 18): Unknown identifier "std_logic_vector".
-# Error: COMP96_0078: decode.vhd : (21, 35): Unknown identifier "XLEN".
-# Error: COMP96_0064: decode.vhd : (21, 18): Unknown type.
-# Error: COMP96_0078: decode.vhd : (22, 21): Unknown identifier "std_logic_vector".
-# Error: COMP96_0078: decode.vhd : (22, 38): Unknown identifier "XLEN".
-# Error: COMP96_0064: decode.vhd : (22, 21): Unknown type.
-# Error: COMP96_0078: decode.vhd : (23, 21): Unknown identifier "std_logic_vector".
-# Error: COMP96_0078: decode.vhd : (23, 38): Unknown identifier "REG_WIDTH".
-# Error: COMP96_0064: decode.vhd : (23, 21): Unknown type.
-# Error: COMP96_0078: decode.vhd : (24, 17): Unknown identifier "std_logic".
-# Error: COMP96_0064: decode.vhd : (24, 17): Unknown type.
-# Error: COMP96_0078: decode.vhd : (25, 16): Unknown identifier "std_logic".
-# Error: COMP96_0064: decode.vhd : (25, 16): Unknown type.
-# Error: COMP96_0078: decode.vhd : (26, 17): Unknown identifier "std_logic".
-# Error: COMP96_0064: decode.vhd : (26, 17): Unknown type.
-# Error: COMP96_0078: decode.vhd : (27, 16): Unknown identifier "std_logic_vector".
-# Error: COMP96_0078: decode.vhd : (27, 33): Unknown identifier "XLEN".
-# Error: COMP96_0064: decode.vhd : (27, 16): Unknown type.
-# Error: COMP96_0078: decode.vhd : (28, 18): Unknown identifier "std_logic".
-# Error: COMP96_0064: decode.vhd : (28, 18): Unknown type.
-# Error: COMP96_0078: decode.vhd : (29, 18): Unknown identifier "std_logic".
-# Error: COMP96_0064: decode.vhd : (29, 18): Unknown type.
-# Error: COMP96_0078: decode.vhd : (30, 18): Unknown identifier "std_logic".
-# Error: COMP96_0064: decode.vhd : (30, 18): Unknown type.
-# Error: COMP96_0078: decode.vhd : (34, 22): Unknown identifier "std_logic_vector".
-# Error: COMP96_0078: decode.vhd : (34, 39): Unknown identifier "XLEN".
-# Error: COMP96_0064: decode.vhd : (34, 22): Unknown type.
-# Error: COMP96_0078: decode.vhd : (35, 22): Unknown identifier "std_logic_vector".
-# Error: COMP96_0078: decode.vhd : (35, 39): Unknown identifier "XLEN".
-# Error: COMP96_0064: decode.vhd : (35, 22): Unknown type.
-# Error: COMP96_0078: decode.vhd : (36, 19): Unknown identifier "std_logic".
-# Error: COMP96_0064: decode.vhd : (36, 19): Unknown type.
-# Error: COMP96_0078: decode.vhd : (37, 18): Unknown identifier "std_logic".
-# Error: COMP96_0064: decode.vhd : (37, 18): Unknown type.
-# Error: COMP96_0078: decode.vhd : (38, 17): Unknown identifier "std_logic".
-# Error: COMP96_0064: decode.vhd : (38, 17): Unknown type.
-# Error: COMP96_0078: decode.vhd : (39, 16): Unknown identifier "std_logic".
-# Error: COMP96_0064: decode.vhd : (39, 16): Unknown type.
-# Error: COMP96_0078: decode.vhd : (40, 16): Unknown identifier "std_logic".
-# Error: COMP96_0064: decode.vhd : (40, 16): Unknown type.
-# Error: COMP96_0078: decode.vhd : (41, 17): Unknown identifier "std_logic_vector".
-# Error: COMP96_0078: decode.vhd : (41, 34): Unknown identifier "XLEN".
-# Error: COMP96_0064: decode.vhd : (41, 17): Unknown type.
-# Error: COMP96_0078: decode.vhd : (42, 20): Unknown identifier "std_logic".
-# Error: COMP96_0064: decode.vhd : (42, 20): Unknown type.
-# Error: COMP96_0078: decode.vhd : (43, 21): Unknown identifier "std_logic_vector".
-# Error: COMP96_0078: decode.vhd : (43, 38): Unknown identifier "REG_WIDTH".
-# Error: COMP96_0064: decode.vhd : (43, 21): Unknown type.
-# Error: COMP96_0078: decode.vhd : (44, 16): Unknown identifier "std_logic_vector".
-# Error: COMP96_0078: decode.vhd : (44, 33): Unknown identifier "XLEN".
-# Error: COMP96_0064: decode.vhd : (44, 16): Unknown type.
-# Error: COMP96_0078: decode.vhd : (46, 18): Unknown identifier "std_logic".
-# Error: COMP96_0064: decode.vhd : (46, 18): Unknown type.
-# Error: COMP96_0078: decode.vhd : (47, 18): Unknown identifier "std_logic".
-# Error: COMP96_0064: decode.vhd : (47, 18): Unknown type.
-# Error: COMP96_0078: decode.vhd : (48, 18): Unknown identifier "std_logic_vector".
-# Error: COMP96_0064: decode.vhd : (48, 18): Unknown type.
-# Error: COMP96_0078: decode.vhd : (49, 19): Unknown identifier "std_logic_vector".
-# Error: COMP96_0078: decode.vhd : (49, 36): Unknown identifier "ALUOP_WIDTH".
-# Error: COMP96_0064: decode.vhd : (49, 19): Unknown type.
-# Compile Architecture "beh" of Entity "decode"
-# Error: COMP96_0547: decode.vhd : (206, 18): Choice in selected assignments and case statements must be locally static. Use -relax to allow nonstatic expressions and discrete ranges.
-# Error: COMP96_0547: decode.vhd : (207, 18): Choice in selected assignments and case statements must be locally static. Use -relax to allow nonstatic expressions and discrete ranges.
-# Compile failure 64 Errors 0 Warnings  Analysis time :  79.0 [ms]
--relax
-# Error: invalid command name -relax
-acom -O3 -e 100 -work processor -2002  $dsn/src/decode.vhd
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/decode.vhd
-# Compile Entity "decode"
-# Compile Architecture "beh" of Entity "decode"
-# Error: COMP96_0547: decode.vhd : (206, 18): Choice in selected assignments and case statements must be locally static. Use -relax to allow nonstatic expressions and discrete ranges.
-# Error: COMP96_0547: decode.vhd : (207, 18): Choice in selected assignments and case statements must be locally static. Use -relax to allow nonstatic expressions and discrete ranges.
-# Compile failure 2 Errors 0 Warnings  Analysis time :  16.0 [ms]
-acom -O3 -e 100 -work processor -2002  $dsn/src/decode.vhd
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/decode.vhd
-# Compile Entity "decode"
-# Compile Architecture "beh" of Entity "decode"
-# Error: COMP96_0329: decode.vhd : (205, 2): Generate statement must have a label.
-# Error: COMP96_0019: decode.vhd : (205, 44): Keyword 'generate' expected.
-# Error: COMP96_0019: decode.vhd : (207, 2): Keyword 'end' expected.
-# Error: COMP96_0016: decode.vhd : (207, 8): Design unit declaration expected.
-# Error: COMP96_0019: decode.vhd : (303, 21): Keyword 'of' expected.
-# Error: COMP96_0018: decode.vhd : (303, 21): Identifier expected.
-# Compile failure 6 Errors 0 Warnings  Analysis time :  47.0 [ms]
-acom -O3 -e 100 -work processor -2002  $dsn/src/decode.vhd
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/decode.vhd
-# Compile Entity "decode"
-# Compile Architecture "beh" of Entity "decode"
-# Error: COMP96_0329: decode.vhd : (205, 2): Generate statement must have a label.
-# Error: COMP96_0019: decode.vhd : (205, 44): Keyword 'generate' expected.
-# Error: COMP96_0019: decode.vhd : (207, 2): Keyword 'end' expected.
-# Error: COMP96_0016: decode.vhd : (207, 8): Design unit declaration expected.
-# Error: COMP96_0019: decode.vhd : (303, 21): Keyword 'of' expected.
-# Error: COMP96_0018: decode.vhd : (303, 21): Identifier expected.
-# Compile failure 6 Errors 0 Warnings  Analysis time :  31.0 [ms]
-acom -O3 -e 100 -work processor -2002  $dsn/src/decode.vhd
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/decode.vhd
-# Compile Entity "decode"
-# Compile Architecture "beh" of Entity "decode"
-# Error: COMP96_0019: decode.vhd : (206, 2): Keyword 'begin' expected.
-# Error: COMP96_0019: decode.vhd : (208, 2): Keyword 'end' expected.
-# Error: COMP96_0016: decode.vhd : (208, 8): Design unit declaration expected.
-# Error: COMP96_0019: decode.vhd : (305, 21): Keyword 'of' expected.
-# Error: COMP96_0018: decode.vhd : (305, 21): Identifier expected.
-# Compile failure 5 Errors 0 Warnings  Analysis time :  47.0 [ms]
-acom -O3 -e 100 -work processor -2002  $dsn/src/decode.vhd
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/decode.vhd
-# Compile Entity "decode"
-# Compile Architecture "beh" of Entity "decode"
-# A feature of VHDL 2008 has been detected. Use the -2008 argument of the vcom command.
-# Error: COMP96_0019: decode.vhd : (213, 3): Keyword 'end' expected.
-# Error: COMP96_0019: decode.vhd : (240, 7): Keyword 'process' expected.
-# Error: COMP96_0015: decode.vhd : (241, 6): ';' expected.
-# Error: COMP96_0016: decode.vhd : (241, 13): Design unit declaration expected.
-# Error: COMP96_0019: decode.vhd : (306, 21): Keyword 'of' expected.
-# Error: COMP96_0018: decode.vhd : (306, 21): Identifier expected.
-# Compile failure 6 Errors 0 Warnings  Analysis time :  47.0 [ms]
-acom -O3 -e 100 -work processor -2002  $dsn/src/decode.vhd
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/decode.vhd
-# Compile Entity "decode"
-# Compile Architecture "beh" of Entity "decode"
-# A feature of VHDL 2008 has been detected. Use the -2008 argument of the vcom command.
-# Error: COMP96_0019: decode.vhd : (212, 4): Keyword 'end' expected.
-# Error: COMP96_0019: decode.vhd : (239, 7): Keyword 'process' expected.
-# Error: COMP96_0015: decode.vhd : (240, 6): ';' expected.
-# Error: COMP96_0016: decode.vhd : (240, 13): Design unit declaration expected.
-# Error: COMP96_0019: decode.vhd : (305, 21): Keyword 'of' expected.
-# Error: COMP96_0018: decode.vhd : (305, 21): Identifier expected.
-# Compile failure 6 Errors 0 Warnings  Analysis time :  63.0 [ms]
-acom -O3 -e 100 -work processor -2002  $dsn/src/decode.vhd
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/decode.vhd
-# Compile Entity "decode"
-# Compile Architecture "beh" of Entity "decode"
-# A feature of VHDL 2008 has been detected. Use the -2008 argument of the vcom command.
-# Error: COMP96_0019: decode.vhd : (212, 4): Keyword 'end' expected.
-# Error: COMP96_0019: decode.vhd : (239, 7): Keyword 'process' expected.
-# Error: COMP96_0015: decode.vhd : (240, 6): ';' expected.
-# Error: COMP96_0016: decode.vhd : (240, 13): Design unit declaration expected.
-# Error: COMP96_0019: decode.vhd : (305, 21): Keyword 'of' expected.
-# Error: COMP96_0018: decode.vhd : (305, 21): Identifier expected.
-# Compile failure 6 Errors 0 Warnings  Analysis time :  31.0 [ms]
-acom -O3 -e 100 -work processor -2002  $dsn/src/decode.vhd
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/decode.vhd
-# Compile Entity "decode"
-# Compile Architecture "beh" of Entity "decode"
-# Error: COMP96_0019: decode.vhd : (212, 4): Keyword 'end' expected.
-# Error: COMP96_0015: decode.vhd : (242, 7): ';' expected.
-# Error: COMP96_0016: decode.vhd : (242, 9): Design unit declaration expected.
-# Error: COMP96_0019: decode.vhd : (308, 21): Keyword 'of' expected.
-# Error: COMP96_0018: decode.vhd : (308, 21): Identifier expected.
-# Compile failure 5 Errors 0 Warnings  Analysis time :  47.0 [ms]
-acom -O3 -e 100 -work processor -2002  $dsn/src/tb_riscv_rf.vhd
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/tb_riscv_rf.vhd
-# Compile Entity "tb_riscv_rf"
-# Compile Architecture "testbench" of Entity "tb_riscv_rf"
-# Error: COMP96_0034: tb_riscv_rf.vhd : (42, 3): Expression or keyword expected.
-# Error: COMP96_0015: tb_riscv_rf.vhd : (63, 3): ';' expected.
-# Error: COMP96_0015: tb_riscv_rf.vhd : (70, 3): ';' expected.
-# Error: COMP96_0015: tb_riscv_rf.vhd : (77, 3): ';' expected.
-# Error: COMP96_0015: tb_riscv_rf.vhd : (84, 3): ';' expected.
-# Error: COMP96_0015: tb_riscv_rf.vhd : (92, 3): ';' expected.
-# Error: COMP96_0015: tb_riscv_rf.vhd : (104, 7): ';' expected.
-# Error: COMP96_0016: tb_riscv_rf.vhd : (104, 14): Design unit declaration expected.
-# Error: COMP96_0019: tb_riscv_rf.vhd : (106, 27): Keyword 'of' expected.
-# Error: COMP96_0018: tb_riscv_rf.vhd : (106, 27): Identifier expected.
-# Compile failure 10 Errors 0 Warnings  Analysis time :  94.0 [ms]
-acom -O3 -e 100 -work processor -2002  $dsn/src/riscv_rf.vhd
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/riscv_rf.vhd
-# Compile Entity "riscv_rf"
-# Compile Architecture "beh" of Entity "riscv_rf"
-# Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]
-acom -O3 -e 100 -work processor -2002  $dsn/src/tb_riscv_rf.vhd
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/tb_riscv_rf.vhd
-# Compile Entity "tb_riscv_rf"
-# Compile Architecture "testbench" of Entity "tb_riscv_rf"
-# Error: COMP96_0034: tb_riscv_rf.vhd : (42, 3): Expression or keyword expected.
-# Error: COMP96_0015: tb_riscv_rf.vhd : (63, 3): ';' expected.
-# Error: COMP96_0015: tb_riscv_rf.vhd : (70, 3): ';' expected.
-# Error: COMP96_0015: tb_riscv_rf.vhd : (77, 3): ';' expected.
-# Error: COMP96_0015: tb_riscv_rf.vhd : (84, 3): ';' expected.
-# Error: COMP96_0015: tb_riscv_rf.vhd : (92, 3): ';' expected.
-# Error: COMP96_0015: tb_riscv_rf.vhd : (104, 7): ';' expected.
-# Error: COMP96_0016: tb_riscv_rf.vhd : (104, 14): Design unit declaration expected.
-# Error: COMP96_0019: tb_riscv_rf.vhd : (106, 27): Keyword 'of' expected.
-# Error: COMP96_0018: tb_riscv_rf.vhd : (106, 27): Identifier expected.
-# Compile failure 10 Errors 0 Warnings  Analysis time :  32.0 [ms]
-acom -O3 -e 100 -work processor -2002  $dsn/src/fetch.vhd
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/fetch.vhd
-# Compile Entity "fetch"
-# Error: COMP96_0019: fetch.vhd : (28, 3): Keyword 'end' expected.
-# Error: COMP96_0111: fetch.vhd : (28, 3): Labels do not match.
-# Error: COMP96_0015: fetch.vhd : (28, 16): ';' expected.
-# Error: COMP96_0016: fetch.vhd : (28, 18): Design unit declaration expected.
-# Compile Entity "fetch"
-# Error: COMP96_0019: fetch.vhd : (30, 17): Keyword 'is' expected.
-# Error: COMP96_0019: fetch.vhd : (30, 17): Keyword 'end' expected.
-# Compile Architecture "beh" of Entity "fetch"
-# Error: COMP96_0056: fetch.vhd : (32, 1): Cannot find referenced entity declaration "fetch".
-# Compile failure 7 Errors 0 Warnings  Analysis time :  94.0 [ms]
-acom -O3 -e 100 -work processor -2002  $dsn/src/fetch.vhd
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/fetch.vhd
-# Compile Entity "fetch"
-# Compile Architecture "beh" of Entity "fetch"
-# Warning: ELAB1_0026: fetch.vhd : (49, 0): There is no default binding for component "riscv_pc". (No entity named "riscv_pc" was found).
-# Error: COMP96_0333: fetch.vhd : (55, 4): Formal must be locally static name.
-# Error: COMP96_0078: fetch.vhd : (66, 19): Unknown identifier "NOP".
-# Error: COMP96_0133: fetch.vhd : (66, 19): Cannot find object declaration.
-# Error: COMP96_0077: fetch.vhd : (66, 19): Undefined type of expression. Expected type 'STD_LOGIC_VECTOR'.
-# Compile failure 4 Errors 1 Warnings  Analysis time :  31.0 [ms]
-acom -O3 -e 100 -work processor -2002  $dsn/src/riscv_pc.vhd
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/riscv_pc.vhd
-# Compile Entity "riscv_pc"
-# Compile Architecture "beh" of Entity "riscv_pc"
-# Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]
-acom -O3 -e 100 -work processor -2002  $dsn/src/fetch.vhd
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/fetch.vhd
-# Compile Entity "fetch"
-# Compile Architecture "beh" of Entity "fetch"
-# Error: COMP96_0333: fetch.vhd : (55, 4): Formal must be locally static name.
-# Error: COMP96_0078: fetch.vhd : (66, 19): Unknown identifier "NOP".
-# Error: COMP96_0133: fetch.vhd : (66, 19): Cannot find object declaration.
-# Error: COMP96_0077: fetch.vhd : (66, 19): Undefined type of expression. Expected type 'STD_LOGIC_VECTOR'.
-# Compile failure 4 Errors 0 Warnings  Analysis time :  15.0 [ms]
-acom -O3 -e 100 -work processor -2002  $dsn/src/fetch.vhd
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/fetch.vhd
-# Compile Entity "fetch"
-# Compile Architecture "beh" of Entity "fetch"
-# Error: COMP96_0078: fetch.vhd : (66, 19): Unknown identifier "NOP".
-# Error: COMP96_0133: fetch.vhd : (66, 19): Cannot find object declaration.
-# Error: COMP96_0077: fetch.vhd : (66, 19): Undefined type of expression. Expected type 'STD_LOGIC_VECTOR'.
-# Compile failure 3 Errors 0 Warnings  Analysis time :  31.0 [ms]
-acom -O3 -e 100 -work processor -2002  $dsn/src/riscv_pkg.vhd
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/riscv_pkg.vhd
-# Compile Package "riscv_pkg"
-# Compile success 0 Errors 0 Warnings  Analysis time :  15.0 [ms]
-acom -O3 -e 100 -work processor -2002  $dsn/src/fetch.vhd
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/fetch.vhd
-# Compile Entity "fetch"
-# Compile Architecture "beh" of Entity "fetch"
-# Error: COMP96_0078: fetch.vhd : (66, 19): Unknown identifier "NOP".
-# Error: COMP96_0133: fetch.vhd : (66, 19): Cannot find object declaration.
-# Error: COMP96_0077: fetch.vhd : (66, 19): Undefined type of expression. Expected type 'STD_LOGIC_VECTOR'.
-# Compile failure 3 Errors 0 Warnings  Analysis time :  15.0 [ms]
-acom -O3 -e 100 -work processor -2002  $dsn/src/fetch.vhd
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/fetch.vhd
-# Compile Entity "fetch"
-# Compile Architecture "beh" of Entity "fetch"
+# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/tb_riscv_alu.vhd
+# Compile Entity "tb_riscv_alu"
+# Compile Architecture "testbench" of Entity "tb_riscv_alu"
 # Compile success 0 Errors 0 Warnings  Analysis time :  63.0 [ms]
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+acom -O3 -e 100 -work processor -2002  $dsn/src/tb_riscv_alu.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/tb_riscv_alu.vhd
+# Compile Entity "tb_riscv_alu"
+# Compile Architecture "testbench" of Entity "tb_riscv_alu"
+# Compile success 0 Errors 0 Warnings  Analysis time :  47.0 [ms]
+asim -O5 +access +r +m+tb_riscv_alu tb_riscv_alu testbench
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6640 kB (elbread=429 elab2=6063 kernel=147 sdf=0)
+# KERNEL: ASDB file was created in location C:\Users\ismai\OneDrive\Documents\GitHub\MINIRISCV\processor\.gitignore\src\wave.asdb
+#  20:34, Tuesday, 5 December 2023
+#  Simulation has been initialized
+run
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /tb_riscv_alu/uut,  Process: p_shift.
+# EXECUTION:: FAILURE: Test case 1 failed
+# EXECUTION:: Time: 20 ns,  Iteration: 1,  Instance: /tb_riscv_alu,  Process: test_process.
+# KERNEL: Stopped at time 20 ns + 1.
+# VSIM: 8 object(s) traced.
+# Waveform file 'untitled.awc' connected to 'C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/wave.asdb'.
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +r +m+tb_riscv_alu tb_riscv_alu testbench
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6640 kB (elbread=429 elab2=6063 kernel=147 sdf=0)
+# KERNEL: ASDB file was created in location C:\Users\ismai\OneDrive\Documents\GitHub\MINIRISCV\processor\.gitignore\src\wave.asdb
+#  20:34, Tuesday, 5 December 2023
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/wave.asdb'.
+run
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /tb_riscv_alu/uut,  Process: p_shift.
+# EXECUTION:: FAILURE: Test case 1 failed
+# EXECUTION:: Time: 20 ns,  Iteration: 1,  Instance: /tb_riscv_alu,  Process: test_process.
+# KERNEL: Stopped at time 20 ns + 1.
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +r +m+tb_riscv_alu tb_riscv_alu testbench
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+acom -O3 -e 100 -work processor -2002  $dsn/src/tb_riscv_alu.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/tb_riscv_alu.vhd
+# Compile Entity "tb_riscv_alu"
+# Compile Architecture "testbench" of Entity "tb_riscv_alu"
+# Compile success 0 Errors 0 Warnings  Analysis time :  78.0 [ms]
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6639 kB (elbread=429 elab2=6062 kernel=147 sdf=0)
+# KERNEL: ASDB file was created in location C:\Users\ismai\OneDrive\Documents\GitHub\MINIRISCV\processor\.gitignore\src\wave.asdb
+#  20:37, Tuesday, 5 December 2023
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/wave.asdb'.
+run
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /tb_riscv_alu/uut,  Process: p_shift.
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+# KERNEL: Warning: KERNEL_0291 Object "/tb_riscv_alu/res" has already been traced.
+# VSIM: 0 object(s) traced.
+# VSIM: 1 object(s) traced.
+endsim
+# VSIM: Simulation has finished.
+acom -O3 -e 100 -work processor -2002  $dsn/src/tb_riscv_alu.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/tb_riscv_alu.vhd
+# Compile Entity "tb_riscv_alu"
+# Compile Architecture "testbench" of Entity "tb_riscv_alu"
+# Compile success 0 Errors 0 Warnings  Analysis time :  47.0 [ms]
+asim -O5 +access +r +m+tb_riscv_alu tb_riscv_alu testbench
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6639 kB (elbread=429 elab2=6062 kernel=147 sdf=0)
+# KERNEL: ASDB file was created in location C:\Users\ismai\OneDrive\Documents\GitHub\MINIRISCV\processor\.gitignore\src\wave.asdb
+#  20:42, Tuesday, 5 December 2023
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/wave.asdb'.
+# KERNEL: Warning: KERNEL_0291 Object "/tb_riscv_alu/res" has already been traced.
+run
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /tb_riscv_alu/uut,  Process: p_shift.
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +r +m+tb_riscv_alu tb_riscv_alu testbench
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+acom -O3 -e 100 -work processor -2002  $dsn/src/tb_riscv_alu.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/tb_riscv_alu.vhd
+# Compile Entity "tb_riscv_alu"
+# Compile Architecture "testbench" of Entity "tb_riscv_alu"
+# Compile success 0 Errors 0 Warnings  Analysis time :  31.0 [ms]
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6639 kB (elbread=429 elab2=6062 kernel=147 sdf=0)
+# KERNEL: ASDB file was created in location C:\Users\ismai\OneDrive\Documents\GitHub\MINIRISCV\processor\.gitignore\src\wave.asdb
+#  20:43, Tuesday, 5 December 2023
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/wave.asdb'.
+# KERNEL: Warning: KERNEL_0291 Object "/tb_riscv_alu/res" has already been traced.
+run
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /tb_riscv_alu/uut,  Process: p_shift.
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+acom -O3 -e 100 -work processor -2002  $dsn/src/tb_riscv_rf.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/tb_riscv_rf.vhd
+# Compile Entity "tb_riscv_rf"
+# Compile Architecture "testbench" of Entity "tb_riscv_rf"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]
+asim -O5 +access +r +m+tb_riscv_rf tb_riscv_rf testbench
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6603 kB (elbread=427 elab2=6037 kernel=139 sdf=0)
+# KERNEL: ASDB file was created in location C:\Users\ismai\OneDrive\Documents\GitHub\MINIRISCV\processor\.gitignore\src\wave.asdb
+#  21:05, Tuesday, 5 December 2023
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/wave.asdb'.
+# Warning: WAVEFORM: Object matching /tb_riscv_alu/arith not found in C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/wave.asdb.
+# Warning: WAVEFORM: Object matching /tb_riscv_alu/sign not found in C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/wave.asdb.
+# Warning: WAVEFORM: Object matching /tb_riscv_alu/opcode not found in C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/wave.asdb.
+# Warning: WAVEFORM: Object matching /tb_riscv_alu/src1 not found in C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/wave.asdb.
+# Warning: WAVEFORM: Object matching /tb_riscv_alu/src2 not found in C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/wave.asdb.
+# Warning: WAVEFORM: Object matching /tb_riscv_alu/res not found in C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/wave.asdb.
+# Warning: WAVEFORM: Object matching /tb_riscv_alu/shamt not found in C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/wave.asdb.
+# Warning: WAVEFORM: Object matching /tb_riscv_alu/clock not found in C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/wave.asdb.
+# Warning: WAVEFORM: Object matching /tb_riscv_alu/res not found in C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/wave.asdb.
+# Warning: WAVEFORM: Object matching /tb_riscv_alu/reset not found in C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/wave.asdb.
+run
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 5 ns,  Iteration: 1,  Instance: /tb_riscv_rf/uut,  Process: p_rf.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 5 ns,  Iteration: 1,  Instance: /tb_riscv_rf/uut,  Process: p_rf.
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+# Waveform file 'untitled.awc' connected to 'C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/rf_tb_signals.asdb'.
+run
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +r +m+tb_riscv_rf tb_riscv_rf testbench
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6603 kB (elbread=427 elab2=6037 kernel=139 sdf=0)
+# KERNEL: ASDB file was created in location C:\Users\ismai\OneDrive\Documents\GitHub\MINIRISCV\processor\.gitignore\src\wave.asdb
+#  21:06, Tuesday, 5 December 2023
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/wave.asdb'.
+run
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 5 ns,  Iteration: 1,  Instance: /tb_riscv_rf/uut,  Process: p_rf.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 5 ns,  Iteration: 1,  Instance: /tb_riscv_rf/uut,  Process: p_rf.
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+# VSIM: 7 object(s) traced.
+# Waveform file 'untitled.awc' connected to 'C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/wave.asdb'.
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +r +m+tb_riscv_rf tb_riscv_rf testbench
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6603 kB (elbread=427 elab2=6037 kernel=139 sdf=0)
+# KERNEL: ASDB file was created in location C:\Users\ismai\OneDrive\Documents\GitHub\MINIRISCV\processor\.gitignore\src\wave.asdb
+#  21:06, Tuesday, 5 December 2023
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/wave.asdb'.
+# Waveform file 'untitled.awc' connected to 'C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/wave.asdb'.
+run
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 5 ns,  Iteration: 1,  Instance: /tb_riscv_rf/uut,  Process: p_rf.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 5 ns,  Iteration: 1,  Instance: /tb_riscv_rf/uut,  Process: p_rf.
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+acom -O3 -e 100 -work processor -2002  $dsn/src/tb_riscv_rf.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/tb_riscv_rf.vhd
+# Compile Entity "tb_riscv_rf"
+# Compile Architecture "testbench" of Entity "tb_riscv_rf"
+# Compile success 0 Errors 0 Warnings  Analysis time :  78.0 [ms]
+acom -O3 -e 100 -work processor -2002  $dsn/src/tb_riscv_rf.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/tb_riscv_rf.vhd
+# Compile Entity "tb_riscv_rf"
+# Compile Architecture "testbench" of Entity "tb_riscv_rf"
+# Compile success 0 Errors 0 Warnings  Analysis time :  47.0 [ms]
+acom -O3 -e 100 -work processor -2002  $dsn/src/tb_riscv_rf.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/tb_riscv_rf.vhd
+# Compile Entity "tb_riscv_rf"
+# Compile Architecture "testbench" of Entity "tb_riscv_rf"
+# Compile success 0 Errors 0 Warnings  Analysis time :  47.0 [ms]
+run
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +r +m+tb_riscv_rf tb_riscv_rf testbench
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6603 kB (elbread=427 elab2=6037 kernel=139 sdf=0)
+# KERNEL: ASDB file was created in location C:\Users\ismai\OneDrive\Documents\GitHub\MINIRISCV\processor\.gitignore\src\wave.asdb
+#  21:09, Tuesday, 5 December 2023
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/wave.asdb'.
+# Waveform file 'untitled.awc' connected to 'C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/wave.asdb'.
+run
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+# VSIM: 1 object(s) traced.
+# VSIM: 1 object(s) traced.
+run
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +r +m+tb_riscv_rf tb_riscv_rf testbench
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6603 kB (elbread=427 elab2=6037 kernel=139 sdf=0)
+# KERNEL: ASDB file was created in location C:\Users\ismai\OneDrive\Documents\GitHub\MINIRISCV\processor\.gitignore\src\wave.asdb
+#  21:12, Tuesday, 5 December 2023
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/wave.asdb'.
+# Waveform file 'untitled.awc' connected to 'C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/wave.asdb'.
+run
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +r +m+tb_riscv_rf tb_riscv_rf testbench
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+acom -O3 -e 100 -work processor -2002  $dsn/src/tb_riscv_rf.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/tb_riscv_rf.vhd
+# Compile Entity "tb_riscv_rf"
+# Compile Architecture "testbench" of Entity "tb_riscv_rf"
+# Compile success 0 Errors 0 Warnings  Analysis time :  78.0 [ms]
+asim -O5 +access +r +m+tb_riscv_rf tb_riscv_rf testbench
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6603 kB (elbread=427 elab2=6037 kernel=139 sdf=0)
+# KERNEL: ASDB file was created in location C:\Users\ismai\OneDrive\Documents\GitHub\MINIRISCV\processor\.gitignore\src\wave.asdb
+#  21:15, Tuesday, 5 December 2023
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/wave.asdb'.
+# Waveform file 'untitled.awc' connected to 'C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/wave.asdb'.
+run
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+acom -O3 -e 100 -work processor -2002  $dsn/src/tb_riscv_rf.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/tb_riscv_rf.vhd
+# Compile Entity "tb_riscv_rf"
+# Compile Architecture "testbench" of Entity "tb_riscv_rf"
+# Compile success 0 Errors 0 Warnings  Analysis time :  63.0 [ms]
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +r +m+tb_riscv_rf tb_riscv_rf testbench
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6603 kB (elbread=427 elab2=6037 kernel=139 sdf=0)
+# KERNEL: ASDB file was created in location C:\Users\ismai\OneDrive\Documents\GitHub\MINIRISCV\processor\.gitignore\src\wave.asdb
+#  21:15, Tuesday, 5 December 2023
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/wave.asdb'.
+# Waveform file 'untitled.awc' connected to 'C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/wave.asdb'.
+run
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+acom -O3 -e 100 -work processor -2002  $dsn/src/tb_riscv_rf.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/tb_riscv_rf.vhd
+# Compile Entity "tb_riscv_rf"
+# Compile Architecture "testbench" of Entity "tb_riscv_rf"
+# Compile success 0 Errors 0 Warnings  Analysis time :  63.0 [ms]
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +r +m+tb_riscv_rf tb_riscv_rf testbench
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6603 kB (elbread=427 elab2=6037 kernel=139 sdf=0)
+# KERNEL: ASDB file was created in location C:\Users\ismai\OneDrive\Documents\GitHub\MINIRISCV\processor\.gitignore\src\wave.asdb
+#  21:16, Tuesday, 5 December 2023
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/wave.asdb'.
+# Waveform file 'untitled.awc' connected to 'C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/wave.asdb'.
+run
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+acom -O3 -e 100 -work processor -2002  $dsn/src/tb_riscv_rf.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/tb_riscv_rf.vhd
+# Compile Entity "tb_riscv_rf"
+# Compile Architecture "testbench" of Entity "tb_riscv_rf"
+# Compile success 0 Errors 0 Warnings  Analysis time :  62.0 [ms]
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +r +m+tb_riscv_rf tb_riscv_rf testbench
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6603 kB (elbread=427 elab2=6037 kernel=139 sdf=0)
+# KERNEL: ASDB file was created in location C:\Users\ismai\OneDrive\Documents\GitHub\MINIRISCV\processor\.gitignore\src\wave.asdb
+#  21:17, Tuesday, 5 December 2023
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/wave.asdb'.
+# Waveform file 'untitled.awc' connected to 'C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/wave.asdb'.
+run
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+# Waveform file 'C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/rf_tb_signal.awc' connected to 'C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/rf_tb_signal.asdb'.
+# Adding file C:\Users\ismai\OneDrive\Documents\GitHub\MINIRISCV\processor\.gitignore\src\rf_tb_signal.asdb ... Done
+# Adding file C:\Users\ismai\OneDrive\Documents\GitHub\MINIRISCV\processor\.gitignore\src\rf_tb_signal.awc ... Done
+# KERNEL: Warning: KERNEL_0291 Object "/tb_riscv_rf/i_addr_ra" has already been traced.
+# KERNEL: Warning: KERNEL_0291 Object "/tb_riscv_rf/i_addr_rb" has already been traced.
+# KERNEL: Warning: KERNEL_0291 Object "/tb_riscv_rf/i_data_w" has already been traced.
+# KERNEL: Warning: KERNEL_0291 Object "/tb_riscv_rf/i_addr_w" has already been traced.
+# KERNEL: Warning: KERNEL_0291 Object "/tb_riscv_rf/i_we" has already been traced.
+# KERNEL: Warning: KERNEL_0291 Object "/tb_riscv_rf/rstn" has already been traced.
+# KERNEL: Warning: KERNEL_0291 Object "/tb_riscv_rf/clk" has already been traced.
+# KERNEL: Warning: KERNEL_0291 Object "/tb_riscv_rf/o_data_ra" has already been traced.
+# KERNEL: Warning: KERNEL_0291 Object "/tb_riscv_rf/o_data_rb" has already been traced.
+# VSIM: 0 object(s) traced.
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+asim -O5 +access +r +m+tb_riscv_alu tb_riscv_alu testbench
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+acom -O3 -e 100 -work processor -2002  $dsn/src/tb_riscv_alu.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/tb_riscv_alu.vhd
+# Compile Entity "tb_riscv_alu"
+# Compile Architecture "testbench" of Entity "tb_riscv_alu"
+# Compile success 0 Errors 0 Warnings  Analysis time :  94.0 [ms]
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6639 kB (elbread=429 elab2=6062 kernel=147 sdf=0)
+# KERNEL: ASDB file was created in location C:\Users\ismai\OneDrive\Documents\GitHub\MINIRISCV\processor\.gitignore\src\wave.asdb
+#  21:55, Tuesday, 5 December 2023
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/wave.asdb'.
+# Warning: WAVEFORM: Object matching /tb_riscv_rf/i_addr_ra not found in C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/wave.asdb.
+# Warning: WAVEFORM: Object matching /tb_riscv_rf/i_addr_rb not found in C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/wave.asdb.
+# Warning: WAVEFORM: Object matching /tb_riscv_rf/i_data_w not found in C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/wave.asdb.
+# Warning: WAVEFORM: Object matching /tb_riscv_rf/i_addr_w not found in C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/wave.asdb.
+# Warning: WAVEFORM: Object matching /tb_riscv_rf/i_we not found in C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/wave.asdb.
+# Warning: WAVEFORM: Object matching /tb_riscv_rf/rstn not found in C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/wave.asdb.
+# Warning: WAVEFORM: Object matching /tb_riscv_rf/clk not found in C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/wave.asdb.
+# Warning: WAVEFORM: Object matching /tb_riscv_rf/o_data_ra not found in C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/wave.asdb.
+# Warning: WAVEFORM: Object matching /tb_riscv_rf/o_data_rb not found in C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/wave.asdb.
+run
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /tb_riscv_alu/uut,  Process: p_shift.
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+# VSIM: 8 object(s) traced.
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +r +m+tb_riscv_alu tb_riscv_alu testbench
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6639 kB (elbread=429 elab2=6062 kernel=147 sdf=0)
+# KERNEL: ASDB file was created in location C:\Users\ismai\OneDrive\Documents\GitHub\MINIRISCV\processor\.gitignore\src\wave.asdb
+#  21:55, Tuesday, 5 December 2023
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/wave.asdb'.
+run
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /tb_riscv_alu/uut,  Process: p_shift.
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+# VSIM: 1 object(s) traced.
+run
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +r +m+tb_riscv_alu tb_riscv_alu testbench
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6639 kB (elbread=429 elab2=6062 kernel=147 sdf=0)
+# KERNEL: ASDB file was created in location C:\Users\ismai\OneDrive\Documents\GitHub\MINIRISCV\processor\.gitignore\src\wave.asdb
+#  21:55, Tuesday, 5 December 2023
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/wave.asdb'.
+run
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /tb_riscv_alu/uut,  Process: p_shift.
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
 acom -O3 -e 100 -work processor -2002  $dsn/src/execute.vhd
 # Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
 # File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/execute.vhd
 # Compile Entity "execute"
 # Compile Architecture "beh" of Entity "execute"
-# Error: COMP96_0078: execute.vhd : (89, 38): Unknown identifier "XLEN".
-# Error: COMP96_0569: execute.vhd : (97, 8): Select expression must be of a locally static subtype. Use -relax to allow expressions of a nonstatic subtype.
-# Error: COMP96_0078: execute.vhd : (110, 4): Unknown identifier "i_scr2".
-# Error: COMP96_0133: execute.vhd : (110, 4): Cannot find object declaration.
-# Error: COMP96_0112: execute.vhd : (110, 4): "i_scr2" does not match the formal name.
-# Error: COMP96_0207: execute.vhd : (103, 3): No actual specified for local port "i_src2".
-# Compile failure 6 Errors 0 Warnings  Analysis time :  32.0 [ms]
+# Error: COMP96_0569: execute.vhd : (95, 8): Select expression must be of a locally static subtype. Use -relax to allow expressions of a nonstatic subtype.
+# Error: COMP96_0078: execute.vhd : (108, 4): Unknown identifier "i_scr2".
+# Error: COMP96_0133: execute.vhd : (108, 4): Cannot find object declaration.
+# Error: COMP96_0112: execute.vhd : (108, 4): "i_scr2" does not match the formal name.
+# Error: COMP96_0207: execute.vhd : (101, 3): No actual specified for local port "i_src2".
+# Compile failure 5 Errors 0 Warnings  Analysis time :  63.0 [ms]
+run
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
 acom -O3 -e 100 -work processor -2002  $dsn/src/execute.vhd
 # Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
 # File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/execute.vhd
 # Compile Entity "execute"
 # Compile Architecture "beh" of Entity "execute"
-# Error: COMP96_0569: execute.vhd : (98, 8): Select expression must be of a locally static subtype. Use -relax to allow expressions of a nonstatic subtype.
-# Error: COMP96_0078: execute.vhd : (111, 4): Unknown identifier "i_scr2".
-# Error: COMP96_0133: execute.vhd : (111, 4): Cannot find object declaration.
-# Error: COMP96_0112: execute.vhd : (111, 4): "i_scr2" does not match the formal name.
-# Error: COMP96_0207: execute.vhd : (104, 3): No actual specified for local port "i_src2".
-# Compile failure 5 Errors 0 Warnings  Analysis time :  32.0 [ms]
-acom -O3 -e 100 -work processor -2002  $dsn/src/tb_riscv_rf.vhd
+# Error: COMP96_0078: execute.vhd : (112, 4): Unknown identifier "i_scr2".
+# Error: COMP96_0133: execute.vhd : (112, 4): Cannot find object declaration.
+# Error: COMP96_0112: execute.vhd : (112, 4): "i_scr2" does not match the formal name.
+# Error: COMP96_0207: execute.vhd : (105, 3): No actual specified for local port "i_src2".
+# Compile failure 4 Errors 0 Warnings  Analysis time :  16.0 [ms]
+acom -O3 -e 100 -work processor -2002  $dsn/src/execute.vhd
 # Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/tb_riscv_rf.vhd
-# Compile Entity "tb_riscv_rf"
-# Compile Architecture "testbench" of Entity "tb_riscv_rf"
-# Error: COMP96_0034: tb_riscv_rf.vhd : (42, 3): Expression or keyword expected.
-# Error: COMP96_0015: tb_riscv_rf.vhd : (63, 3): ';' expected.
-# Error: COMP96_0015: tb_riscv_rf.vhd : (70, 3): ';' expected.
-# Error: COMP96_0015: tb_riscv_rf.vhd : (77, 3): ';' expected.
-# Error: COMP96_0015: tb_riscv_rf.vhd : (84, 3): ';' expected.
-# Error: COMP96_0015: tb_riscv_rf.vhd : (92, 3): ';' expected.
-# Error: COMP96_0015: tb_riscv_rf.vhd : (104, 7): ';' expected.
-# Error: COMP96_0016: tb_riscv_rf.vhd : (104, 14): Design unit declaration expected.
-# Error: COMP96_0019: tb_riscv_rf.vhd : (106, 27): Keyword 'of' expected.
-# Error: COMP96_0018: tb_riscv_rf.vhd : (106, 27): Identifier expected.
-# Compile failure 10 Errors 0 Warnings  Analysis time :  32.0 [ms]
-acom -O3 -e 100 -work processor -2002  $dsn/src/tb_riscv_rf.vhd
+# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/execute.vhd
+# Compile Entity "execute"
+# Compile Architecture "beh" of Entity "execute"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]
+acom -O3 -e 100 -work processor -2002  $dsn/src/decode.vhd
 # Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/tb_riscv_rf.vhd
-# Compile Entity "tb_riscv_rf"
-# Compile Architecture "testbench" of Entity "tb_riscv_rf"
-# Error: COMP96_0015: tb_riscv_rf.vhd : (60, 3): ';' expected.
-# Error: COMP96_0015: tb_riscv_rf.vhd : (67, 3): ';' expected.
-# Error: COMP96_0015: tb_riscv_rf.vhd : (74, 3): ';' expected.
-# Error: COMP96_0015: tb_riscv_rf.vhd : (81, 3): ';' expected.
-# Error: COMP96_0015: tb_riscv_rf.vhd : (89, 3): ';' expected.
-# Error: COMP96_0015: tb_riscv_rf.vhd : (101, 7): ';' expected.
-# Error: COMP96_0016: tb_riscv_rf.vhd : (101, 14): Design unit declaration expected.
-# Error: COMP96_0019: tb_riscv_rf.vhd : (103, 27): Keyword 'of' expected.
-# Error: COMP96_0018: tb_riscv_rf.vhd : (103, 27): Identifier expected.
-# Compile failure 9 Errors 0 Warnings  Analysis time :  46.0 [ms]
-acom -O3 -e 100 -work processor -2002  $dsn/src/tb_riscv_rf.vhd
+# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/decode.vhd
+# Compile Entity "decode"
+# Compile Architecture "beh" of Entity "decode"
+# A feature of VHDL 2008 has been detected. Use the -2008 argument of the vcom command.
+# Error: COMP96_0019: decode.vhd : (212, 4): Keyword 'end' expected.
+# Error: COMP96_0019: decode.vhd : (239, 7): Keyword 'process' expected.
+# Error: COMP96_0015: decode.vhd : (240, 6): ';' expected.
+# Error: COMP96_0016: decode.vhd : (240, 13): Design unit declaration expected.
+# Error: COMP96_0019: decode.vhd : (305, 21): Keyword 'of' expected.
+# Error: COMP96_0018: decode.vhd : (305, 21): Identifier expected.
+# Compile failure 6 Errors 0 Warnings  Analysis time :  79.0 [ms]
+# Waveform file 'C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/alu_tb_signal.awc' connected to 'C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/alu_tb_signal.asdb'.
+# Adding file C:\Users\ismai\OneDrive\Documents\GitHub\MINIRISCV\processor\.gitignore\src\alu_tb_signal.asdb ... Done
+# Adding file C:\Users\ismai\OneDrive\Documents\GitHub\MINIRISCV\processor\.gitignore\src\alu_tb_signal.awc ... Done
+acom -O3 -e 100 -work processor -2002  $dsn/src/dpm.vhd
 # Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/tb_riscv_rf.vhd
-# Compile Entity "tb_riscv_rf"
-# Compile Architecture "testbench" of Entity "tb_riscv_rf"
-# Error: COMP96_0015: tb_riscv_rf.vhd : (60, 3): ';' expected.
-# Error: COMP96_0015: tb_riscv_rf.vhd : (101, 7): ';' expected.
-# Error: COMP96_0016: tb_riscv_rf.vhd : (101, 14): Design unit declaration expected.
-# Error: COMP96_0019: tb_riscv_rf.vhd : (103, 27): Keyword 'of' expected.
-# Error: COMP96_0018: tb_riscv_rf.vhd : (103, 27): Identifier expected.
-# Compile failure 5 Errors 0 Warnings  Analysis time :  47.0 [ms]
-acom -O3 -e 100 -work processor -2002  $dsn/src/tb_riscv_rf.vhd
+# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/dpm.vhd
+# Compile Entity "dpm"
+# Compile Architecture "beh" of Entity "dpm"
+# Error: COMP96_0078: dpm.vhd : (72, 31): Unknown identifier "to_string".
+# Error: COMP96_0133: dpm.vhd : (72, 31): Cannot find object declaration.
+# Error: COMP96_0289: dpm.vhd : (72, 31): Prefix of index must be an array.
+# Error: COMP96_0086: dpm.vhd : (72, 16): String expected.
+# Error: COMP96_0273: dpm.vhd : (83, 11): Cannot find procedure "hread" for these actuals.
+# Error: COMP96_0078: dpm.vhd : (87, 15): Unknown identifier "to_string".
+# Error: COMP96_0133: dpm.vhd : (87, 15): Cannot find object declaration.
+# Error: COMP96_0289: dpm.vhd : (87, 15): Prefix of index must be an array.
+# Error: COMP96_0086: dpm.vhd : (86, 20): String expected.
+# Error: COMP96_0078: dpm.vhd : (97, 15): Unknown identifier "to_string".
+# Error: COMP96_0133: dpm.vhd : (97, 15): Cannot find object declaration.
+# Error: COMP96_0289: dpm.vhd : (97, 15): Prefix of index must be an array.
+# Error: COMP96_0086: dpm.vhd : (96, 20): String expected.
+# Compile failure 13 Errors 0 Warnings  Analysis time :  62.0 [ms]
+acom -O3 -e 100 -work processor -2002  $dsn/src/decode.vhd
 # Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: C:/
+# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/decode.vhd
+# Compile Entity "decode"
+# Compile Architecture "beh" of Entity "decode"
+# A feature of VHDL 2008 has been detected. Use the -2008 argument of the vcom command.
+# Error: COMP96_0019: decode.vhd : (212, 4): Keyword 'end' expected.
+# Error: COMP96_0019: decode.vhd : (239, 7): Keyword 'process' expected.
+# Error: COMP96_0015: decode.vhd : (240, 6): ';' expected.
+# Error: COMP96_0016: decode.vhd : (240, 13): Design unit declaration expected.
+# Error: COMP96_0019: decode.vhd : (305, 21): Keyword 'of' expected.
+# Error: COMP96_0018: decode.vhd : (305, 21): Identifier expected.
+# Compile failure 6 Errors 0 Warnings  Analysis time :  16.0 [ms]
+acom -O3 -e 100 -work processor -2002  $dsn/src/decode.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/decode.vhd
+# Compile Entity "decode"
+# Compile Architecture "beh" of Entity "decode"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]
+acom -O3 -e 100 -work processor -2002  $dsn/src/riscv_core_tb.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/riscv_core_tb.vhd
+# Compile Entity "riscv_core_tb"
+# Compile Architecture "tb" of Entity "riscv_core_tb"
+# Error: COMP96_0071: riscv_core_tb.vhd : (83, 33): Operator "srl" is not defined for such operands.
+# Error: COMP96_0077: riscv_core_tb.vhd : (83, 19): Undefined type of expression. Expected type 'STD_LOGIC_VECTOR'.
+# Error: COMP96_0071: riscv_core_tb.vhd : (84, 33): Operator "srl" is not defined for such operands.
+# Error: COMP96_0077: riscv_core_tb.vhd : (84, 19): Undefined type of expression. Expected type 'STD_LOGIC_VECTOR'.
+# Error: COMP96_0078: riscv_core_tb.vhd : (86, 19): Unknown identifier "riscv_core".
+# Error: COMP96_0055: riscv_core_tb.vhd : (86, 14): Cannot find context item "work.riscv_core".
+# Compile failure 6 Errors 0 Warnings  Analysis time :  63.0 [ms]
+acom -O3 -e 100 -work processor -2002  $dsn/src/dpm.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/dpm.vhd
+# Compile Entity "dpm"
+# Compile Architecture "beh" of Entity "dpm"
+# Error: COMP96_0078: dpm.vhd : (72, 31): Unknown identifier "to_string".
+# Error: COMP96_0133: dpm.vhd : (72, 31): Cannot find object declaration.
+# Error: COMP96_0289: dpm.vhd : (72, 31): Prefix of index must be an array.
+# Error: COMP96_0086: dpm.vhd : (72, 16): String expected.
+# Error: COMP96_0273: dpm.vhd : (83, 11): Cannot find procedure "hread" for these actuals.
+# Error: COMP96_0078: dpm.vhd : (87, 15): Unknown identifier "to_string".
+# Error: COMP96_0133: dpm.vhd : (87, 15): Cannot find object declaration.
+# Error: COMP96_0289: dpm.vhd : (87, 15): Prefix of index must be an array.
+# Error: COMP96_0086: dpm.vhd : (86, 20): String expected.
+# Error: COMP96_0078: dpm.vhd : (97, 15): Unknown identifier "to_string".
+# Error: COMP96_0133: dpm.vhd : (97, 15): Cannot find object declaration.
+# Error: COMP96_0289: dpm.vhd : (97, 15): Prefix of index must be an array.
+# Error: COMP96_0086: dpm.vhd : (96, 20): String expected.
+# Compile failure 13 Errors 0 Warnings  Analysis time :  0.0 [ms]
+acom -O3 -e 100 -work processor -2002  $dsn/src/dpm.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/dpm.vhd
+# Compile Entity "dpm"
+# Compile Architecture "beh" of Entity "dpm"
+# Error: COMP96_0078: dpm.vhd : (72, 31): Unknown identifier "to_string".
+# Error: COMP96_0133: dpm.vhd : (72, 31): Cannot find object declaration.
+# Error: COMP96_0289: dpm.vhd : (72, 31): Prefix of index must be an array.
+# Error: COMP96_0086: dpm.vhd : (72, 16): String expected.
+# Error: COMP96_0273: dpm.vhd : (83, 11): Cannot find procedure "hread" for these actuals.
+# Error: COMP96_0078: dpm.vhd : (87, 15): Unknown identifier "to_string".
+# Error: COMP96_0133: dpm.vhd : (87, 15): Cannot find object declaration.
+# Error: COMP96_0289: dpm.vhd : (87, 15): Prefix of index must be an array.
+# Error: COMP96_0086: dpm.vhd : (86, 20): String expected.
+# Error: COMP96_0078: dpm.vhd : (97, 15): Unknown identifier "to_string".
+# Error: COMP96_0133: dpm.vhd : (97, 15): Cannot find object declaration.
+# Error: COMP96_0289: dpm.vhd : (97, 15): Prefix of index must be an array.
+# Error: COMP96_0086: dpm.vhd : (96, 20): String expected.
+# Compile failure 13 Errors 0 Warnings  Analysis time :  15.0 [ms]
+acom -O3 -e 100 -work processor -2002  $dsn/src/dpm.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/dpm.vhd
+# Compile Entity "dpm"
+# Compile Architecture "beh" of Entity "dpm"
+# Error: COMP96_0078: dpm.vhd : (72, 31): Unknown identifier "to_string".
+# Error: COMP96_0133: dpm.vhd : (72, 31): Cannot find object declaration.
+# Error: COMP96_0289: dpm.vhd : (72, 31): Prefix of index must be an array.
+# Error: COMP96_0086: dpm.vhd : (72, 16): String expected.
+# Error: COMP96_0273: dpm.vhd : (83, 11): Cannot find procedure "hread" for these actuals.
+# Error: COMP96_0078: dpm.vhd : (87, 15): Unknown identifier "to_string".
+# Error: COMP96_0133: dpm.vhd : (87, 15): Cannot find object declaration.
+# Error: COMP96_0289: dpm.vhd : (87, 15): Prefix of index must be an array.
+# Error: COMP96_0086: dpm.vhd : (86, 20): String expected.
+# Error: COMP96_0078: dpm.vhd : (97, 15): Unknown identifier "to_string".
+# Error: COMP96_0133: dpm.vhd : (97, 15): Cannot find object declaration.
+# Error: COMP96_0289: dpm.vhd : (97, 15): Prefix of index must be an array.
+# Error: COMP96_0086: dpm.vhd : (96, 20): String expected.
+# Compile failure 13 Errors 0 Warnings  Analysis time :  16.0 [ms]
+acom -O3 -e 100 -work processor -2002  $dsn/src/riscv_core_tb.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/riscv_core_tb.vhd
+# Compile Entity "riscv_core_tb"
+# Compile Architecture "tb" of Entity "riscv_core_tb"
+# Error: COMP96_0071: riscv_core_tb.vhd : (83, 33): Operator "srl" is not defined for such operands.
+# Error: COMP96_0077: riscv_core_tb.vhd : (83, 19): Undefined type of expression. Expected type 'STD_LOGIC_VECTOR'.
+# Error: COMP96_0071: riscv_core_tb.vhd : (84, 33): Operator "srl" is not defined for such operands.
+# Error: COMP96_0077: riscv_core_tb.vhd : (84, 19): Undefined type of expression. Expected type 'STD_LOGIC_VECTOR'.
+# Error: COMP96_0078: riscv_core_tb.vhd : (86, 19): Unknown identifier "riscv_core".
+# Error: COMP96_0055: riscv_core_tb.vhd : (86, 14): Cannot find context item "work.riscv_core".
+# Compile failure 6 Errors 0 Warnings  Analysis time :  31.0 [ms]
+acom -O3 -e 100 -work processor -2002  $dsn/src/riscv_core_tb.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/riscv_core_tb.vhd
+# Compile Entity "riscv_core_tb"
+# Compile Architecture "tb" of Entity "riscv_core_tb"
+# Error: COMP96_0071: riscv_core_tb.vhd : (83, 33): Operator "srl" is not defined for such operands.
+# Error: COMP96_0077: riscv_core_tb.vhd : (83, 19): Undefined type of expression. Expected type 'STD_LOGIC_VECTOR'.
+# Error: COMP96_0071: riscv_core_tb.vhd : (84, 33): Operator "srl" is not defined for such operands.
+# Error: COMP96_0077: riscv_core_tb.vhd : (84, 19): Undefined type of expression. Expected type 'STD_LOGIC_VECTOR'.
+# Error: COMP96_0078: riscv_core_tb.vhd : (86, 19): Unknown identifier "riscv_core".
+# Error: COMP96_0055: riscv_core_tb.vhd : (86, 14): Cannot find context item "work.riscv_core".
+# Compile failure 6 Errors 0 Warnings  Analysis time :  31.0 [ms]
+acom -O3 -e 100 -work processor -2002  $dsn/src/riscv_core_tb.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/riscv_core_tb.vhd
+# Compile Entity "riscv_core_tb"
+# Compile Architecture "tb" of Entity "riscv_core_tb"
+# Error: COMP96_0071: riscv_core_tb.vhd : (83, 33): Operator "srl" is not defined for such operands.
+# Error: COMP96_0077: riscv_core_tb.vhd : (83, 19): Undefined type of expression. Expected type 'STD_LOGIC_VECTOR'.
+# Error: COMP96_0071: riscv_core_tb.vhd : (84, 33): Operator "srl" is not defined for such operands.
+# Error: COMP96_0077: riscv_core_tb.vhd : (84, 19): Undefined type of expression. Expected type 'STD_LOGIC_VECTOR'.
+# Error: COMP96_0078: riscv_core_tb.vhd : (86, 19): Unknown identifier "riscv_core".
+# Error: COMP96_0055: riscv_core_tb.vhd : (86, 14): Cannot find context item "work.riscv_core".
+# Compile failure 6 Errors 0 Warnings  Analysis time :  16.0 [ms]
+acom -O3 -e 100 -work processor -2002  $dsn/src/riscv_core_tb.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/riscv_core_tb.vhd
+# Compile Entity "riscv_core_tb"
+# Compile Architecture "tb" of Entity "riscv_core_tb"
+# Error: COMP96_0071: riscv_core_tb.vhd : (83, 33): Operator "srl" is not defined for such operands.
+# Error: COMP96_0077: riscv_core_tb.vhd : (83, 19): Undefined type of expression. Expected type 'STD_LOGIC_VECTOR'.
+# Error: COMP96_0071: riscv_core_tb.vhd : (84, 33): Operator "srl" is not defined for such operands.
+# Error: COMP96_0077: riscv_core_tb.vhd : (84, 19): Undefined type of expression. Expected type 'STD_LOGIC_VECTOR'.
+# Error: COMP96_0078: riscv_core_tb.vhd : (86, 19): Unknown identifier "riscv_core".
+# Error: COMP96_0055: riscv_core_tb.vhd : (86, 14): Cannot find context item "work.riscv_core".
+# Compile failure 6 Errors 0 Warnings  Analysis time :  31.0 [ms]
+acom -O3 -e 100 -work processor -2002  $dsn/src/riscv_core_tb.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/riscv_core_tb.vhd
+# Compile Entity "riscv_core_tb"
+# Compile Architecture "tb" of Entity "riscv_core_tb"
+# Error: COMP96_0071: riscv_core_tb.vhd : (83, 33): Operator "srl" is not defined for such operands.
+# Error: COMP96_0077: riscv_core_tb.vhd : (83, 19): Undefined type of expression. Expected type 'STD_LOGIC_VECTOR'.
+# Error: COMP96_0071: riscv_core_tb.vhd : (84, 33): Operator "srl" is not defined for such operands.
+# Error: COMP96_0077: riscv_core_tb.vhd : (84, 19): Undefined type of expression. Expected type 'STD_LOGIC_VECTOR'.
+# Error: COMP96_0078: riscv_core_tb.vhd : (86, 19): Unknown identifier "riscv_core".
+# Error: COMP96_0055: riscv_core_tb.vhd : (86, 14): Cannot find context item "work.riscv_core".
+# Compile failure 6 Errors 0 Warnings  Analysis time :  16.0 [ms]
+acom -O3 -e 100 -work processor -2002  $dsn/src/riscv_core_tb.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/riscv_core_tb.vhd
+# Compile Entity "riscv_core_tb"
+# Compile Architecture "tb" of Entity "riscv_core_tb"
+# Error: COMP96_0071: riscv_core_tb.vhd : (83, 33): Operator "srl" is not defined for such operands.
+# Error: COMP96_0077: riscv_core_tb.vhd : (83, 19): Undefined type of expression. Expected type 'STD_LOGIC_VECTOR'.
+# Error: COMP96_0071: riscv_core_tb.vhd : (84, 33): Operator "srl" is not defined for such operands.
+# Error: COMP96_0077: riscv_core_tb.vhd : (84, 19): Undefined type of expression. Expected type 'STD_LOGIC_VECTOR'.
+# Error: COMP96_0078: riscv_core_tb.vhd : (86, 19): Unknown identifier "riscv_core".
+# Error: COMP96_0055: riscv_core_tb.vhd : (86, 14): Cannot find context item "work.riscv_core".
+# Compile failure 6 Errors 0 Warnings  Analysis time :  15.0 [ms]
+acom -O3 -e 100 -work processor -2002  $dsn/src/riscv_core_tb.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/riscv_core_tb.vhd
+# Compile Entity "riscv_core_tb"
+# Compile Architecture "tb" of Entity "riscv_core_tb"
+# Error: COMP96_0071: riscv_core_tb.vhd : (83, 33): Operator "srl" is not defined for such operands.
+# Error: COMP96_0077: riscv_core_tb.vhd : (83, 19): Undefined type of expression. Expected type 'STD_LOGIC_VECTOR'.
+# Error: COMP96_0071: riscv_core_tb.vhd : (84, 33): Operator "srl" is not defined for such operands.
+# Error: COMP96_0077: riscv_core_tb.vhd : (84, 19): Undefined type of expression. Expected type 'STD_LOGIC_VECTOR'.
+# Error: COMP96_0078: riscv_core_tb.vhd : (86, 19): Unknown identifier "riscv_core".
+# Error: COMP96_0055: riscv_core_tb.vhd : (86, 14): Cannot find context item "work.riscv_core".
+# Compile failure 6 Errors 0 Warnings  Analysis time :  16.0 [ms]
+acom -O3 -e 100 -work processor -2002  $dsn/src/riscv_core_tb.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/riscv_core_tb.vhd
+# Compile Entity "riscv_core_tb"
+# Compile Architecture "tb" of Entity "riscv_core_tb"
+# Error: COMP96_0071: riscv_core_tb.vhd : (83, 33): Operator "srl" is not defined for such operands.
+# Error: COMP96_0077: riscv_core_tb.vhd : (83, 19): Undefined type of expression. Expected type 'STD_LOGIC_VECTOR'.
+# Error: COMP96_0071: riscv_core_tb.vhd : (84, 33): Operator "srl" is not defined for such operands.
+# Error: COMP96_0077: riscv_core_tb.vhd : (84, 19): Undefined type of expression. Expected type 'STD_LOGIC_VECTOR'.
+# Error: COMP96_0078: riscv_core_tb.vhd : (86, 19): Unknown identifier "riscv_core".
+# Error: COMP96_0055: riscv_core_tb.vhd : (86, 14): Cannot find context item "work.riscv_core".
+# Compile failure 6 Errors 0 Warnings  Analysis time :  31.0 [ms]
+acom -O3 -e 100 -work processor -2002  $dsn/src/riscv_core_tb.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/riscv_core_tb.vhd
+# Compile Entity "riscv_core_tb"
+# Compile Architecture "tb" of Entity "riscv_core_tb"
+# Error: COMP96_0753: riscv_core_tb.vhd : (84, 33): Cannot find the "srl" operator with operands denoted with the "[STD_LOGIC_VECTOR, STD_LOGIC_VECTOR]" signature.
+# Error: COMP96_0077: riscv_core_tb.vhd : (84, 19): Undefined type of expression. Expected type 'STD_LOGIC_VECTOR'.
+# Error: COMP96_0753: riscv_core_tb.vhd : (85, 33): Cannot find the "srl" operator with operands denoted with the "[STD_LOGIC_VECTOR, STD_LOGIC_VECTOR]" signature.
+# Error: COMP96_0077: riscv_core_tb.vhd : (85, 19): Undefined type of expression. Expected type 'STD_LOGIC_VECTOR'.
+# Error: COMP96_0078: riscv_core_tb.vhd : (87, 19): Unknown identifier "riscv_core".
+# Error: COMP96_0055: riscv_core_tb.vhd : (87, 14): Cannot find context item "work.riscv_core".
+# Compile failure 6 Errors 0 Warnings  Analysis time :  15.0 [ms]
+acom -O3 -e 100 -work processor -2002  $dsn/src/riscv_core_tb.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/riscv_core_tb.vhd
+# Compile Entity "riscv_core_tb"
+# Compile Architecture "tb" of Entity "riscv_core_tb"
+# Error: COMP96_0078: riscv_core_tb.vhd : (91, 19): Unknown identifier "riscv_core".
+# Error: COMP96_0055: riscv_core_tb.vhd : (91, 14): Cannot find context item "work.riscv_core".
+# Compile failure 2 Errors 0 Warnings  Analysis time :  31.0 [ms]
+acom -O3 -e 100 -work processor -2002  $dsn/src/riscv_core_tb.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/riscv_core_tb.vhd
+# Compile Entity "riscv_core_tb"
+# Compile Architecture "tb" of Entity "riscv_core_tb"
+# Error: COMP96_0078: riscv_core_tb.vhd : (91, 19): Unknown identifier "riscv_core".
+# Error: COMP96_0055: riscv_core_tb.vhd : (91, 14): Cannot find context item "work.riscv_core".
+# Compile failure 2 Errors 0 Warnings  Analysis time :  32.0 [ms]
+acom -O3 -e 100 -work processor -2002  $dsn/src/riscv_core.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/riscv_core.vhd
+# Warning: COMP96_0003: Source file "C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/riscv_core.vhd" is empty.
+# Compile success 0 Errors 1 Warnings  Analysis time :  15.0 [ms]
+acom -O3 -e 100 -work processor -2002  $dsn/src/riscv_core_tb.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/riscv_core_tb.vhd
+# Compile Entity "riscv_core_tb"
+# Compile Architecture "tb" of Entity "riscv_core_tb"
+# Error: COMP96_0078: riscv_core_tb.vhd : (91, 19): Unknown identifier "riscv_core".
+# Error: COMP96_0055: riscv_core_tb.vhd : (91, 14): Cannot find context item "work.riscv_core".
+# Compile failure 2 Errors 0 Warnings  Analysis time :  15.0 [ms]
+acom -O3 -e 100 -work processor -2002  $dsn/src/dpm.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/dpm.vhd
+# Compile Entity "dpm"
+# Compile Architecture "beh" of Entity "dpm"
+# Error: COMP96_0078: dpm.vhd : (72, 31): Unknown identifier "to_string".
+# Error: COMP96_0133: dpm.vhd : (72, 31): Cannot find object declaration.
+# Error: COMP96_0289: dpm.vhd : (72, 31): Prefix of index must be an array.
+# Error: COMP96_0086: dpm.vhd : (72, 16): String expected.
+# Error: COMP96_0273: dpm.vhd : (83, 11): Cannot find procedure "hread" for these actuals.
+# Error: COMP96_0078: dpm.vhd : (87, 15): Unknown identifier "to_string".
+# Error: COMP96_0133: dpm.vhd : (87, 15): Cannot find object declaration.
+# Error: COMP96_0289: dpm.vhd : (87, 15): Prefix of index must be an array.
+# Error: COMP96_0086: dpm.vhd : (86, 20): String expected.
+# Error: COMP96_0078: dpm.vhd : (97, 15): Unknown identifier "to_string".
+# Error: COMP96_0133: dpm.vhd : (97, 15): Cannot find object declaration.
+# Error: COMP96_0289: dpm.vhd : (97, 15): Prefix of index must be an array.
+# Error: COMP96_0086: dpm.vhd : (96, 20): String expected.
+# Compile failure 13 Errors 0 Warnings  Analysis time :  16.0 [ms]
+acom -O3 -e 100 -work processor -2002  $dsn/src/tb_riscv_pc.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/tb_riscv_pc.vhd
+# Compile Entity "tb_riscv_pc"
+# Compile Architecture "testbench" of Entity "tb_riscv_pc"
+# Error: COMP96_0078: tb_riscv_pc.vhd : (25, 7): Unknown identifier "i_clk".
+# Error: COMP96_0078: tb_riscv_pc.vhd : (26, 7): Unknown identifier "i_rstn".
+# Error: COMP96_0078: tb_riscv_pc.vhd : (27, 7): Unknown identifier "i_stall".
+# Error: COMP96_0078: tb_riscv_pc.vhd : (28, 7): Unknown identifier "i_transfert".
+# Error: COMP96_0078: tb_riscv_pc.vhd : (29, 7): Unknown identifier "i_target".
+# Error: COMP96_0078: tb_riscv_pc.vhd : (30, 7): Unknown identifier "o_pc".
+# Error: COMP96_0133: tb_riscv_pc.vhd : (25, 7): Cannot find object declaration.
+# Error: COMP96_0112: tb_riscv_pc.vhd : (25, 7): "i_clk" does not match the formal name.
+# Error: COMP96_0207: tb_riscv_pc.vhd : (23, 3): No actual specified for local port "i_arith".
+# Error: COMP96_0207: tb_riscv_pc.vhd : (23, 3): No actual specified for local port "i_sign".
+# Error: COMP96_0207: tb_riscv_pc.vhd : (23, 3): No actual specified for local port "i_opcode".
+# Error: COMP96_0207: tb_riscv_pc.vhd : (23, 3): No actual specified for local port "i_shamt".
+# Error: COMP96_0207: tb_riscv_pc.vhd : (23, 3): No actual specified for local port "i_src1".
+# Error: COMP96_0207: tb_riscv_pc.vhd : (23, 3): No actual specified for local port "i_src2".
+# Compile failure 14 Errors 0 Warnings  Analysis time :  63.0 [ms]
+acom -O3 -e 100 -work processor -2002  $dsn/src/tb_riscv_pc.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/tb_riscv_pc.vhd
+# Compile Entity "tb_riscv_pc"
+# Compile Architecture "testbench" of Entity "tb_riscv_pc"
+# Compile success 0 Errors 0 Warnings  Analysis time :  63.0 [ms]
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# Error: Accelerated Waveform: Simulation database is not connected. Initialize simulation or load simulation database by opening waveform file (AWC, ASDB).
+# Error: Accelerated Waveform: Simulation database is not connected. Initialize simulation or load simulation database by opening waveform file (AWC, ASDB).
+asim -O5 +access +r +m+tb_riscv_pc tb_riscv_pc testbench
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6595 kB (elbread=427 elab2=6028 kernel=139 sdf=0)
+# KERNEL: ASDB file was created in location C:\Users\ismai\OneDrive\Documents\GitHub\MINIRISCV\processor\.gitignore\src\wave.asdb
+#  23:11, Tuesday, 5 December 2023
+#  Simulation has been initialized
+run
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+# VSIM: 4 object(s) traced.
+# Waveform file 'untitled.awc' connected to 'C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/wave.asdb'.
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +r +m+tb_riscv_pc tb_riscv_pc testbench
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6595 kB (elbread=427 elab2=6028 kernel=139 sdf=0)
+# KERNEL: ASDB file was created in location C:\Users\ismai\OneDrive\Documents\GitHub\MINIRISCV\processor\.gitignore\src\wave.asdb
+#  23:11, Tuesday, 5 December 2023
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/wave.asdb'.
+run
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +r +m+tb_riscv_pc tb_riscv_pc testbench
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+acom -O3 -e 100 -work processor -2002  $dsn/src/tb_riscv_pc.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/tb_riscv_pc.vhd
+# Compile Entity "tb_riscv_pc"
+# Compile Architecture "testbench" of Entity "tb_riscv_pc"
+# Compile success 0 Errors 0 Warnings  Analysis time :  63.0 [ms]
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6595 kB (elbread=427 elab2=6028 kernel=139 sdf=0)
+# KERNEL: ASDB file was created in location C:\Users\ismai\OneDrive\Documents\GitHub\MINIRISCV\processor\.gitignore\src\wave.asdb
+#  23:13, Tuesday, 5 December 2023
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/wave.asdb'.
+run
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+acom -O3 -e 100 -work processor -2002  $dsn/src/tb_riscv_pc.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/tb_riscv_pc.vhd
+# Compile Entity "tb_riscv_pc"
+# Compile Architecture "testbench" of Entity "tb_riscv_pc"
+# Compile success 0 Errors 0 Warnings  Analysis time :  31.0 [ms]
+endsim
+# VSIM: Simulation has finished.
+acom -O3 -e 100 -work processor -2002  $dsn/src/tb_riscv_pc.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/tb_riscv_pc.vhd
+# Compile Entity "tb_riscv_pc"
+# Compile Architecture "testbench" of Entity "tb_riscv_pc"
+# Compile success 0 Errors 0 Warnings  Analysis time :  32.0 [ms]
+asim -O5 +access +r +m+tb_riscv_pc tb_riscv_pc testbench
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6595 kB (elbread=427 elab2=6028 kernel=139 sdf=0)
+# KERNEL: ASDB file was created in location C:\Users\ismai\OneDrive\Documents\GitHub\MINIRISCV\processor\.gitignore\src\wave.asdb
+#  23:14, Tuesday, 5 December 2023
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/wave.asdb'.
+run
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+# Waveform file 'C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/tb_pc_signal.awc' connected to 'C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/tb_pc_signal.asdb'.
+# Adding file C:\Users\ismai\OneDrive\Documents\GitHub\MINIRISCV\processor\.gitignore\src\tb_pc_signal.asdb ... Done
+# Adding file C:\Users\ismai\OneDrive\Documents\GitHub\MINIRISCV\processor\.gitignore\src\tb_pc_signal.awc ... Done
+# Design: Error: Cannot rename file "tb_pc_signal.asdb" to "pc_tb_signal.asdb"
+# Design: Error: Cannot rename file "tb_pc_signal.asdb" to "pc_tb_signal.asdb"
+acom -O3 -e 100 -work processor -2002  $dsn/src/tb_riscv_adder.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/tb_riscv_adder.vhd
+# Compile Entity "tb_riscv_adder"
+# Compile Architecture "testbench" of Entity "tb_riscv_adder"
+# Compile success 0 Errors 0 Warnings  Analysis time :  94.0 [ms]
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+asim -O5 +access +r +m+tb_riscv_adder tb_riscv_adder testbench
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6630 kB (elbread=429 elab2=6053 kernel=147 sdf=0)
+# KERNEL: ASDB file was created in location C:\Users\ismai\OneDrive\Documents\GitHub\MINIRISCV\processor\.gitignore\src\wave.asdb
+#  23:17, Tuesday, 5 December 2023
+#  Simulation has been initialized
+run
+# EXECUTION:: NOTE   : o_sum = 3
+# EXECUTION:: Time: 20 ns,  Iteration: 0,  Instance: /tb_riscv_adder,  Process: monitor_process.
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+# VSIM: 7 object(s) traced.
+# Waveform file 'untitled.awc' connected to 'C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/wave.asdb'.
+endsim
+# VSIM: Simulation has finished.

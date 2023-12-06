@@ -14,9 +14,6 @@ use ieee.numeric_std.all;
 use work.riscv_pkg.all;
 
 entity execute is
-  generic (
-    N : positive := 32
-  );
   port ( 						
   i_jump 			: in  std_logic;
   i_branch 			: in  std_logic; 
@@ -24,29 +21,29 @@ entity execute is
   i_rw 				: in  std_logic; -- read word from d-mem
   i_we				: in  std_logic; -- write enable in d-mem	
   i_wb 				: in  std_logic; -- write back in rf
-  i_rs1_data 		: in  std_logic_vector(N-1 downto 0);
-  i_rs2_data 		: in  std_logic_vector(N-1 downto 0);
-  i_imm				: in  std_logic_vector(N-1 downto 0);
-  i_pc				: in  std_logic_vector(N-1  downto 0);
-  i_rd_addr 		: in  std_logic_vector(5-1 downto 0);
+  i_rs1_data 		: in  std_logic_vector(XLEN-1 downto 0);
+  i_rs2_data 		: in  std_logic_vector(XLEN-1 downto 0);
+  i_imm				: in  std_logic_vector(XLEN-1 downto 0);
+  i_pc				: in  std_logic_vector(XLEN-1  downto 0);
+  i_rd_addr 		: in  std_logic_vector(REG_WIDTH-1 downto 0);
   i_flush			: in  std_logic;
   i_stall			: in  std_logic;
   i_rstn			: in  std_logic;
   i_clk 			: in  std_logic;
   -- ALU inputs	from ID
-  i_shamt			: in  std_logic_vector(5-1 downto 0);
-  i_alu_op			: in  std_logic_vector(3-1 downto 0);
+  i_shamt			: in  std_logic_vector(SHAMT_WIDTH-1 downto 0);
+  i_alu_op			: in  std_logic_vector(ALUOP_WIDTH-1 downto 0);
   i_arith			: in  std_logic;
   i_sign			: in  std_logic;
 	
   o_pc_transfert	: out std_logic;
-  o_alu_result 		: out std_logic_vector(N-1 downto 0);
-  o_store_data 		: out std_logic_vector(N-1 downto 0); 
-  o_pc_target 		: out std_logic_vector(N-1 downto 0);
+  o_alu_result 		: out std_logic_vector(XLEN-1 downto 0);
+  o_store_data 		: out std_logic_vector(XLEN-1 downto 0); 
+  o_pc_target 		: out std_logic_vector(XLEN-1 downto 0);
   o_rw 				: out std_logic;  -- read word from d-mem
   o_we				: out std_logic;	-- write enable in d-mem
   o_wb				: out std_logic;  -- write back in rf
-  o_rd_addr 		: out std_logic_vector(5-1 downto 0)
+  o_rd_addr 		: out std_logic_vector(REG_WIDTH-1 downto 0)
   ); 
   
 end entity execute;
@@ -57,30 +54,34 @@ component riscv_alu is
 	port (
 	    i_arith  : in  std_logic;                                -- Arith/Logic
 	    i_sign   : in  std_logic;                                -- Signed/Unsigned
-	    i_opcode : in  std_logic_vector(3-1 downto 0); -- ALU opcodes
-	    i_shamt  : in  std_logic_vector(5-1 downto 0); -- Shift Amount
-	    i_src1   : in  std_logic_vector(N-1 downto 0);        -- Operand A
-	    i_src2   : in  std_logic_vector(N-1 downto 0);        -- Operand B
-	    o_res    : out std_logic_vector(N-1 downto 0));       -- Result	   
+	    i_opcode : in  std_logic_vector(ALUOP_WIDTH-1 downto 0); -- ALU opcodes
+	    i_shamt  : in  std_logic_vector(SHAMT_WIDTH-1 downto 0); -- Shift Amount
+	    i_src1   : in  std_logic_vector(XLEN-1 downto 0);        -- Operand A
+	    i_src2   : in  std_logic_vector(XLEN-1 downto 0);        -- Operand B
+	    o_res    : out std_logic_vector(XLEN-1 downto 0));       -- Result	   
   end component riscv_alu ;
   
   component riscv_adder is 
 	generic (N : positive := 32);
 	port (
-		i_a    : in  std_logic_vector(N-1 downto 0);
-  		i_b    : in  std_logic_vector(N-1 downto 0);   
+		i_a    : in  std_logic_vector(XLEN-1 downto 0);
+  		i_b    : in  std_logic_vector(XLEN-1 downto 0);   
 	    i_sign : in  std_logic;
 	    i_sub  : in  std_logic;
-	    o_sum  : out std_logic_vector(N downto 0));
+	    o_sum  : out std_logic_vector(XLEN downto 0));
   end component riscv_adder;
   
-signal alu_result		: std_logic_vector(N-1 downto 0);
-signal src2_alu			: std_logic_vector(N-1 downto 0);
-signal pc_target		: std_logic_vector(N-1 downto 0);
+signal alu_result		: std_logic_vector(XLEN-1 downto 0);
+signal src2_alu			: std_logic_vector(XLEN-1 downto 0);
+signal pc_target		: std_logic_vector(XLEN-1 downto 0);
 signal beq				: std_logic;
 signal pc_transfert		: std_logic;
+signal branch_and_alu   : std_logic_vector(XLEN downto 0);
 
 begin 
+	
+  branch_and_alu <=  i_branch&alu_result;
+  
 	pc_adder: component riscv_adder
     port map(
 	i_a => i_imm,
@@ -95,7 +96,7 @@ begin
   i_rs2_data when others;
   
   	-- PC transfert
-  with i_branch&alu_result select beq <= 
+  with branch_and_alu select beq <= 
   '1'	when "100000000000000000000000000000000",	-- if (alu_result == 0 and i_branch==1) ==> BEQ
   '0'	when others;
   pc_transfert <= beq or i_jump;		 -- pc_transfert == flush
@@ -108,7 +109,7 @@ begin
 	  i_opcode => i_alu_op,
 	  i_shamt => i_shamt,
 	  i_src1 => i_rs1_data,
-	  i_scr2 => src2_alu,
+	  i_src2 => src2_alu,
 	  o_res => alu_result
 	  );
   
@@ -123,7 +124,7 @@ begin
 		o_we		   <= '0';
 		o_wb		   <= '0';
 		o_rd_addr	   <= i_rd_addr;   -- handeled by rf
-	  elsif pc_transfert = '1' then -- pc_transfert == flush
+	  elsif pc_transfert = '1' then	   -- pc_transfert == flush
 		o_pc_transfert <= '0';
 		o_alu_result   <= alu_result;
 		o_store_data   <= i_rs2_data;

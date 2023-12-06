@@ -14,3 +14,4 @@ i<>.\src\execute.vhd
 i<>.\src\decode.vhd
 i<>.\src\tb_riscv_alu.vhd
 i<>.\src\tb_riscv_rf.vhd
+i<>.\src\tb_riscv_pc.vhd
