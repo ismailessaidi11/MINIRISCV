@@ -14,15 +14,11 @@ use ieee.numeric_std.all;
 use work.riscv_pkg.all;
 
 entity decode is
-  generic (
-    N : positive := 32
-  );
+
   port (
   i_instr		: in  std_logic_vector(XLEN-1 downto 0);
   i_rd_data 		: in  std_logic_vector(XLEN-1 downto 0);
   i_rd_addr 		: in  std_logic_vector(REG_WIDTH -1 downto 0);  
-  i_rw 			: in  std_logic;
-  i_we			: in  std_logic;
   i_wb 			: in  std_logic;
   i_pc			: in  std_logic_vector(XLEN-1 downto 0);
   i_flush		: in  std_logic;
@@ -210,48 +206,27 @@ begin
     alu_op <= ALUOP_ADD; -- JAL
   else
     case opcode_and_funct3 is
-      when "1100111000" =>
-        alu_op <= ALUOP_ADD; -- JALR
-      when "1100011000" =>
-        alu_op <= ALUOP_ADD; -- BEQ
-      when "0000011010" =>
-        alu_op <= ALUOP_ADD; -- LW
-      when "0100011010" =>
-        alu_op <= ALUOP_ADD; -- SW
-      when "0010011000" =>
-        alu_op <= ALUOP_ADD; -- ADDI
-      when "0110011000" =>
-        alu_op <= ALUOP_ADD; -- ADD, SUB
-      when "0010011010" =>
-        alu_op <= ALUOP_SLT; -- SLTI
-      when "0010011011" =>
-        alu_op <= ALUOP_SLT; -- SLTIU
-      when "0110011010" =>
-        alu_op <= ALUOP_SLT; -- SLT
-      when "0110011011" =>
-        alu_op <= ALUOP_SLT; -- SLTU
-      when "0010011001" =>
-        alu_op <= ALUOP_SL; -- SLLI
-      when "0110011001" =>
-        alu_op <= ALUOP_SL; -- SLL
-      when "0010011101" =>
-        alu_op <= ALUOP_SR; -- SRLI, SRAI
-      when "0110011101" =>
-        alu_op <= ALUOP_SR; -- SRL, SRA
-      when "0010011100" =>
-        alu_op <= ALUOP_XOR; -- XORI
-      when "0110011100" =>
-        alu_op <= ALUOP_XOR; -- XOR
-      when "0010011110" =>
-        alu_op <= ALUOP_OR; -- ORI
-      when "0110011110" =>
-        alu_op <= ALUOP_OR; -- OR
-      when "0010011111" =>
-        alu_op <= ALUOP_AND; -- ANDI
-      when "0110011111" =>
-        alu_op <= ALUOP_AND; -- AND
-      when others =>
-        alu_op <= ALUOP_OTHER;
+      when "1100111000" => alu_op <= ALUOP_ADD; -- JALR
+      when "1100011000" => alu_op <= ALUOP_ADD; -- BEQ
+      when "0000011010" => alu_op <= ALUOP_ADD; -- LW
+      when "0100011010" => alu_op <= ALUOP_ADD; -- SW
+      when "0010011000" => alu_op <= ALUOP_ADD; -- ADDI
+      when "0110011000" => alu_op <= ALUOP_ADD; -- ADD, SUB
+      when "0010011010" => alu_op <= ALUOP_SLT; -- SLTI
+      when "0010011011" => alu_op <= ALUOP_SLT; -- SLTIU
+      when "0110011010" => alu_op <= ALUOP_SLT; -- SLT
+      when "0110011011" => alu_op <= ALUOP_SLT; -- SLTU
+      when "0010011001" => alu_op <= ALUOP_SL; -- SLLI
+      when "0110011001" => alu_op <= ALUOP_SL; -- SLL
+      when "0010011101" => alu_op <= ALUOP_SR; -- SRLI, SRAI
+      when "0110011101" => alu_op <= ALUOP_SR; -- SRL, SRA
+      when "0010011100" => alu_op <= ALUOP_XOR; -- XORI
+      when "0110011100" => alu_op <= ALUOP_XOR; -- XOR
+      when "0010011110" => alu_op <= ALUOP_OR; -- ORI
+      when "0110011110" => alu_op <= ALUOP_OR; -- OR
+      when "0010011111" => alu_op <= ALUOP_AND; -- ANDI
+      when "0110011111" => alu_op <= ALUOP_AND; -- AND
+      when others 	  => alu_op <= ALUOP_OTHER;
     end case;
   end if;
 end process;
@@ -285,7 +260,7 @@ end process;
 		o_alu_op <= "000";
 		o_shamt	<= "00000";
 		pc <= i_pc;	    		   -- will be reset by the PC
-		o_rd_addr <= 	i_instr(11 downto 7); --won't be written
+		o_rd_addr <= 	i_instr(11 downto 7); --won't be written (handeled by rf)
 	  elsif i_flush = '1' then
 	  	o_branch <= '0';
 		o_jump <= '0';

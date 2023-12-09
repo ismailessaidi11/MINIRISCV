@@ -15,3 +15,5 @@
 .\src\write_back.vhd
 .\src\riscv_core.vhd
 .\src\riscv_core_tb.vhd
+.\src\compteur.vhd
+.\src\compteur_tb.vhd

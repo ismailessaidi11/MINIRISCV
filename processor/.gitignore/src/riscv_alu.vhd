@@ -37,13 +37,13 @@ begin
   ------------------------------------------------------------------------------
   --  SHIFTER
   ------------------------------------------------------------------------------
-  p_shift : process(i_opcode,i_arith,i_shamt,i_src1)--(all)
+  p_shift : process(all)
   begin
     case i_opcode is
       when ALUOP_SR =>
         if i_arith = '1' then
-       --   shifter_res <= unsigned(signed(i_src1) sra to_integer(unsigned(i_shamt)));
-       	  shifter_res <= shift_right(unsigned(signed(i_src1)), to_integer(unsigned(i_shamt)));
+          shifter_res <= unsigned(signed(i_src1) sra to_integer(unsigned(i_shamt)));
+      
 
 		else
           shifter_res <= unsigned(i_src1) srl to_integer(unsigned(i_shamt));
@@ -71,7 +71,7 @@ begin
   ------------------------------------------------------------------------------
   --  RESULT SELECTION
   ------------------------------------------------------------------------------
-  p_res : process (i_opcode,adder_res,shifter_res,slt_res,i_src1,i_src2)--(all)
+  p_res : process(all)
   begin
     case i_opcode is
       when ALUOP_ADD  => o_res <= adder_res(XLEN-1 downto 0);    -- ADD[I]/SUB[I]

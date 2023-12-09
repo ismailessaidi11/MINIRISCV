@@ -10,24 +10,23 @@
 -------------------------------------------------------------------------------
 library ieee;
 use ieee.std_logic_1164.all;
-use ieee.numeric_std.all;	   
+use ieee.numeric_std.all;
+use work.riscv_pkg.all;
 
 entity write_back is
-  generic (
-    N : positive := 32
-  );
+
   port (
-  i_load_data	: in  std_logic_vector(N-1 downto 0);
-  i_alu_result 	: in  std_logic_vector(N-1 downto 0);
-  i_rd_addr 	: in  std_logic_vector(5-1 downto 0);  
+  i_load_data	: in  std_logic_vector(XLEN-1 downto 0);
+  i_alu_result 	: in  std_logic_vector(XLEN-1 downto 0);
+  i_rd_addr 	: in  std_logic_vector(REG_WIDTH-1 downto 0);  
   i_rw 			: in  std_logic;	  
   i_wb 			: in  std_logic;
   i_rstn		: in  std_logic;
   i_clk 		: in  std_logic;
 	
   o_wb 			: out std_logic;
-  o_rd_addr 	: out std_logic_vector(5-1 downto 0); 
-  o_rd_data 	: out std_logic_vector(N-1 downto 0)
+  o_rd_addr 	: out std_logic_vector(REG_WIDTH-1 downto 0); 
+  o_rd_data 	: out std_logic_vector(XLEN-1 downto 0)
   ); 
   
 end entity write_back;

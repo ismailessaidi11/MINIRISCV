@@ -26,7 +26,6 @@ entity execute is
   i_imm				: in  std_logic_vector(XLEN-1 downto 0);
   i_pc				: in  std_logic_vector(XLEN-1  downto 0);
   i_rd_addr 		: in  std_logic_vector(REG_WIDTH-1 downto 0);
-  i_flush			: in  std_logic;
   i_stall			: in  std_logic;
   i_rstn			: in  std_logic;
   i_clk 			: in  std_logic;
@@ -73,7 +72,7 @@ component riscv_alu is
   
 signal alu_result		: std_logic_vector(XLEN-1 downto 0);
 signal src2_alu			: std_logic_vector(XLEN-1 downto 0);
-signal pc_target		: std_logic_vector(XLEN-1 downto 0);
+signal pc_target		: std_logic_vector(XLEN downto 0);
 signal beq				: std_logic;
 signal pc_transfert		: std_logic;
 signal branch_and_alu   : std_logic_vector(XLEN downto 0);
@@ -88,7 +87,7 @@ begin
     i_b => i_pc,
     i_sign => '0',
     i_sub => '0',
-	o_sum(XLEN-1 downto 0) => pc_target(XLEN-1 downto 0)	  -- we don't need the last bit of o_sum
+	o_sum => pc_target	  -- we don't need the last bit of o_sum
 	);	
 	-- MUX to select src2_alu
   with i_src_imm select  src2_alu <=
@@ -115,29 +114,20 @@ begin
   
   process(i_clk, i_rstn)
 	begin
-	  if falling_edge(i_rstn) then
+	  if i_rstn = '0' then
 		o_pc_transfert <= '0';
-		o_alu_result   <= alu_result;
-		o_store_data   <= i_rs2_data;
-		o_pc_target    <= pc_target;   -- handled by pc
+		o_alu_result   <= alu_result;  -- reset by decode 
+		o_store_data   <= i_rs2_data;  -- won't be stored because rw = 0
+		o_pc_target    <= pc_target(XLEN-1 downto 0);   -- handled by pc
 		o_rw 		   <= '0';
 		o_we		   <= '0';
 		o_wb		   <= '0';
 		o_rd_addr	   <= i_rd_addr;   -- handeled by rf
-	  elsif pc_transfert = '1' then	   -- pc_transfert == flush
-		o_pc_transfert <= '0';
-		o_alu_result   <= alu_result;
-		o_store_data   <= i_rs2_data;
-		o_pc_target    <= pc_target;   -- handled by pc
-		o_rw 		   <= '0';
-		o_we		   <= '0';
-		o_wb		   <= '0';
-		o_rd_addr	   <= i_rd_addr;   -- handeled by rf  
 	  elsif rising_edge(i_clk) then	
-		o_pc_transfert <= pc_transfert;
+		o_pc_transfert <= pc_transfert;	-- pc_transfert == flush
 		o_alu_result   <= alu_result;
 		o_store_data   <= i_rs2_data;
-		o_pc_target    <= pc_target;
+		o_pc_target    <= pc_target(XLEN-1 downto 0);
 		o_rw 		   <= i_rw;
 		o_we		   <= i_we;
 		o_wb		   <= i_wb;

@@ -21,9 +21,9 @@ use std.textio.all;
 entity dpm is
   generic (
     WIDTH : integer := 32;
-    DEPTH : integer := 10;
+    DEPTH : integer := 9;
     RESET : integer := 16#00000000#;
-    INIT  : string  := "memory.mem");
+    INIT  : string  := "riscv_basic.mem");
   port (
     -- Port A
     i_a_clk   : in  std_logic;                               -- Clock

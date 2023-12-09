@@ -1,36 +1,50 @@
-Active-HDL 13.0.376.8320 2023-12-05 23:17:42
+Active-HDL 13.0.376.8320 2023-12-09 14:10:23
 
 Elaboration top modules:
-Architecture                  testbench(tb_riscv_adder)
+Architecture                  tb(riscv_core_tb)
 
 
----------------------------------------------------------------------------------------------------
-Entity         | Architecture | Library   | Info | Compiler Version          | Compilation Options
----------------------------------------------------------------------------------------------------
-tb_riscv_adder | testbench    | processor |      | 13.0.376.8320 (Windows64) | -O3
-riscv_adder    | beh          | processor |      | 13.0.376.8320 (Windows64) | -O3
-half_adder     | beh          | processor |      | 13.0.376.8320 (Windows64) | -O3
----------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------
+Entity        | Architecture | Library   | Info | Compiler Version          | Compilation Options
+--------------------------------------------------------------------------------------------------
+riscv_core_tb | tb           | processor |      | 13.0.376.8320 (Windows64) | -O3 -2008
+dpm           | beh          | processor |      | 13.0.376.8320 (Windows64) | -O3 -2008
+riscv_core    | beh          | processor |      | 13.0.376.8320 (Windows64) | -O3 -2008
+fetch         | beh          | processor |      | 13.0.376.8320 (Windows64) | -O3 -2008
+decode        | beh          | processor |      | 13.0.376.8320 (Windows64) | -O3 -2008
+execute       | beh          | processor |      | 13.0.376.8320 (Windows64) | -O3 -2008
+memory_access | beh          | processor |      | 13.0.376.8320 (Windows64) | -O3 -2008
+write_back    | beh          | processor |      | 13.0.376.8320 (Windows64) | -O3 -2008
+riscv_pc      | beh          | processor |      | 13.0.376.8320 (Windows64) | -O3 -2008
+riscv_rf      | beh          | processor |      | 13.0.376.8320 (Windows64) | -O3 -2008
+riscv_adder   | beh          | processor |      | 13.0.376.8320 (Windows64) | -O3 -2008
+riscv_alu     | beh          | processor |      | 13.0.376.8320 (Windows64) | -O3 -2008
+half_adder    | beh          | processor |      | 13.0.376.8320 (Windows64) | -O3 -2008
+--------------------------------------------------------------------------------------------------
 
----------------------------------------------------------------------------------------------------
-VHDL Package                  | Library   | Info | Compiler Version          | Compilation Options
----------------------------------------------------------------------------------------------------
-standard                      | std       |      |                           | <unavailable>
-TEXTIO                        | std       |      | 13.0.376.8320 (Windows64) |  -2019
-std_logic_1164                | ieee      |      | 13.0.376.8320 (Windows64) |  -2008
-NUMERIC_STD                   | ieee      |      | 13.0.376.8320 (Windows64) |  -2008
----------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------
+VHDL Package                 | Library   | Info | Compiler Version          | Compilation Options
+--------------------------------------------------------------------------------------------------
+standard                     | std       |      |                           | <unavailable>
+TEXTIO                       | std       |      | 13.0.376.8320 (Windows64) |  -2019
+std_logic_1164               | ieee      |      | 13.0.376.8320 (Windows64) |  -2008
+ENV                          | std       |      | 13.0.376.8320 (Windows64) |  -2019
+NUMERIC_STD                  | ieee      |      | 13.0.376.8320 (Windows64) |  -2008
+STD_LOGIC_TEXTIO             | ieee      |      | 13.0.376.8320 (Windows64) | <unavailable>
+MATH_REAL                    | ieee      |      | 13.0.376.8320 (Windows64) | <unavailable>
+riscv_pkg                    | processor |      | 13.0.376.8320 (Windows64) | -O3 -2008
+--------------------------------------------------------------------------------------------------
 
----------------------------------------------------------------------------------------------------
-Library                       | Comment
----------------------------------------------------------------------------------------------------
-ieee                          | Standard IEEE packages library
-processor                     | None
-std                           | Standard VHDL library
----------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------
+Library                      | Comment
+--------------------------------------------------------------------------------------------------
+ieee                         | Standard IEEE packages library
+processor                    | None
+std                          | Standard VHDL library
+--------------------------------------------------------------------------------------------------
 
 
-Simulation Options: asim -O5 +access +r +m+tb_riscv_adder tb_riscv_adder testbench
+Simulation Options: asim -O5 +access +r +m+riscv_core_tb riscv_core_tb tb
 
 
 The performance of simulation is reduced. Version Student Edition

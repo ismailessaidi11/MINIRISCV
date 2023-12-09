@@ -1,3 +1,6 @@
-memory_access ENTITY
-write_back ENTITY
-execute ENTITY
+tb_riscv_alu ENTITY
+tb_riscv_rf ENTITY
+tb_riscv_pc ENTITY
+tb_riscv_adder ENTITY
+riscv_core_tb ENTITY
+compteur_tb ENTITY
