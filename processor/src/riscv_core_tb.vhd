@@ -14,7 +14,7 @@
 --						le compteur de programme (adresse de l'instruction suivante) 
 --						doit donc etre divise par 4 (ou srl 2) avant d'etre connecte
 --						a la memoire.
---						Bien que le bus d'adressage presente une largeur de 16b,
+--						Bien que le bus d'adressage presente une largeur de 32b,
 --						seul les 9 bits de poids faible de l'adresse sont conserve 
 --						en accord avec la documentation.
 -------------------------------------------------------------------------------
@@ -38,19 +38,38 @@ signal	clk		: std_logic := '0';
 signal	rstn		: std_logic := '0';
 
 signal imem_en : std_logic;
-signal imem_addr : std_logic_vector(15 downto 0);
+signal imem_addr : std_logic_vector(31 downto 0);
 signal imem_read : std_logic_vector(31 downto 0);
 
 signal dmem_en : std_logic;
 signal dmem_we : std_logic;
-signal dmem_addr : std_logic_vector(15 downto 0);
+signal dmem_addr : std_logic_vector(31 downto 0);
 signal dmem_read : std_logic_vector(31 downto 0);
 signal dmem_write : std_logic_vector(31 downto 0);
 
-signal imem_addr_div4 : std_logic_vector(15 downto 0);
-signal dmem_addr_div4 : std_logic_vector(15 downto 0);
+signal imem_addr_div4 : std_logic_vector(31 downto 0);
+signal dmem_addr_div4 : std_logic_vector(31 downto 0); 
+
+--test bench signals
+   
+signal tb_fetch_pc, tb_decode_instruction	: std_logic_vector(31 downto 0); 
+signal tb_execute_rs1_data, tb_execute_rs2_data, tb_execute_pc	 : std_logic_vector(31 downto 0);
+signal tb_decode_branch, tb_decode_jump,tb_write_back_rw, tb_memory_we,tb_decode_arith, tb_decode_sign: std_logic;
+signal tb_decode_alu_op : std_logic_vector(2 downto 0);
+signal tb_decode_rs1_addr, tb_decode_rs2_addr : std_logic_vector(4 downto 0);
+signal tb_execute_pc_target,tb_execute_alu_result , tb_memory_alu_result: std_logic_vector(31 downto 0); 
+signal tb_execute_pc_transfert, tb_execute_src_imm : std_logic;
+signal tb_write_back_wb : std_logic;
+signal tb_write_back_rd_addr : std_logic_vector(4 downto 0);
+signal tb_write_back_rd_data : std_logic_vector(31 downto 0);
+signal tb_memory_store_data : std_logic_vector(31 downto 0);
+signal tb_decode_imm : std_logic_vector(31 downto 0);
+signal tb_execute_imm : std_logic_vector(31 downto 0);
+signal tb_write_back_load_data : std_logic_vector(31 downto 0);
+signal tb_write_back_alu_result : std_logic_vector(31 downto 0);
 
 constant PERIOD   : time := 100 ns;
+constant TWO	: std_logic_vector(1 downto 0) := "10";
 
 begin
 
@@ -81,7 +100,8 @@ MEM0 : entity work.dpm
 
 
 imem_addr_div4 <= imem_addr srl 2;     --the memory is only word adressable and not byte so divide the instruction adress by 4
-dmem_addr_div4 <= dmem_addr srl 2;     
+dmem_addr_div4 <= dmem_addr srl 2;  
+
 
 DUT : entity work.riscv_core 
 port map(
@@ -99,7 +119,41 @@ port map(
 	i_scan_en => '0',
 	i_test_mode => '0',
 	i_tdi => '0',
-	o_tdo => open
+	o_tdo => open,
+	
+	--Test Bench
+	tb_decode_instruction => tb_decode_instruction,
+  	tb_fetch_pc => tb_fetch_pc, 
+ 
+	tb_execute_rs1_data=>tb_execute_rs1_data, 
+	tb_execute_rs2_data=>tb_execute_rs2_data ,
+	tb_execute_pc=> tb_execute_pc,
+	tb_decode_branch => tb_decode_branch,
+	tb_decode_jump => tb_decode_jump,
+	tb_write_back_rw => tb_write_back_rw,
+	tb_memory_we => tb_memory_we,
+	tb_decode_arith => tb_decode_arith,
+	tb_decode_sign => tb_decode_sign,
+	tb_decode_alu_op => tb_decode_alu_op,
+    tb_decode_imm => tb_decode_imm,
+	
+	tb_execute_pc_target =>  tb_execute_pc_target,
+	tb_execute_alu_result => tb_execute_alu_result,
+	tb_memory_alu_result => tb_memory_alu_result,
+	tb_execute_imm => tb_execute_imm,
+	
+	tb_write_back_wb => tb_write_back_wb,
+	tb_write_back_rd_addr => tb_write_back_rd_addr,
+	tb_write_back_rd_data => tb_write_back_rd_data,		 
+	tb_write_back_load_data => tb_write_back_load_data,
+	tb_write_back_alu_result => tb_write_back_alu_result,
+	
+	tb_decode_rs1_addr => tb_decode_rs1_addr,
+	tb_decode_rs2_addr => tb_decode_rs2_addr,
+	
+	tb_memory_store_data => tb_memory_store_data,
+	tb_execute_pc_transfert => tb_execute_pc_transfert,
+	tb_execute_src_imm => tb_execute_src_imm
 );
 	
 clk <= not clk after PERIOD/2 ;

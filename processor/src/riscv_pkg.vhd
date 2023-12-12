@@ -14,7 +14,7 @@ use ieee.numeric_std.all;
 use ieee.math_real.all;
 
 package riscv_pkg is
-
+									   		  
   ------------------------------------------------------------------------------
   -- MAIN PARAMETERS
   ------------------------------------------------------------------------------
@@ -51,13 +51,13 @@ package riscv_pkg is
   constant ALUOP_OR    : std_logic_vector(ALUOP_WIDTH-1 downto 0) := "101";
   constant ALUOP_AND   : std_logic_vector(ALUOP_WIDTH-1 downto 0) := "110";
   constant ALUOP_OTHER : std_logic_vector(ALUOP_WIDTH-1 downto 0) := "111";
-  constant NOP         : std_logic_vector(x"000"&"00000"&"001"&"00000"&"0010011") -- slli x0 x0 #0
+  constant NOP         : std_logic_vector(XLEN-1 downto 0) := (x"000"&"00000"&"001"&"00000"&"0010011"); -- slli x0 x0 #0
 
   ------------------------------------------------------------------------------
   -- COMPONENTS
   ------------------------------------------------------------------------------
   component riscv_adder is
-    generic (
+    generic (						   
       N : positive);
     port (
       i_a    : in  std_logic_vector(N-1 downto 0);

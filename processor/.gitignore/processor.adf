@@ -46,8 +46,8 @@ fileopenfolder=C:\Users\ismai\OneDrive\Documents\GitHub\MINIRISCV\processor\.git
 /riscv_basic.mem=-1
 /compteur.vhd=-1
 /compteur_tb.vhd=-1
-/core_tb_signal.asdb=-1
-/core_tb_signal.awc=-1
+/core_signals.asdb=-1
+/core_signals.awc=-1
 [Files.Data]
 .\src\riscv_pkg.vhd=VHDL Source Code
 .\src\dpm.vhd=VHDL Source Code
@@ -77,10 +77,10 @@ fileopenfolder=C:\Users\ismai\OneDrive\Documents\GitHub\MINIRISCV\processor\.git
 .\src\riscv_basic.mem=Memory File
 .\src\compteur.vhd=VHDL Source Code
 .\src\compteur_tb.vhd=VHDL Source Code
-.\src\core_tb_signal.asdb=Accelerated Waveform File
-.\src\core_tb_signal.awc=Accelerated Waveform Configuration
+.\src\core_signals.asdb=Accelerated Waveform File
+.\src\core_signals.awc=Accelerated Waveform Configuration
 [HierarchyViewer]
-HierarchyInformation=riscv_core_tb|tb|0 tb_riscv_adder|testbench|0
+HierarchyInformation=riscv_core_tb|tb|0
 ShowHide=ShowTopLevel
 Selected=
 [ORDER]

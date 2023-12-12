@@ -37,13 +37,15 @@ begin
   ------------------------------------------------------------------------------
   --  SHIFTER
   ------------------------------------------------------------------------------
-  p_shift : process (all)
+  p_shift : process(all)
   begin
     case i_opcode is
       when ALUOP_SR =>
         if i_arith = '1' then
           shifter_res <= unsigned(signed(i_src1) sra to_integer(unsigned(i_shamt)));
-        else
+      
+
+		else
           shifter_res <= unsigned(i_src1) srl to_integer(unsigned(i_shamt));
         end if;
       when others => shifter_res <= unsigned(i_src1) sll to_integer(unsigned(i_shamt));
@@ -69,7 +71,7 @@ begin
   ------------------------------------------------------------------------------
   --  RESULT SELECTION
   ------------------------------------------------------------------------------
-  p_res : process (all)
+  p_res : process(all)
   begin
     case i_opcode is
       when ALUOP_ADD  => o_res <= adder_res(XLEN-1 downto 0);    -- ADD[I]/SUB[I]
@@ -82,5 +84,5 @@ begin
       when others     => o_res <= i_src2;                        -- Default
     end case;
   end process p_res;
-
+										
 end architecture beh;

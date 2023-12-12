@@ -25,7 +25,7 @@ begin
   -- Clock generation process
   clk_process: process
   begin
-    while now < 500 ns loop
+    while now < 100 ns loop
       clk <= '0';
       wait for clock_period / 2;
       clk <= '1';
@@ -76,7 +76,7 @@ begin
   i_sub <= '1';   -- subtraction
   wait for 20 ns;
 
-  -- Add more test cases as needed...
+ 
 
   wait;
 end process;

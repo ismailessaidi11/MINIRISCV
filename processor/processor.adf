@@ -1,0 +1,112 @@
+[Project]
+Current Flow=Generic
+VCS=0
+version=4
+Current Config=compile
+[Configurations]
+compile=processor
+[Library]
+processor=.\processor\processor.lib
+[$LibMap$]
+processor=.
+Active_lib=
+[Settings]
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+REFRESH_FLOW=1
+FLOWTOOLS=NONE
+FAMILY=
+fileopenfolder=C:\Users\ismai\OneDrive\Documents\GitHub\MINIRISCV\processor\.gitignore\src
+[Files]
+/riscv_pkg.vhd=-1
+/dpm.vhd=-1
+/riscv_adder.vhd=-1
+/tb_riscv_adder.vhd=-1
+/adder_tb_signal.asdb=-1
+/adder_tb_signal.awc=-1
+/riscv_alu.vhd=-1
+/tb_riscv_alu.vhd=-1
+/alu_tb_signal.asdb=-1
+/alu_tb_signal.awc=-1
+/riscv_pc.vhd=-1
+/tb_riscv_pc.vhd=-1
+/tb_pc_signal.asdb=-1
+/tb_pc_signal.awc=-1
+/riscv_rf.vhd=-1
+/tb_riscv_rf.vhd=-1
+/rf_tb_signal.asdb=-1
+/rf_tb_signal.awc=-1
+/fetch.vhd=-1
+/decode.vhd=-1
+/execute.vhd=-1
+/memory_access.vhd=-1
+/write_back.vhd=-1
+/riscv_core.vhd=-1
+/riscv_core_tb.vhd=-1
+/riscv_basic.mem=-1
+/compteur.vhd=-1
+/compteur_tb.vhd=-1
+/core_signals.asdb=-1
+/core_signals.awc=-1
+[Files.Data]
+.\src\riscv_pkg.vhd=VHDL Source Code
+.\src\dpm.vhd=VHDL Source Code
+.\src\riscv_adder.vhd=VHDL Source Code
+.\src\tb_riscv_adder.vhd=VHDL Source Code
+.\src\adder_tb_signal.asdb=Accelerated Waveform File
+.\src\adder_tb_signal.awc=Accelerated Waveform Configuration
+.\src\riscv_alu.vhd=VHDL Source Code
+.\src\tb_riscv_alu.vhd=VHDL Source Code
+.\src\alu_tb_signal.asdb=Accelerated Waveform File
+.\src\alu_tb_signal.awc=Accelerated Waveform Configuration
+.\src\riscv_pc.vhd=VHDL Source Code
+.\src\tb_riscv_pc.vhd=VHDL Source Code
+.\src\tb_pc_signal.asdb=Accelerated Waveform File
+.\src\tb_pc_signal.awc=Accelerated Waveform Configuration
+.\src\riscv_rf.vhd=VHDL Source Code
+.\src\tb_riscv_rf.vhd=VHDL Source Code
+.\src\rf_tb_signal.asdb=Accelerated Waveform File
+.\src\rf_tb_signal.awc=Accelerated Waveform Configuration
+.\src\fetch.vhd=VHDL Source Code
+.\src\decode.vhd=VHDL Source Code
+.\src\execute.vhd=VHDL Source Code
+.\src\memory_access.vhd=VHDL Source Code
+.\src\write_back.vhd=VHDL Source Code
+.\src\riscv_core.vhd=VHDL Source Code
+.\src\riscv_core_tb.vhd=VHDL Source Code
+.\src\riscv_basic.mem=Memory File
+.\src\compteur.vhd=VHDL Source Code
+.\src\compteur_tb.vhd=VHDL Source Code
+.\src\core_tb_signal.asdb=Accelerated Waveform File
+.\src\core_tb_signal.awc=Accelerated Waveform Configuration
+.\src\core_signals.asdb=Accelerated Waveform File
+.\src\core_signals.awc=Accelerated Waveform Configuration
+[HierarchyViewer]
+HierarchyInformation=compteur_tb|tb|0 riscv_core|beh|0 riscv_core_tb|tb|0 tb_riscv_adder|testbench|0
+ShowHide=ShowTopLevel
+Selected=
+[ORDER]
+Synchronize=1
+[LocalVhdlSets]
+NetlistCompilation=1
+EnableVHDL93Key=0
+EnableVHDL2002Key=0
+EnableVHDL2008Key=1
+EnableVHDL2019Key=0
+DisableVHDL87Key=0
+Syntax RelaxLRM=0
+MaxErrorsKey=100
+CompileWithDebug=0
+OptimizationLevel=3
+DisableRangeChecks=0
+ProtectLevel=0
+IncrementalCompilation=0
+AdditionalOptions=
+ReorderOnFirstRebuild=1
+ElaborationAfterCompilation=0
+PrintErrWarnOnly=0
+GenMultiplatformLib=0
+VhdlPreservePortComments=0
+VhdlChangeEvalAsynchronous=0
+VhdlDisableAssertionsProcessing=0
+ClockNumbersInAssertionMessages=auto

@@ -1,2 +1,2 @@
 # MINIRISCV
-mini riscv coded in vhdl for ELE8304.
+mini riscv described in vhdl for Lab2 ELE8304.

@@ -1,0 +1,20 @@
+"C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/riscv_pkg.vhd" VHDL processor 1 0 0 -02 -08
+"C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/dpm.vhd" VHDL processor 1 0 0 -02 -08
+"C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/riscv_adder.vhd" VHDL processor 1 0 0 -02 -08
+"C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/tb_riscv_adder.vhd" VHDL processor 1 0 0 -02 -08
+"C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/riscv_alu.vhd" VHDL processor 1 0 0 -02 -08
+"C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/tb_riscv_alu.vhd" VHDL processor 1 0 0 -02 -08
+"C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/riscv_pc.vhd" VHDL processor 1 0 0 -02 -08
+"C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/tb_riscv_pc.vhd" VHDL processor 1 0 0 -02 -08
+"C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/riscv_rf.vhd" VHDL processor 1 0 0 -02 -08
+"C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/tb_riscv_rf.vhd" VHDL processor 1 0 0 -02 -08
+"C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/fetch.vhd" VHDL processor 1 0 0 -02 -08
+"C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/decode.vhd" VHDL processor 1 0 0 -02 -08
+"C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/execute.vhd" VHDL processor 1 0 0 -02 -08
+"C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/memory_access.vhd" VHDL processor 1 0 0 -02 -08
+"C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/write_back.vhd" VHDL processor 1 0 0 -02 -08
+"C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/riscv_core.vhd" VHDL processor 1 0 0 -02 -08
+"C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/riscv_core_tb.vhd" VHDL processor 1 0 0 -02 -08
+"C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/compteur.vhd" VHDL processor 1 0 0 -02 -08
+"C:/Users/ismai/OneDrive/Documents/GitHub/MINIRISCV/processor/.gitignore/src/compteur_tb.vhd" VHDL processor 1 0 0 -02 -08
+. . 0 0 0
