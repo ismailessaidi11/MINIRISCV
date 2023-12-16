@@ -1,4 +1,4 @@
-228
+241
 ~E 1 "../src/compteur.vhd" 17 compteur
 ~A 1 "../src/compteur.vhd" 25 beh
 ~E 1 "../src/compteur_tb.vhd" 24 compteur_tb

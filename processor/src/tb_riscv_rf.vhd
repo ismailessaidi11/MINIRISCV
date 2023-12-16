@@ -8,11 +8,11 @@ end entity tb_riscv_rf;
 architecture testbench of tb_riscv_rf is
 
   -- Test inputs
-  signal i_addr_ra : std_logic_vector(4 downto 0);
-  signal i_addr_rb : std_logic_vector(4 downto 0);
-  signal i_data_w  : std_logic_vector(31 downto 0);
-  signal i_addr_w  : std_logic_vector(4 downto 0);
-  signal i_we	   : std_logic;
+  signal i_addr_ra : std_logic_vector(4 downto 0):= "00000";
+  signal i_addr_rb : std_logic_vector(4 downto 0):= "00000";
+  signal i_data_w  : std_logic_vector(31 downto 0):= "00000000000000000000000000000000";
+  signal i_addr_w  : std_logic_vector(4 downto 0):= "00000";
+  signal i_we	   : std_logic:='0';
   signal rstn      : std_logic:= '1';
   signal clk       : std_logic:= '0';
 
@@ -23,11 +23,11 @@ architecture testbench of tb_riscv_rf is
   -- Clock generation process
   constant clock_period : time := 10 ns;
 begin
-	--o_sum <= (others=>'0');
+
   -- Clock generation process
   clk_process: process
   begin
-    while now < 100 ns loop
+    while now < 120 ns loop
       clk <= '0';
       wait for clock_period / 2;
       clk <= '1';
@@ -53,10 +53,10 @@ begin
 stimulus_process: process
 begin  
 	
-	--rstn <= '0';
-   -- wait for 20 ns;	
+	rstn <= '0';
+    wait for 20 ns;	
 	
-   -- rstn <= '1';
+    rstn <= '1';
 	
   -- Test Case 1: write 0x00000001 in register zero and NOOOOOOOOOOOOOOOOOO read the value in register "ra"
   i_we<='1';
@@ -101,12 +101,5 @@ begin
   wait;
 end process;		
 
- -- Monitor the output signals
-  --monitor_process: process
-  --begin
-  --  wait for 20 ns;
-  --  report "o_sum = " & integer'image(to_integer(unsigned(o_sum)));
-  --  wait;
-  --end process;
-  
+
 end architecture testbench;

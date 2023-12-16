@@ -1,4 +1,4 @@
-Active-HDL 13.0.376.8320 2023-12-11 21:37:29
+Active-HDL 13.0.376.8320 2023-12-15 20:04:50
 
 Elaboration top modules:
 Architecture                  tb(riscv_core_tb)
@@ -42,9 +42,3 @@ ieee                         | Standard IEEE packages library
 processor                    | None
 std                          | Standard VHDL library
 --------------------------------------------------------------------------------------------------
-
-
-Simulation Options: asim -O5 +access +r +m+riscv_core_tb riscv_core_tb tb
-
-
-The performance of simulation is reduced. Version Student Edition

@@ -31,13 +31,13 @@ architecture testbench of tb_riscv_alu is
     (test_case_1, test_case_2, test_case_3);
 
 
-  signal arith, sign : std_logic;
-  signal opcode : std_logic_vector(ALUOP_WIDTH-1 downto 0);
-  signal src1, src2, res : std_logic_vector(XLEN-1 downto 0);
-  signal shamt : std_logic_vector(SHAMT_WIDTH-1 downto 0);
+  signal arith, sign : std_logic:='0';
+  signal opcode : std_logic_vector(ALUOP_WIDTH-1 downto 0):="000";
+  signal src1, src2, res : std_logic_vector(XLEN-1 downto 0):="00000000000000000000000000000000";
+  signal shamt : std_logic_vector(SHAMT_WIDTH-1 downto 0):="00000";
 
   signal clock : std_logic := '0';
-  signal reset : std_logic;
+
 
   constant clock_period : time := 10 ns;
 
@@ -57,7 +57,7 @@ begin
   -- Clock process
   clock_process: process
   begin
-    while now < 100 ns loop
+    while now < 60 ns loop
       clock <= not clock;
       wait for clock_period / 2;
     end loop;
@@ -68,11 +68,6 @@ begin
   begin
     -- Test case 1
    
-    reset <= '1';
-    wait for 20 ns;	
-	
-    reset <= '0';
-
     arith <= test_cases(0).arith;
     sign <= test_cases(0).sign;
     opcode <= test_cases(0).opcode;
@@ -83,10 +78,6 @@ begin
 	wait for 20ns;  
 		
     -- Test case 2
-    wait until rising_edge(clock);
-    reset <= '1';
-    wait for 20 ns;
-    reset <= '0';
 
     arith <= test_cases(1).arith;
     sign <= test_cases(1).sign;
@@ -98,10 +89,6 @@ begin
 	  wait for 20ns;
 	  
     -- Test case 3
-    wait until rising_edge(clock);
-    reset <= '1';
-    wait for 20 ns;
-    reset <= '0';
 
     arith <= test_cases(2).arith;
     sign <= test_cases(2).sign;
